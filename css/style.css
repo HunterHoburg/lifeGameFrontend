@@ -1,0 +1,94 @@
+body {
+  padding: 50px;
+  font-size: 10px;
+  font-family: serif;
+}
+
+.navbar {
+  margin-top: -3rem;
+}
+.navbar .brandWrapper {
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+}
+
+.navbar .brandWrapper img {
+  height: inherit;
+  width: 100%;
+}
+
+.navbar ul,
+.navbar ul li {
+  display: inline-block;
+}
+
+.navbar ul li {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 5rem;
+}
+
+.boardWrapper {
+  width: 95%;
+  margin: auto;
+}
+
+.board {
+  width: 10%;
+  height: 0;
+  padding-top:10%;
+  margin: 0;
+  float: left;
+  background-color: #5BAAA9;
+  background-size: cover;
+  box-sizing: border-box;
+  /*border: 1px solid black;*/
+}
+
+.junctionNS {
+  background: url('../static/img/y-junction.svg')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionEW {
+  background: url('../static/img/north-y-junction.svg')center center no-repeat;
+  background-size: cover;
+}
+
+.elbow {
+  background: url('../static/img/elbow.svg')center center no-repeat;
+  background-size: cover;
+}
+
+.straight {
+  background: url('../static/img/straight.svg')center center no-repeat;
+  background-size: cover;
+}
+
+.straightEW {
+  background: url('../static/img/EW-straight.svg');
+  background-size: cover;
+}
+
+.elbowSE {
+  transform: rotateY(180deg);
+}
+
+.elbowNW {
+  transform: rotateX(180deg);
+}
+
+.elbowNE {
+  background: url('../static/img/NE_elbow.svg');
+  background-size: cover;
+  transform: rotateY(180deg);
+}
+
+.junctionNES {
+  transform: rotateY(180deg);
+}
+
+.junctionSEW {
+  transform: rotateX(180deg);
+}

@@ -1,0 +1,13 @@
+<svg id="y-fork" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="190 190 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5baaa9;
+      }
+    </style>
+  </defs>
+  <rect id="y-fork-2" data-name="y-fork" class="cls-1" x="190" y="190" width="120" height="120"/>
+  <rect x="190" y="190" width="120" height="85"/>
+  <path class="cls-1" d="M275,190h35a0,0,0,0,1,0,0v35a0,0,0,0,1,0,0h-5a30,30,0,0,1-30-30v-5A0,0,0,0,1,275,190Z"/>
+  <path class="cls-1" d="M190,190h35a0,0,0,0,1,0,0v5a30,30,0,0,1-30,30h-5a0,0,0,0,1,0,0V190A0,0,0,0,1,190,190Z"/>
+</svg>

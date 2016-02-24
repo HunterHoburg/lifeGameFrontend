@@ -1,0 +1,11 @@
+<svg id="straight" xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="190 190 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5baaa9;
+      }
+    </style>
+  </defs>
+  <rect id="Rectangle_2_copy_5" data-name="Rectangle 2 copy 5" class="cls-1" x="190" y="190" width="120" height="120"/>
+  <rect x="225" y="190" width="50" height="120"/>
+</svg>
