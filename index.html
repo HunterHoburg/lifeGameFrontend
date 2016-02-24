@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/stylebuttons.css">
+  <link rel="stylesheet" href="./css/styleshare.css">
+  <link href='https://fonts.googleapis.com/css?family=Englebert' rel='stylesheet' type='text/css'>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
 
@@ -26,8 +29,8 @@
     </ul>
   </nav>
   <div class="row">
-    <life-main></life-main>
-    <life-board></life-board>
+    <!-- <life-main></life-main> -->
+    <!-- <life-board></life-board> -->
   </div>
   <form>
     <input ng-model='articleSearchBar'>
@@ -45,6 +48,7 @@
     </li>
   </ul>
   <!-- <button type='submit' ng-click= -->
+<div ng-view>
 
   <script src="./js/app.js"></script>
   <script src="./js/controllers.js"></script>

@@ -1,7 +1,14 @@
 body {
-  padding: 50px;
-  font-size: 10px;
-  font-family: serif;
+  padding-top: 50px;
+  font-family: 'Englebert', sans-serif;
+  /*background-image: url('skulls.png');
+  background-color: rgba(0,255,0,.2);*/
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url('skulls.png');
 }
 
 .navbar {
@@ -91,4 +98,59 @@ body {
 
 .junctionSEW {
   transform: rotateX(180deg);
+}
+
+h1 {
+  font-size: 10em;
+  text-align: center;
+  color: white;
+}
+
+#greenL {
+  background-color: green;
+  height: 10em;
+  text-align: left;
+  box-shadow: 10px 10px 5px #888888;
+  box-shadow: inset 0 -5px 5px rgba(0,0,0,0.5),
+  inset 0 5px 5px rgba(255,255,255,.5);
+}
+#blueI {
+  background-color: blue;
+  height: 10em;
+  text-align: left;
+  box-shadow: 10px 10px 5px #888888;
+  box-shadow: inset 0 -5px 5px rgba(0,0,0,0.5),
+  inset 0 5px 5px rgba(255,255,255,.5);
+}
+#redF {
+  background-color: #FF6200;
+  height: 10em;
+  text-align: left;
+  box-shadow: 10px 10px 5px #888888;
+  box-shadow: inset 0 -5px 5px rgba(0,0,0,0.5),
+  inset 0 5px 5px rgba(255,255,255,.5);
+}
+#purpleE {
+  background-color: purple;
+  height: 10em;
+  text-align: left;
+  box-shadow: 10px 10px 5px #888888;
+  box-shadow: inset 0 -5px 5px rgba(0,0,0,0.5),
+  inset 0 5px 5px rgba(255,255,255,.5);
+}
+
+h3 {
+  text-align: center;
+}
+
+#logo {
+  margin: 1em;
+  padding: 0em;
+}
+
+#navLinks {
+  position: absolute;
+  top: 18%;
+  right: 12%;
+  text-align: center;
 }
