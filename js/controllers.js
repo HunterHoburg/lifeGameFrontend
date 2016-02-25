@@ -1,8 +1,8 @@
 angular.module("app")
-  .controller('MainController', ['$http', MainController]);
+  .controller('MainController', ['$http', 'newGameService', MainController]);
 
   //CONTROLLER FOR QUERYING EL GUARDIAN API
-  function MainController ($http){
+  function MainController ($http, newGameService){
     var vm = this;
     //CURRENTTITLE, CURRENTURL, AND CURRENTSENTIMENT ARE TEMPORARY AND FOR TESTING ONLY
     vm.currentTitle;
@@ -79,5 +79,14 @@ angular.module("app")
         vm.storiesArr.push(data);
       })
     }
+
+//this is a function for instantiating a new game
+    vm.newGame = function() {
+      newGameService().then(function(info){
+        console.log(info);
+      })
+    }
+    vm.newGame();
+
 
   };
