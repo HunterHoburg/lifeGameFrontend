@@ -1,0 +1,21 @@
+.navbar {
+  height: 230px;
+  background-color: #FDCB8C;
+}
+
+.btn {
+  padding: 35px;
+  font-size: 2em;
+  margin-right: 50px;
+
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+}
+
+i {
+  padding: 10px;
+}

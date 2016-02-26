@@ -1,9 +1,9 @@
 var app = angular.module("app");
-
 app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', 'newPlayer', MainController]);
 
   //CONTROLLER FOR QUERYING EL GUARDIAN API
   function MainController ($http, newGameService, playerJoinGame, insertArticles, newPlayer){
+
     var vm = this;
     vm.newPlayer = newPlayer;
     //CURRENTTITLE, CURRENTURL, AND CURRENTSENTIMENT ARE TEMPORARY AND FOR TESTING ONLY
@@ -70,6 +70,12 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
         }
       });
     };
+    vm.openSignUp = function() {
+
+    }
+    vm.signUp = function(username, email, password) {
+      // HTTP route here
+    }
     vm.listArticles = function() {
       $http({
         method: 'POST',
@@ -91,7 +97,7 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
         vm.gameData.id = info.data[0];
         console.log(vm.gameData);
         vm.playerJoinGame(vm.gameData);
-        vm.addArticles(vm.gameData.id);
+        // vm.addArticles(vm.gameData.id);
       });
     };
     // vm.newGame();
@@ -106,22 +112,14 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
     vm.addArticles = function(gameId) {
       insertArticles(gameId);
     };
-  }
 
-//Controller for popup menus
-// app.controller('SignIn', function($scope, $rootScope, ngDialog, $timeout) {
-//   $rootScope.theme = 'ngdialog-theme-default';
-//   $scope.openConfirm = function () {
-//               ngDialog.openConfirm({
-//                   template: 'modalDialogId',
-//                   className: 'ngdialog-theme-default'
-//               }).then(function (value) {
-//                   console.log('Modal promise resolved. Value: ', value);
-//               }, function (reason) {
-//                   console.log('Modal promise rejected. Reason: ', reason);
-//               });
-//           };
-//
-//
-//
-// });
+
+  //controlling the modal signup window
+    vm.showModal = false;
+    vm.toggleModal = function(){
+    vm.showModal = !vm.showModal;
+
+  };
+
+
+}

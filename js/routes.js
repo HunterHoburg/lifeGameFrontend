@@ -9,4 +9,9 @@ angular.module("app")
         templateUrl: 'views/newgame.html',
         controller: 'NewGameController as NGC'
       });
-});
+        templateUrl: 'views/main.html'
+      })
+    .when('/board', {
+      templateUrl: 'views/board.html'
+    });
+};
