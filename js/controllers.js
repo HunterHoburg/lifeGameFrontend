@@ -1,8 +1,8 @@
 angular.module("app")
-  .controller('MainController', ['$http', 'newGameService', 'playerJoinGame', MainController]);
+  .controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', MainController]);
 
   //CONTROLLER FOR QUERYING EL GUARDIAN API
-  function MainController ($http, newGameService, playerJoinGame){
+  function MainController ($http, newGameService, playerJoinGame, insertArticles){
     var vm = this;
     //CURRENTTITLE, CURRENTURL, AND CURRENTSENTIMENT ARE TEMPORARY AND FOR TESTING ONLY
     vm.currentTitle;
@@ -66,7 +66,7 @@ angular.module("app")
             console.log('success ' + data);
           });
         }
-      })
+      });
     };
     vm.listArticles = function() {
       $http({
@@ -77,8 +77,8 @@ angular.module("app")
         }
       }).then(function(data){
         vm.storiesArr.push(data);
-      })
-    }
+      });
+    };
 
 //this is a function for instantiating a new game
     vm.gameData = {};
@@ -88,16 +88,21 @@ angular.module("app")
         vm.gameData.id = info.data[0];
         console.log(vm.gameData);
         vm.playerJoinGame(vm.gameData);
-      })
-    }
+        vm.addArticles(vm.gameData.id);
+      });
+    };
     vm.newGame();
 
 //this is adding a player to a game
     vm.playerJoinGame = function(gameData) {
       playerJoinGame(gameData).then(function(info){
         console.log(info);
-      })
-    }
+      });
+    };
+
+    vm.addArticles = function(gameId) {
+      insertArticles(gameId);
+    };
 
 
-  };
+  }
