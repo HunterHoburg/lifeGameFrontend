@@ -1,7 +1,7 @@
 
 var app = angular.module("app");
 
-app.controller('MainController', ['$http', 'newGameService', MainController]);
+app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', MainController]);
 
   //CONTROLLER FOR QUERYING EL GUARDIAN API
   function MainController ($http, newGameService, playerJoinGame, insertArticles){
