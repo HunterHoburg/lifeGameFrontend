@@ -1,9 +1,12 @@
-angular.module("app")
-  .controller('MainController', ['$http', MainController]);
+
+var app = angular.module("app");
+
+app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', 'newPlayer', MainController]);
 
   //CONTROLLER FOR QUERYING EL GUARDIAN API
-  function MainController ($http){
+  function MainController ($http, newGameService, playerJoinGame, insertArticles, newPlayer){
     var vm = this;
+    vm.newPlayer = newPlayer;
     //CURRENTTITLE, CURRENTURL, AND CURRENTSENTIMENT ARE TEMPORARY AND FOR TESTING ONLY
     vm.currentTitle;
     vm.currentURL;
@@ -66,7 +69,7 @@ angular.module("app")
             console.log('success ' + data);
           });
         }
-      })
+      });
     };
     vm.listArticles = function() {
       $http({
@@ -77,8 +80,60 @@ angular.module("app")
         }
       }).then(function(data){
         vm.storiesArr.push(data);
-      })
-    }
+      });
+    };
 
 
-  };
+//this is a function for instantiating a new game
+    vm.gameData = {};
+    vm.newGame = function() {
+      newGameService().then(function(info){
+        console.log(info.data[0]);
+        vm.gameData.id = info.data[0];
+        console.log(vm.gameData);
+        vm.playerJoinGame(vm.gameData);
+        vm.addArticles(vm.gameData.id);
+      });
+    };
+    vm.newGame();
+
+//this is adding a player to a game
+    vm.playerJoinGame = function(gameData) {
+      playerJoinGame(gameData).then(function(info){
+        console.log(info);
+      });
+    };
+
+    vm.addArticles = function(gameId) {
+      insertArticles(gameId);
+    };
+  }
+
+//Controller for popup menus
+// app.controller('SignIn', function($scope, $rootScope, ngDialog, $timeout) {
+//   $rootScope.theme = 'ngdialog-theme-default';
+//   $scope.openConfirm = function () {
+//               ngDialog.openConfirm({
+//                   template: 'modalDialogId',
+//                   className: 'ngdialog-theme-default'
+//               }).then(function (value) {
+//                   console.log('Modal promise resolved. Value: ', value);
+//               }, function (reason) {
+//                   console.log('Modal promise rejected. Reason: ', reason);
+//               });
+//           };
+//
+//
+//
+// });
+
+app.controller('NewGameController', [NewGameController]);
+
+function NewGameController(){
+  var vm = this;
+
+  var playerForm = {
+    email: mister@shemale.com,
+    color: green
+  }
+}

@@ -3,7 +3,9 @@ angular.module('app')
   .service('playerJoinGame', ['$http', playerJoinGame])
   .service('insertArticles', ['$http', insertArticles])
   .service('signinService', ['$http', signinService])
-  .service('signupService', ['$http', signupService]);
+  .service('signupService', ['$http', signupService])
+  .service('newPlayer', ['$http', newPlayer]);
+
 
 function signinService ($http){
   return function(playerObject) {
@@ -14,6 +16,20 @@ function signinService ($http){
 function signupService ($http) {
   return function (newPlayerObject) {
     return $http.post('//localhost:3000/newPlayer', newPlayerObject);
+  };
+}
+
+function newPlayer($http){
+  return function(playerName, playerEmail, playerPassword, playerColor, playerGender) {
+    var newPlayerData = {
+      name: playerName,
+      email: playerEmail,
+      password: playerPassword,
+      color: playerColor,
+      gender: playerGender
+    };
+    console.log(newPlayerData);
+    return $http.post('//localhost:3000/newPlayer', newPlayerData);
   };
 }
 
@@ -91,7 +107,6 @@ $http.get('http://content.guardianapis.com/search?q=unemployment%20AND%20jobs&pa
       });
       return $http.get('http://content.guardianapis.com/search?q=divorce%20AND%20marriage&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0');
     }).then(function(marriageArticles) {
-      console.log(articles);
       for (var i = 0; i < marriageArticles.data.response.results.length; i++) {
         marriageArticles.data.response.results[i].gameSession = gameSession;
         marriageArticles.data.response.results[i].type = 'marriage';

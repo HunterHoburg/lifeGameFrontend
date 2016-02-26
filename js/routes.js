@@ -5,9 +5,8 @@ angular.module("app")
         templateUrl: 'views/main.html',
         controller: 'MainController as MC'
       })
-      .when('/newGameTestPage', {
-        templateUrl: 'views/newGameForm.html',
-        controller: 'NewGameController as NG'
+      .when('/newgame', {
+        templateUrl: 'views/newgame.html',
+        controller: 'NewGameController as NGC'
       });
-
 });
