@@ -81,17 +81,19 @@ app.controller('MainController', ['$http', 'newGameService', MainController]);
       })
     }
 
+
 //this is a function for instantiating a new game
     vm.newGame = function() {
       newGameService().then(function(info){
         console.log(info);
       });
     };
-    vm.newGame();
+    // vm.newGame();
 
 
   }
 
+//Controller for popup menus
 // app.controller('SignIn', function($scope, $rootScope, ngDialog, $timeout) {
 //   $rootScope.theme = 'ngdialog-theme-default';
 //   $scope.openConfirm = function () {

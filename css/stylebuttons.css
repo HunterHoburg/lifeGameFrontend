@@ -11,7 +11,7 @@
     position: absolute;
     width: 60%;
     height: 2em;
-opacity: 10;
+    opacity: 10;
     margin: auto;
     top: 0; left: 0; bottom: 0; right: 0;
     z-index: 3;
@@ -36,7 +36,7 @@ inset 0 0 0 15px   rgba(255,255,155,.4);
     -webkit-border-radius: 999px;
     -moz-border-radius: 999px;
     border-radius: 999px;
-    /* border-radius: 50% has issues on some mobile browsers */
+     /*border-radius: 50% has issues on some mobile browsers */
 }
 
 .icon1:hover {
