@@ -8,10 +8,8 @@ angular.module("app")
       .when('/newgame', {
         templateUrl: 'views/newgame.html',
         controller: 'NewGameController as NGC'
-      });
-        templateUrl: 'views/main.html'
       })
     .when('/board', {
       templateUrl: 'views/board.html'
     });
-};
+});
