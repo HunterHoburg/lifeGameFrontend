@@ -88,9 +88,8 @@ app.controller('MainController', ['$http', 'newGameService', MainController]);
         console.log(info);
       });
     };
+    //Commented the function call out until we have a button for starting a new game
     // vm.newGame();
-
-
   }
 
 //Controller for popup menus

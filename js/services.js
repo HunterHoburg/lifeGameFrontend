@@ -1,4 +1,6 @@
-angular.module('app').service('newGameService', ['$http', newGameService]);
+angular.module('app')
+  .service('newGameService', ['$http', newGameService])
+  .service('playerJoinGame', ['$http', playerJoinGame]);
 
 function newGameService($http){
   return function() {
@@ -7,8 +9,8 @@ function newGameService($http){
 }
 
 
-angular.module('app').service('playerJoinGame', ['$http', playerJoinGame]);
-
 function playerJoinGame($http){
-  
+  return function(gameSession) {
+    return $http.post('//localhost:3000/newGamePlayer', gameSession);
+  }
 }
