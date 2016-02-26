@@ -7,29 +7,29 @@ function NewGameController (signinService, signupService) {
   // all players to add to game
   vm.players = [];
   // signin post route, returns player id
-  vm.signin = signin(signinService, vm.signinInfo);
-  vm.signup = signup(signupService, vm.signupInfo);
+  vm.signin = signin;
+  vm.signup = signup;
   vm.signinInfo = {};
   vm.signupInfo = {};
 
-  function signin (signinService, emailInput, passwordInput) {
+  function signin () {
     // playerInfo should be: {email: '', password: ''}
-    var playerInfo = {email: emailInput, password: passwordInput};
+    var playerInfo = {email: vm.emailInput, password: vm.passwordInput};
     signinService(playerInfo)
       .then(function(playerData){
-        if (playerData.email === emailInput){
+        if (playerData.data.email === vm.emailInput){
           // add returned player to players obj
-          vm.players.push(playerData);
+          vm.players.push(playerData.data);
           vm.emailInput = '';
           vm.passwordInput = '';
+          console.log(vm.players);
         } else {
           vm.errorMessage = 'wrong username or password';
         }
       });
-      console.log(vm.players);
   }
 
-  function signup (signupService, newPlayer) {
+  function signup (newPlayer) {
     signupService(newPlayer);
   }
 }

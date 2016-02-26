@@ -1,4 +1,3 @@
-
 var app = angular.module("app");
 
 app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', 'newPlayer', MainController]);
@@ -95,7 +94,7 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
         vm.addArticles(vm.gameData.id);
       });
     };
-    vm.newGame();
+    // vm.newGame();
 
 //this is adding a player to a game
     vm.playerJoinGame = function(gameData) {
@@ -126,14 +125,3 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
 //
 //
 // });
-
-app.controller('NewGameController', [NewGameController]);
-
-function NewGameController(){
-  var vm = this;
-
-  var playerForm = {
-    email: mister@shemale.com,
-    color: green
-  }
-}

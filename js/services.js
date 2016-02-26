@@ -9,6 +9,8 @@ angular.module('app')
 
 function signinService ($http){
   return function(playerObject) {
+    console.log('signin service was called!');
+    console.log(playerObject);
     return $http.post('//localhost:3000/signin', playerObject);
   };
 }
