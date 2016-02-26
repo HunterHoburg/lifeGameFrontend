@@ -3,6 +3,12 @@ angular.module("app")
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html'
-      });  
+      });
 
+})
+.config(function($routeProvider) {
+  $routeProvider
+    .when('/board', {
+      templateUrl: 'views/board.html'
+    });
 });
