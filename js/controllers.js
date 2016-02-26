@@ -91,7 +91,7 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
         vm.gameData.id = info.data[0];
         console.log(vm.gameData);
         vm.playerJoinGame(vm.gameData);
-        vm.addArticles(vm.gameData.id);
+        // vm.addArticles(vm.gameData.id);
       });
     };
     vm.newGame();
