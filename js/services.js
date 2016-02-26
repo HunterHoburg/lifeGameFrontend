@@ -13,7 +13,7 @@ function signinService ($http){
 
 function signupService ($http) {
   return function (newPlayerObject) {
-    return $http.post('//localhost:3000/signup', newPlayerObject);
+    return $http.post('//localhost:3000/newPlayer', newPlayerObject);
   };
 }
 
