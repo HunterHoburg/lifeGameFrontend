@@ -1,5 +1,6 @@
-angular.module("app")
-  .controller('MainController', ['$http', 'newGameService', MainController]);
+var app = angular.module("app");
+
+app.controller('MainController', ['$http', 'newGameService', MainController]);
 
   //CONTROLLER FOR QUERYING EL GUARDIAN API
   function MainController ($http, newGameService){
@@ -84,9 +85,26 @@ angular.module("app")
     vm.newGame = function() {
       newGameService().then(function(info){
         console.log(info);
-      })
-    }
+      });
+    };
     vm.newGame();
 
 
-  };
+  }
+
+// app.controller('SignIn', function($scope, $rootScope, ngDialog, $timeout) {
+//   $rootScope.theme = 'ngdialog-theme-default';
+//   $scope.openConfirm = function () {
+//               ngDialog.openConfirm({
+//                   template: 'modalDialogId',
+//                   className: 'ngdialog-theme-default'
+//               }).then(function (value) {
+//                   console.log('Modal promise resolved. Value: ', value);
+//               }, function (reason) {
+//                   console.log('Modal promise rejected. Reason: ', reason);
+//               });
+//           };
+//
+//
+//
+// });
