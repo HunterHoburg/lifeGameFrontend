@@ -3,6 +3,9 @@ angular.module("app")
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html'
-      });  
-
+      })
+      .when('/newgame', {
+        templateUrl: 'views/newgame.html',
+        controller: 'NewGameController as NGC'
+      });
 });

@@ -126,3 +126,14 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
 //
 //
 // });
+
+app.controller('NewGameController', [NewGameController]);
+
+function NewGameController(){
+  var vm = this;
+
+  var playerForm = {
+    email: mister@shemale.com,
+    color: green
+  }
+}
