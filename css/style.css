@@ -348,6 +348,7 @@ h3 {
   text-align: center;
 }
 
+
 /* Styling for the pop-up modal 'how to play' */
 .btn {
   background: #428bca;
@@ -383,6 +384,7 @@ h3 {
 .btn-close:hover {
   color: #919191;
 }
+/*
 .modal:before {
   content: "";
   display: none;
@@ -437,7 +439,8 @@ h3 {
 .modal-footer {
   border-top: #eee solid 1px;
   text-align: right;
-}
+}*/
+
 /*ADDED TO STOP SCROLLING TO TOP*/
 #close {
   display: none;

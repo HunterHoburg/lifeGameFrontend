@@ -71,6 +71,28 @@
 <div id="navLinks">
 <a href="#"><h4> How to Play </h4></a>
 <a href="#"><h4> Log In </h4></a>
+<button ng-click="MC.toggleModal()" class="btn btn-default">Sign Up</button>
+ <modal title="Sign up!" visible="MC.showModal">
+    <form role="form">
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input type="firstname" class="form-control" id="firstname" placeholder="Enter first name" />
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input type="lastname" class="form-control" id="lastname" placeholder="Enter last name" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Password" />
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </modal>
 </div>
 <!-- <div>
   <script type='text/ng-template' id='signUp.html'>

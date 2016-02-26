@@ -113,41 +113,13 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
       insertArticles(gameId);
     };
 
-    //Modal stuff probably
-  vm.animationsEnabled = true;
-  vm.openSignUp = function (size) {
-    var modalInstance = $uibModal.open({
-      animation: vm.animationsEnabled,
-      templateUrl: 'signUp.html',
-      controller: 'ModalInstanceCtrl'
-    });
 
-    modalInstance.result.then(function () {
-      $log.info('Modal Created');
-    }, function () {
-      $log.info('Modal dismissed at: ' + new Date());
-    });
-  };
+  //controlling the modal signup window
+    vm.showModal = false;
+    vm.toggleModal = function(){
+    vm.showModal = !vm.showModal;
 
-  vm.toggleAnimation = function () {
-    vm.animationsEnabled = !vm.animationsEnabled;
   };
 
 
-
-};
-
-app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance) {
-  var vm = this;
-  // vm.selected = {
-  //   item: $scope.items[0]
-  // };
-  console.log('ModalInstanceCtrl instantiated');
-  vm.ok = function () {
-    $uibModalInstance.close();
-  };
-
-  vm.cancel = function () {
-    $uibModalInstance.dismiss('cancel');
-  };
-});
+}
