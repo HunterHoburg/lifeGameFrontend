@@ -117,27 +117,3 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
 
 }
 
-
-
-
-  
-    
-
-
-//Controller for popup menus
-// app.controller('SignIn', function($scope, $rootScope, ngDialog, $timeout) {
-//   $rootScope.theme = 'ngdialog-theme-default';
-//   $scope.openConfirm = function () {
-//               ngDialog.openConfirm({
-//                   template: 'modalDialogId',
-//                   className: 'ngdialog-theme-default'
-//               }).then(function (value) {
-//                   console.log('Modal promise resolved. Value: ', value);
-//               }, function (reason) {
-//                   console.log('Modal promise rejected. Reason: ', reason);
-//               });
-//           };
-//
-//
-//
-// });
