@@ -1,19 +1,10 @@
-<<<<<<< HEAD
-var app = angular.module("app");
-
-app.controller('MainController', ['$http', 'newGameService', MainController]);
-
-  //CONTROLLER FOR QUERYING EL GUARDIAN API
-  function MainController ($http, newGameService){
-=======
 
 var app = angular.module("app");
 
-app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', MainController]);
+app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', '$scope', '$uibModal', '$log', MainController]);
 
   //CONTROLLER FOR QUERYING EL GUARDIAN API
-  function MainController ($http, newGameService, playerJoinGame, insertArticles){
->>>>>>> a4f2cbe116bae6dd5e06365897ed71a56e3a0e57
+  function MainController ($http, newGameService, playerJoinGame, insertArticles, $scope, $uibModal, $log){
     var vm = this;
     //CURRENTTITLE, CURRENTURL, AND CURRENTSENTIMENT ARE TEMPORARY AND FOR TESTING ONLY
     vm.currentTitle;
@@ -79,6 +70,12 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
         }
       });
     };
+    vm.openSignUp = function() {
+
+    }
+    vm.signUp = function(username, email, password) {
+      // HTTP route here
+    }
     vm.listArticles = function() {
       $http({
         method: 'POST',
@@ -93,6 +90,7 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
 
 
 //this is a function for instantiating a new game
+    vm.gameData = {};
     vm.newGame = function() {
       newGameService().then(function(info){
         console.log(info.data[0]);
@@ -114,4 +112,42 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
     vm.addArticles = function(gameId) {
       insertArticles(gameId);
     };
-  }
+
+    //Modal stuff probably
+  vm.animationsEnabled = true;
+  vm.openSignUp = function (size) {
+    var modalInstance = $uibModal.open({
+      animation: vm.animationsEnabled,
+      templateUrl: 'signUp.html',
+      controller: 'ModalInstanceCtrl'
+    });
+
+    modalInstance.result.then(function () {
+      $log.info('Modal Created');
+    }, function () {
+      $log.info('Modal dismissed at: ' + new Date());
+    });
+  };
+
+  vm.toggleAnimation = function () {
+    vm.animationsEnabled = !vm.animationsEnabled;
+  };
+
+
+
+};
+
+app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance) {
+  var vm = this;
+  // vm.selected = {
+  //   item: $scope.items[0]
+  // };
+  console.log('ModalInstanceCtrl instantiated');
+  vm.ok = function () {
+    $uibModalInstance.close();
+  };
+
+  vm.cancel = function () {
+    $uibModalInstance.dismiss('cancel');
+  };
+});

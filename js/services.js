@@ -78,7 +78,7 @@ $http.get('http://content.guardianapis.com/search?q=unemployment%20AND%20jobs&pa
       });
       return $http.get('http://content.guardianapis.com/search?q=divorce%20AND%20marriage&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0');
     }).then(function(marriageArticles) {
-      console.log(articles);
+      // console.log(articles);
       for (var i = 0; i < marriageArticles.data.response.results.length; i++) {
         marriageArticles.data.response.results[i].gameSession = gameSession;
         marriageArticles.data.response.results[i].type = 'marriage';
@@ -88,7 +88,7 @@ $http.get('http://content.guardianapis.com/search?q=unemployment%20AND%20jobs&pa
             promises.push($http.post('//localhost:3000/newGameStories', articles[j]));
           }
           Promise.all(promises).then(function(finished) {
-            console.log(finished);
+            // console.log(finished);
           });
         }
       }
