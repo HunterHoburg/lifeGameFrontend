@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 var app = angular.module("app");
 
 app.controller('MainController', ['$http', 'newGameService', MainController]);
 
   //CONTROLLER FOR QUERYING EL GUARDIAN API
   function MainController ($http, newGameService){
+=======
+
+var app = angular.module("app");
+
+app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', MainController]);
+
+  //CONTROLLER FOR QUERYING EL GUARDIAN API
+  function MainController ($http, newGameService, playerJoinGame, insertArticles){
+>>>>>>> a4f2cbe116bae6dd5e06365897ed71a56e3a0e57
     var vm = this;
     //CURRENTTITLE, CURRENTURL, AND CURRENTSENTIMENT ARE TEMPORARY AND FOR TESTING ONLY
     vm.currentTitle;
@@ -67,7 +77,7 @@ app.controller('MainController', ['$http', 'newGameService', MainController]);
             console.log('success ' + data);
           });
         }
-      })
+      });
     };
     vm.listArticles = function() {
       $http({
@@ -78,34 +88,30 @@ app.controller('MainController', ['$http', 'newGameService', MainController]);
         }
       }).then(function(data){
         vm.storiesArr.push(data);
-      })
-    }
+      });
+    };
 
 
 //this is a function for instantiating a new game
     vm.newGame = function() {
       newGameService().then(function(info){
+        console.log(info.data[0]);
+        vm.gameData.id = info.data[0];
+        console.log(vm.gameData);
+        vm.playerJoinGame(vm.gameData);
+        vm.addArticles(vm.gameData.id);
+      });
+    };
+    vm.newGame();
+
+//this is adding a player to a game
+    vm.playerJoinGame = function(gameData) {
+      playerJoinGame(gameData).then(function(info){
         console.log(info);
       });
     };
-    //Commented the function call out until we have a button for starting a new game
-    // vm.newGame();
-  }
 
-//Controller for popup menus
-// app.controller('SignIn', function($scope, $rootScope, ngDialog, $timeout) {
-//   $rootScope.theme = 'ngdialog-theme-default';
-//   $scope.openConfirm = function () {
-//               ngDialog.openConfirm({
-//                   template: 'modalDialogId',
-//                   className: 'ngdialog-theme-default'
-//               }).then(function (value) {
-//                   console.log('Modal promise resolved. Value: ', value);
-//               }, function (reason) {
-//                   console.log('Modal promise rejected. Reason: ', reason);
-//               });
-//           };
-//
-//
-//
-// });
+    vm.addArticles = function(gameId) {
+      insertArticles(gameId);
+    };
+  }
