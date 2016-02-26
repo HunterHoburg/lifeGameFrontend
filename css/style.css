@@ -37,69 +37,250 @@ body {
 }
 
 .boardWrapper {
-  width: 95%;
-  margin: auto;
+  /*width: 95%;*/
+  width: 1500px;
+  margin: 5%;
+  /*margin-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;*/
+  /*padding-left: 1.1%;
+  padding-right: 1.1%;*/
+  background: url('../static/img/board.jpg')center center no-repeat;
+  background-size: cover;
+  border: 3px ridge #212121;
+  box-shadow: -1px -1px 1px 1px #212121;
 }
 
+.boardWrapper .row {
+  margin-left: -3px;
+}
 .board {
-  width: 10%;
-  height: 0;
-  padding-top:10%;
+  width: 150px;
+  height: 150px;
+  /*padding-top:10%;*/
   margin: 0;
   float: left;
-  background-color: #5BAAA9;
   background-size: cover;
   box-sizing: border-box;
   /*border: 1px solid black;*/
+  border-right: 1px solid #212121;
+  border-bottom: 1px solid #212121;
 }
 
-.junctionNS {
-  background: url('../static/img/y-junction.svg')center center no-repeat;
+.junctionNYellow {
+  background: url('../static/img/junction/yfork-N-yellow.png')center center no-repeat;
   background-size: cover;
 }
 
-.junctionEW {
-  background: url('../static/img/north-y-junction.svg')center center no-repeat;
+.junctionEYellow {
+  background: url('../static/img/junction/yfork-E-yellow.png')center center no-repeat;
   background-size: cover;
 }
 
-.elbow {
-  background: url('../static/img/elbow.svg')center center no-repeat;
+.junctionSYellow {
+  background: url('../static/img/junction/yfork-S-yellow.png')center center no-repeat;
   background-size: cover;
 }
 
-.straight {
-  background: url('../static/img/straight.svg')center center no-repeat;
+.junctionWYellow {
+  background: url('../static/img/junction/yfork-W-yellow.png')center center no-repeat;
   background-size: cover;
 }
 
-.straightEW {
-  background: url('../static/img/EW-straight.svg');
+.junctionNBlue {
+  background: url('../static/img/junction/yfork-N-blue.png')center center no-repeat;
   background-size: cover;
 }
 
-.elbowSE {
-  transform: rotateY(180deg);
-}
-
-.elbowNW {
-  transform: rotateX(180deg);
-}
-
-.elbowNE {
-  background: url('../static/img/NE_elbow.svg');
+.junctionEBlue {
+  background: url('../static/img/junction/yfork-E-blue.png')center center no-repeat;
   background-size: cover;
-  transform: rotateY(180deg);
 }
 
-.junctionNES {
-  transform: rotateY(180deg);
+.junctionSBlue {
+  background: url('../static/img/junction/yfork-S-blue.png')center center no-repeat;
+  background-size: cover;
 }
 
-.junctionSEW {
-  transform: rotateX(180deg);
+.junctionWBlue {
+  background: url('../static/img/junction/yfork-W-blue.png')center center no-repeat;
+  background-size: cover;
 }
 
+.junctionNGreen {
+  background: url('../static/img/junction/yfork-N-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionEGreen {
+  background: url('../static/img/junction/yfork-E-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionSGreen {
+  background: url('../static/img/junction/yfork-S-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionWGreen {
+  background: url('../static/img/junction/yfork-W-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionNRed {
+  background: url('../static/img/junction/yfork-N-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionERed {
+  background: url('../static/img/junction/yfork-E-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionSRed {
+  background: url('../static/img/junction/yfork-S-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionWRed {
+  background: url('../static/img/junction/yfork-W-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowYellow {
+  background: url('../static/img/elbow/elbow-SW-yellow.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowSEYellow {
+  background: url('../static/img/elbow/elbow-SE-yellow.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowNWYellow {
+  background: url('../static/img/elbow/elbow-NW-yellow.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowNEYellow {
+  background: url('../static/img/elbow/elbow-NE-yellow.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowBlue {
+  background: url('../static/img/elbow/elbow-SW-blue.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowSEBlue {
+  background: url('../static/img/elbow/elbow-SE-blue.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowNWBlue {
+  background: url('../static/img/elbow/elbow-NW-blue.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowNEBlue {
+  background: url('../static/img/elbow/elbow-NE-blue.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowRed {
+  background: url('../static/img/elbow/elbow-SW-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowSERed {
+  background: url('../static/img/elbow/elbow-SE-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowNWRed {
+  background: url('../static/img/elbow/elbow-NW-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowNERed {
+  background: url('../static/img/elbow/elbow-NE-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowGreen {
+  background: url('../static/img/elbow/elbow-SW-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowSEGreen {
+  background: url('../static/img/elbow/elbow-SE-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowNWGreen {
+  background: url('../static/img/elbow/elbow-NW-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowNEGreen {
+  background: url('../static/img/elbow/elbow-NE-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.straightEWYellow {
+  background: url('../static/img/straight/straight-EW-yellow.png')center center no-repeat;
+  background-size: cover;
+}
+
+.straightNSYellow {
+  background: url('../static/img/straight/straight-NS-yellow.png');
+  background-size: cover;
+}
+
+.straightEWBlue {
+  background: url('../static/img/straight/straight-EW-blue.png')center center no-repeat;
+  background-size: cover;
+}
+
+.straightNSBlue {
+  background: url('../static/img/straight/straight-NS-blue.png');
+  background-size: cover;
+}
+
+.straightEWRed {
+  background: url('../static/img/straight/straight-EW-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.straightNSRed {
+  background: url('../static/img/straight/straight-NS-red.png');
+  background-size: cover;
+}
+
+.straightEWGreen {
+  background: url('../static/img/straight/straight-EW-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.straightNSGreen {
+  background: url('../static/img/straight/straight-NS-green.png');
+  background-size: cover;
+}
+
+.board span {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  margin-left: 42%;
+  font-size: 25px;
+}
+
+.board span i {
+  position: relative;
+  top: 50%;
+  transform: translateY(-350%);
+}
 h1 {
   font-size: 10em;
   text-align: center;
@@ -155,3 +336,98 @@ h3 {
   text-align: center;
 }
 
+
+/* Styling for the pop-up modal 'how to play' */
+.btn {
+  background: #428bca;
+  border: #357ebd solid 1px;
+  border-radius: 3px;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 15px;
+  text-decoration: none;
+  text-align: center;
+  min-width: 60px;
+  position: relative;
+  transition: color .1s ease;
+  /* top: 40em;*/
+}
+.btn:hover {
+  background: #357ebd;
+}
+.btn.btn-big {
+  font-size: 18px;
+  padding: 15px 20px;
+  min-width: 100px;
+}
+.btn-close {
+  color: #aaa;
+  font-size: 30px;
+  text-decoration: none;
+  position: absolute;
+  right: 5px;
+  top: 0;
+}
+.btn-close:hover {
+  color: #919191;
+}
+.modal:before {
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.modal:target:before {
+  display: block;
+}
+.modal:target .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  top: 20%;
+}
+.modal-dialog {
+  background: #fefefe;
+  border: #333 solid 1px;
+  border-radius: 5px;
+  margin-left: -200px;
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  z-index: 11;
+  width: 360px;
+  -webkit-transform: translate(0, -500%);
+  -ms-transform: translate(0, -500%);
+  transform: translate(0, -500%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.modal-body {
+  padding: 20px;
+}
+.modal-header,
+.modal-footer {
+  padding: 10px 20px;
+}
+.modal-header {
+  border-bottom: #eee solid 1px;
+}
+.modal-header h2 {
+  font-size: 20px;
+}
+.modal-footer {
+  border-top: #eee solid 1px;
+  text-align: right;
+}
+/*ADDED TO STOP SCROLLING TO TOP*/
+#close {
+  display: none;
+}
