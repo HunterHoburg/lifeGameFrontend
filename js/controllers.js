@@ -106,7 +106,23 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
     vm.addArticles = function(gameId) {
       insertArticles(gameId);
     };
-  }
+  
+  //controlling the modal signup window
+    vm.showModal = false;
+    vm.toggleModal = function(){
+    vm.showModal = !vm.showModal;
+
+  };
+
+
+}
+
+
+
+
+  
+    
+
 
 //Controller for popup menus
 // app.controller('SignIn', function($scope, $rootScope, ngDialog, $timeout) {
