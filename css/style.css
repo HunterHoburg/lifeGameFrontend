@@ -393,7 +393,7 @@ width: 80%;
 
 
 /* Styling for the pop-up modal 'how to play' */
-.btn {
+/*.btn {
   background: #428bca;
   border: #357ebd solid 1px;
   border-radius: 3px;
@@ -407,7 +407,7 @@ width: 80%;
   position: relative;
   transition: color .1s ease;
   /* top: 40em;*/
-}
+}*/
 .btn:hover {
   background: #357ebd;
 }

@@ -69,15 +69,26 @@
   </section>
 </div>
 <div id="navLinks">
-<a href="#" ng-click="MC.toggleModal()"><h4> How to Play </h4></a>
+  <div>
+    <button class='btn btn-info' href="#" ng-click="MC.toggleModal()"><h4> How to Play </h4></button>
+  </div>
   <modal title="How to Play" visible="MC.showModal">
     <div class="gamenarrative">
       <p>This game is awesome. You will love it. You may find yourself addicted to a dangerous substance and you may die an early death. That's what makes this game super fun. GO PLAY!</p>
     </div>
   </modal>
-<a href="#"><h4> Log In </h4></a>
-<button ng-click="MC.toggleModal2()" class="btn btn-default">Sign Up</button>
- <modal title="Sign up!" visible="MC.showModal2">
+  <div>
+    <button class='btn btn-info' ng-click='MC.toggleModal2()' href="#"><h4> Log In </h4></button>
+  </div>
+  <modal title="Log In" visible="MC.showModal2">
+    <div class="loginmodal">
+      <p>Log in stuff here</p>
+    </div>
+  </modal>
+  <div>
+    <button class="btn btn-default" ng-click="MC.toggleModal3()" href='#'><h3>Sign Up</h3></button>
+  </div>
+  <modal title="Sign up!" visible="MC.showModal3">
     <form role="form">
       <div class="form-group">
         <label for="firstname">First Name</label>

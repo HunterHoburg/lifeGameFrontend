@@ -128,4 +128,10 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
 
   };
 
+    vm.showModal3 = false;
+    vm.toggleModal3 = function(){
+    vm.showModal3 = !vm.showModal2;
+
+  };
+
 }
