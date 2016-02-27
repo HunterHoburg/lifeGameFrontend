@@ -22,7 +22,7 @@ function NewGameController (signinService, signupService) {
           vm.players.push(playerData.data);
           vm.emailInput = '';
           vm.passwordInput = '';
-          console.log(vm.players);
+          // console.log(vm.players);
         } else {
           vm.errorMessage = 'wrong username or password';
         }
