@@ -13,36 +13,48 @@
   </div>
 </div> -->
 
-<div class="row topmargin" ng-repeat="player in NGC.players">
-  <div class="col-md-6 col-md-offset-3">
-    <center>
-    <div class="col-md-4">
-      <h4>Player:</h4>
-    </div>
-    <div class="col-md-4">
-      <h4>{{ player.name }}</h4>
-    </div>
-    <div class="col-md-4">
-      <h4>{{ player.color }}</h4>
-    </div>
-  </center>
-  </div>
-</div>
-
 <div class="row topmargin">
-  <div class="col-md-10 col-md-offset-1">
+  <div class="col-md-12">
+    <div class='row signUpBar'>
+      <div class="col-md-2 col-md-offset-1">
+        <h2 class="numberOfPlayersLabel"> Sign in: </h2>
+      </div>
+      <div class="col-md-2">
+        <input type="text" class="playerFormInputs" name="emailInput" ng-model="emailInput" placeholder="Enter Email">
+      </div>
+      <div class="col-md-1">
+        <input type="password" class="playerFormInputs" name="passwordInput" ng-model="passwordInput" placeholder="Enter Password">
+      </div>
+      <div class='col-md-3'>
 
-    <div class="col-md-6">
-      <h2 class="numberOfPlayersLabel"> Sign in, jabroni: </h2>
+          <p>Pick<br>Your<br> Color!</p>
+            <ul class="colorList">
+              <ul class='colorListSub'>
+                <li class="red"></li>
+                <li class="orange"></li>
+                <li class="blue"></li>
+              </ul>
+              <ul class='colorListSub'>
+                <li class="yellow"></li>
+                <li class="olive"></li>
+                <li class="teal"></li>
+              </ul>
+
+            </ul>
+
+      </div>
+      <div class="col-md-2">
+        <button type="button" class='addBtn' ng-click="NGC.signin(emailInput, passwordInput); emailInput = null">Add Player</button>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-3 col-md-offset-1'>
+        <div class="guestSignup"><button class="btn guestBtn btn-default" ng-click="MC.toggleModal4()"><h4>Guest</button></div>
+        <div class="signInNewGamePage"><button class="btn guestBtn btn-default" ng-click="MC.toggleModal5()"><h4>Sign Up!</button></div>
+      </div>
     </div>
     <div class="col-md-2">
-      <input type="text" class="playerFormInputs" name="emailInput" ng-model="emailInput" placeholder="Enter Email">
-    </div>
-    <div class="col-md-2">
-      <input type="text" class="playerFormInputs" name="passwordInput" ng-model="passwordInput" placeholder="Enter Password">
-    </div>
-    <div class="col-md-2">
-      <div class="guestSignup"><button class="btn btn-default" ng-click="MC.toggleModal4()"><h4>Guest</button></div>
+
        <modal title="Guest Signup" visible="MC.showModal4">
         <div class="guest">
           <form class="form">
@@ -52,12 +64,17 @@
             </div>
             <p>Pick Your Color!</p>
               <ul class="colorList">
-                <li class="red"></li>
-                <li class="orange"></li>
-                <li class="blue"></li>
-                <li class="yellow"></li>
-                <li class="olive"></li>
-                <li class="teal"></li>
+                <ul class='colorListSub'>
+                  <li class="red"></li>
+                  <li class="orange"></li>
+                  <li class="blue"></li>
+                </ul>
+                <ul class='colorListSub'>
+                  <li class="yellow"></li>
+                  <li class="olive"></li>
+                  <li class="teal"></li>
+                </ul>
+
               </ul>
           <br>
            <button type="submit" ng-click="MC.guestSubmit(color)" class="btn btn-default">Submit</button>
@@ -65,7 +82,7 @@
         </div>
       </modal>
       </div>
-      <div class="signInNewGamePage"><button class="btn btn-default" ng-click="MC.toggleModal5()"><h4>Sign Up!</button></div>
+
         <modal title="Sign up!" visible="MC.showModal5">
           <form role="form">
             <div class="form-group">
@@ -90,10 +107,41 @@
     </div>
 
 
+<div class='row'>
+  <div class='col-md-4 col-md-offset-4' ng-show='emailInput && passwordInput'>
+    <p>Pick Your Color!</p>
+      <ul class="colorList">
+        <ul class='colorListSub'>
+          <li class="red"></li>
+          <li class="orange"></li>
+          <li class="blue"></li>
+        </ul>
+        <ul class='colorListSub'>
+          <li class="yellow"></li>
+          <li class="olive"></li>
+          <li class="teal"></li>
+        </ul>
 
+      </ul>
+  </div>
+</div>
 <div class="row">
-  <div class="col-md-2 col-md-offset-5">
-    <button type="button" ng-click="NGC.signin(emailInput, passwordInput)">Add Player</button>
+
+</div>
+
+<div class="row topmargin" ng-repeat="player in NGC.players">
+  <div class="col-md-6 col-md-offset-3">
+    <center>
+    <div class="col-md-4">
+      <h4>Player:</h4>
+    </div>
+    <div class="col-md-4">
+      <h4>{{ player.name }}</h4>
+    </div>
+    <div class="col-md-4">
+      <h4>{{ player.color }}</h4>
+    </div>
+  </center>
   </div>
 </div>
 
