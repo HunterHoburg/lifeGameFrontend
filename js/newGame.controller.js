@@ -21,9 +21,15 @@ function NewGameController (signinService, signupService, insertArticles, newGam
         if (playerData.data.email === vm.signinInfo.email){
           // add returned player to players obj
           vm.players.push(playerData.data);
+<<<<<<< HEAD
           vm.signinInfo.email = '';
           vm.signinInfo.password = '';
           console.log(vm.players);
+=======
+          vm.emailInput = '';
+          vm.passwordInput = '';
+          // console.log(vm.players);
+>>>>>>> 09e27b7ae0985ba01694e2405628f9b3c05727fd
         } else {
           vm.errorMessage = 'wrong username or password';
         }
