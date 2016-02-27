@@ -69,10 +69,15 @@
   </section>
 </div>
 <div id="navLinks">
-<a href="#"><h4> How to Play </h4></a>
+<a href="#" ng-click="MC.toggleModal()"><h4> How to Play </h4></a>
+  <modal title="How to Play" visible="MC.showModal">
+    <div class="gamenarrative">
+      <p>This game is awesome. You will love it. You may find yourself addicted to a dangerous substance and you may die an early death. That's what makes this game super fun. GO PLAY!</p>
+    </div>
+  </modal>
 <a href="#"><h4> Log In </h4></a>
-<button ng-click="MC.toggleModal()" class="btn btn-default">Sign Up</button>
- <modal title="Sign up!" visible="MC.showModal">
+<button ng-click="MC.toggleModal2()" class="btn btn-default">Sign Up</button>
+ <modal title="Sign up!" visible="MC.showModal2">
     <form role="form">
       <div class="form-group">
         <label for="firstname">First Name</label>

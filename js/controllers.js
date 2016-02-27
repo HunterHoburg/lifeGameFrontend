@@ -114,12 +114,18 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
     };
 
 
-  //controlling the modal signup window
+  //controlling the modal windows
     vm.showModal = false;
     vm.toggleModal = function(){
     vm.showModal = !vm.showModal;
 
   };
 
+
+    vm.showModal2 = false;
+    vm.toggleModal2 = function(){
+    vm.showModal2 = !vm.showModal2;
+
+  };
 
 }
