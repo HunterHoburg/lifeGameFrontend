@@ -12,12 +12,12 @@ function NewGameController (signinService, signupService) {
   vm.signinInfo = {};
   vm.signupInfo = {};
 
-  function signin () {
+  function signin (emailIn, passwordIn) {
     // playerInfo should be: {email: '', password: ''}
-    var playerInfo = {email: vm.emailInput, password: vm.passwordInput};
+    var playerInfo = {email: emailIn, password: passwordIn};
     signinService(playerInfo)
       .then(function(playerData){
-        if (playerData.data.email === vm.emailInput){
+        if (playerData.data.email === playerInfo.email) {
           // add returned player to players obj
           vm.players.push(playerData.data);
           vm.emailInput = '';

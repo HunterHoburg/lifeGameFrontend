@@ -36,10 +36,10 @@
       <h2 class="numberOfPlayersLabel"> Sign in, jabroni: </h2>
     </div>
     <div class="col-md-2">
-      <input type="text" class="playerFormInputs" name="emailInput" ng-model="NGC.emailInput" placeholder="Enter Email">
+      <input type="text" class="playerFormInputs" name="emailInput" ng-model="emailInput" placeholder="Enter Email">
     </div>
     <div class="col-md-2">
-      <input type="text" class="playerFormInputs" name="passwordInput" ng-model="NGC.passwordInput" placeholder="Enter Password">
+      <input type="text" class="playerFormInputs" name="passwordInput" ng-model="passwordInput" placeholder="Enter Password">
     </div>
     <div class="col-md-2">
       <div class="guestSignup"><a href="#/guest"><h4>Guest</a> / <a href="#/signup">Sign-up</h4></a></div>
@@ -49,7 +49,7 @@
 
 <div class="row">
   <div class="col-md-2 col-md-offset-5">
-    <input type="button" value="Add Player" ng-click="NGC.signin()">
+    <button type="button" ng-click="NGC.signin(emailInput, passwordInput)">Add Player</button>
   </div>
 </div>
 

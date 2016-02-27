@@ -393,21 +393,22 @@ width: 80%;
 
 
 /* Styling for the pop-up modal 'how to play' */
-/*.btn {
-  background: #428bca;
-  border: #357ebd solid 1px;
-  border-radius: 3px;
+.btn {
+  /*background: #428bca;*/
+  /*border: #357ebd solid 1px;*/
+  /*border-radius: 3px;*/
   color: #fff;
   display: inline-block;
   font-size: 14px;
   padding: 8px 15px;
+  margin: .75rem;
   text-decoration: none;
   text-align: center;
   min-width: 60px;
   position: relative;
   transition: color .1s ease;
   /* top: 40em;*/
-}*/
+}
 .btn:hover {
   background: #357ebd;
 }
