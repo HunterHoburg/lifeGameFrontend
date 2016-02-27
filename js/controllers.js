@@ -1,11 +1,11 @@
 var app = angular.module("app");
 
-app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', 'newPlayer', MainController]);
+app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', 'signupService', MainController]);
 
   //CONTROLLER FOR QUERYING EL GUARDIAN API
-  function MainController ($http, newGameService, playerJoinGame, insertArticles, newPlayer){
+  function MainController ($http, newGameService, playerJoinGame, insertArticles, signupService){
     var vm = this;
-    vm.newPlayer = newPlayer;
+    vm.newPlayer = signupService;
     //CURRENTTITLE, CURRENTURL, AND CURRENTSENTIMENT ARE TEMPORARY AND FOR TESTING ONLY
     vm.currentTitle;
     vm.currentURL;
