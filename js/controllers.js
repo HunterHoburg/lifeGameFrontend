@@ -134,4 +134,33 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
 
   };
 
+  //login button
+    vm.loginSubmit = function(email, password){
+      $http({
+        method: 'POST',
+        url: 'http://localhost:3000/signin',
+        data: {
+          email: email,
+          password: password
+        } 
+      }).then(function(data){
+        console.log(data);
+      });
+    };
+
+    vm.signupSubmit = function(firstname, lastname, email, password){
+      $http({
+        method: 'POST',
+        url: 'http://localhost:3000/newPlayer',
+        data: {
+          firstname: firstname,
+          lastname: lastname,
+          email: email,
+          password: password
+        } 
+      }).then(function(data){
+        console.log(data);
+      });
+    };
+
 }
