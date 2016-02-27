@@ -29,7 +29,7 @@
   </div>
 </div>
 
-<div class="row topmargin" ng-controller="MainController as MC">
+<div class="row topmargin">
   <div class="col-md-10 col-md-offset-1">
 
     <div class="col-md-6">
@@ -43,7 +43,7 @@
     </div>
     <div class="col-md-2">
      
-      <div class="guestSignup"><button ng-click="MC.toggleModal4()"><h4>Guest</button> / <a href="#/signup">Sign-up</h4></a></div>
+      <div class="guestSignup"><button class="btn btn-default" ng-click="MC.toggleModal4()"><h4>Guest</button></div>
        <modal title="Guest Signup" visible="MC.showModal4">
         <div class="guest">
           <form class="form">
@@ -51,23 +51,46 @@
               <label for="firstname">First Name</label>
               <input type="firstname" class="form-control" id="firstname" placeholder="Enter first name" />
             </div>
-          <p>Pick Your Color!</p>
-          <ul class="colorList">
-            <li class="red"></li>
-            <li class="orange"></li>
-            <li class="blue"></li>
-            <li class="yellow"></li>
-            <li class="olive"></li>
-            <li class="teal"></li>
-          </ul>
+            <p>Pick Your Color!</p>
+              <ul class="colorList">
+                <li class="red"></li>
+                <li class="orange"></li>
+                <li class="blue"></li>
+                <li class="yellow"></li>
+                <li class="olive"></li>
+                <li class="teal"></li>
+              </ul>
           <br>
            <button type="submit" ng-click="MC.guestSubmit(color)" class="btn btn-default">Submit</button>
           </form>
         </div>
       </modal>
+      </div>
+      <div class="signInNewGamePage"><button class="btn btn-default" ng-click="MC.toggleModal5()"><h4>Sign Up!</button></div>
+        <modal title="Sign up!" visible="MC.showModal5">
+          <form role="form">
+            <div class="form-group">
+              <label for="firstname">First Name</label>
+              <input type="firstname" class="form-control" id="firstname" placeholder="Enter first name" />
+            </div>
+            <div class="form-group">
+              <label for="lastname">Last Name</label>
+              <input type="lastname" class="form-control" id="lastname" placeholder="Enter last name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email" />
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" id="password" placeholder="Password" />
+            </div>
+          <button type="submit" class="btn btn-default" ng-click="MC.signupSubmit(firstname, lastname, email, password)" class="btn btn-default">Submit</button>
+        </form>
+      </modal>
     </div>
-  </div>
-</div>
+
+
 
 <div class="row">
   <div class="col-md-2 col-md-offset-5">

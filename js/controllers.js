@@ -140,6 +140,12 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
 
   };
 
+    vm.showModal5 = false;
+    vm.toggleModal5 = function(){
+    vm.showModal5 = !vm.showModal5;
+
+  };
+
   //login button WE SHOULD TAKE THESE OUT 
     vm.loginSubmit = function(email, password){
       $http({
