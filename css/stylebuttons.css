@@ -18,6 +18,8 @@
     font-size: 6em;
     text-align: center;
     padding-top: .5em;
+    color: #00A1D6;
+    border: none;
 
 
     -webkit-box-shadow:
@@ -38,6 +40,7 @@ inset 0 0 0 15px   rgba(255,255,155,.4);
     border-radius: 999px;
      /*border-radius: 50% has issues on some mobile browsers */
 }
+
 
 .icon1:hover {
   background-color: rgba(0, 120, 0, 0.6);

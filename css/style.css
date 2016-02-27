@@ -357,8 +357,8 @@ h3 {
 }
 
 #enterBoard .icon1 {
-height: 2.5em;
-font-size: 4em;
+  height: 2.5em;
+  font-size: 4em;
 }
 
 #enterBoard .pulse1 {
@@ -374,9 +374,10 @@ width: 80%;
 }
 
 .playerFormInputs {
-  margin-top: 1em;
-  width: 12em;
-  height: 4em;
+  margin-top: .5em;
+  width: 6.2em;
+  height: 2em;
+  font-size: 2em;
 }
 
 .guestSignup h4 {
@@ -393,7 +394,7 @@ width: 80%;
 
 
 /* Styling for the pop-up modal 'how to play' */
-.btn {
+/*.btn {
   background: #428bca;
   border: #357ebd solid 1px;
   border-radius: 3px;
@@ -406,7 +407,7 @@ width: 80%;
   min-width: 60px;
   position: relative;
   transition: color .1s ease;
-  /* top: 40em;*/
+  top: 40em;
 }
 .btn:hover {
   background: #357ebd;
@@ -426,7 +427,7 @@ width: 80%;
 }
 .btn-close:hover {
   color: #919191;
-}
+}*/
 /*
 .modal:before {
   content: "";
@@ -487,4 +488,24 @@ width: 80%;
 /*ADDED TO STOP SCROLLING TO TOP*/
 #close {
   display: none;
+}
+
+#plusButton {
+  width: 2em;
+  margin-top: .5em;
+  padding-top: .25em;
+  background-color: green;
+  color: white;
+  font-size: 2em;
+  border-radius: 50%;
+}
+
+#minusButton {
+  width: 2em;
+  margin-top: .5em;
+  padding-top: .25em;
+  background-color: red;
+  color: white;
+  font-size: 2em;
+  border-radius: 50%;
 }
