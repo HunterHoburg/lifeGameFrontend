@@ -4,7 +4,7 @@ angular.module('app')
   .service('insertArticles', ['$http', insertArticles])
   .service('signinService', ['$http', signinService])
   .service('signupService', ['$http', signupService])
-  .service('playersInCurrentGame', [playersInCurrentGame]);
+  .service('CurrentGameData', [CurrentGameData]);
 
 
 function signinService ($http){
@@ -20,15 +20,15 @@ function signinService ($http){
 // }
 
 function signupService($http){
-  return function(playerName, playerEmail, playerPassword, playerColor, playerGender) {
-    var newPlayerData = {
-      name: playerName,
-      email: playerEmail,
-      password: playerPassword,
-      color: playerColor,
-      gender: playerGender
-    };
-    console.log(newPlayerData);
+  return function(newPlayerData) {
+    // var newPlayerData = {
+    //   name: playerName,
+    //   email: playerEmail,
+    //   password: playerPassword,
+    //   color: playerColor,
+    //   gender: playerGender
+    // };
+    console.log('service was called for this player: ' + newPlayerData);
     return $http.post('//localhost:3000/newPlayer', newPlayerData);
   };
 }
@@ -124,8 +124,8 @@ $http.get('http://content.guardianapis.com/search?q=unemployment%20AND%20jobs&pa
   };
 }
 
-function playersInCurrentGame () {
+function CurrentGameData () {
   return function() {
-    // contains
+    // contains player data from
   };
 }
