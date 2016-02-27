@@ -489,3 +489,60 @@ width: 80%;
 #close {
   display: none;
 }
+
+/*colors for guest modal*/
+.colorList {
+ 
+}
+
+
+.red {
+  width:18px;
+  height:18px;
+  background-color:red;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.orange {
+  width:18px;
+  height:18px;
+  background-color:orange;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.blue {
+  width:18px;
+  height:18px;
+  background-color:blue;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.yellow {
+  width:18px;
+  height:18px;
+  background-color:yellow;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.olive {
+  width:18px;
+  height:18px;
+  background-color:olive;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+.teal {
+  width:18px;
+  height:18px;
+  background-color:teal;
+  border: 1px solid black;
+  margin: 5px;
+}
+
+
+

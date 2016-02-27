@@ -130,8 +130,43 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
 
     vm.showModal3 = false;
     vm.toggleModal3 = function(){
-    vm.showModal3 = !vm.showModal2;
+    vm.showModal3 = !vm.showModal3;
 
   };
+
+    vm.showModal4 = false;
+    vm.toggleModal4 = function(){
+    vm.showModal4 = !vm.showModal4;
+
+  };
+
+  //login button WE SHOULD TAKE THESE OUT 
+    vm.loginSubmit = function(email, password){
+      $http({
+        method: 'POST',
+        url: 'http://localhost:3000/signin',
+        data: {
+          email: email,
+          password: password
+        } 
+      }).then(function(data){
+        console.log(data);
+      });
+    };
+
+    vm.signupSubmit = function(firstname, lastname, email, password){
+      $http({
+        method: 'POST',
+        url: 'http://localhost:3000/newPlayer',
+        data: {
+          firstname: firstname,
+          lastname: lastname,
+          email: email,
+          password: password
+        } 
+      }).then(function(data){
+        console.log(data);
+      });
+    };
 
 }
