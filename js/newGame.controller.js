@@ -15,6 +15,7 @@ function NewGameController (signinService, signupService) {
   function signin (emailIn, passwordIn) {
     // playerInfo should be: {email: '', password: ''}
     var playerInfo = {email: emailIn, password: passwordIn};
+    console.log(playerInfo);
     signinService(playerInfo)
       .then(function(playerData){
         if (playerData.data.email === playerInfo.email) {
