@@ -29,3 +29,56 @@ MARRIAGE
 Positive
 
 You really married into a wealthy family! You get $200,000 for your stocking stuffer this Christmas.
+
+
+Negative
+
+You and your spouse need some marriage counseling, and he/she just HAD to choose the counselor who charges $3,000 an hour... You lose $60,000, but gain marital stability!
+
+D-I-V-O-R-C-E, give your ex-spouse half your money!
+
+Your spouse suspected you were cheating and lit your car on fire. Whether you were or weren't is unimportant; that car was worth $80,000!
+
+Turns out your spouse is quite the con artist; they made off with $200,000 of your money and are living quite comfortably on the beaches of Cozumel. At least SOMEONE'S happy!
+
+Your spouse enrolled all of your kids in a private school with tuition to rival an Ivy League school. You pay $200,000, but your kids will get a great education! Right?
+
+
+NATURAL DISASTER
+
+Positive
+
+Your town experienced the largest hurricane ever seen, and you're not above looting a few electronics stores. You gain $40,000 and bitchin' new movie room in your basement!
+
+A tornado tore through downtown, and picked up an armored van containing $500,000, which landed in your backyard. You had to buy a pretty hefty drill to open the doors, but even after that you made $495,000!
+
+Your city was flooded, and you own a side business of flood damage restoration. Business is a-booming! You gain $100,000.
+
+A nearby volcano suddenly and violently erupted; it sucks for all the people with houses on the mountain, but there was a gold deposit in that volcano that spewed molten treasure all over the town! You shoveled $200,000 off of your driveway.
+
+
+Negative
+
+Did you feel that? An earthquake knocked everything off of your shelves. Maybe you shouldn't have invested $200,000 in antique fine china...
+
+Did you know that the Japanese word 'Gojira' is a portmanteau of the Japanese words for whale and gorilla? Well, your house was stepped on by Godzilla and homeowner's insurance doesn't cover giant monster-related damage, so it looks like you're out of $300,000.
+
+While cooking dinner last night, your house was rattled by a thunderous crash outside. A meteorite careened into your cul-de-sac, and in the ensuing pandemonium on, the stove you left on caught your dinner on fire and your house burned down. You lose $250,000 and a delicious meatloaf.
+
+It's raining cats and dogs! Literally. Your car is trashed by a particularly large tabby going through the engine block at terminal velocity. You lose $50,000.
+
+On your way to work, a rogue tsunami swept you and your car off the highway and into the forest nearby. That's $60,000 down the drain... Is there even a body of water nearby?
+
+A sinkhole appeared in the middle of the office at work, but luckily no one was injured. Coincidentally, you got fired that same day. Lose $50,000.
+
+
+HEALTH
+
+Positive
+
+Due to advances in medicine, we can finally grow organs like kidneys and hearts. You get a brand new ticker and an extra hand! Gain 2 health.
+
+All those years of eating gluten-free has really paid off; gain 1 health!
+
+
+Negative
