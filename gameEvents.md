@@ -12,6 +12,8 @@ You found a $100 bill in your pants pocket! Well, it wasn't really in your pocke
 
 Your money counterfeiting operation is in full swing; You get $10,000! Just don't use those bills at the bank!
 
+All those years of playing pool are really paying off, and you're like the Jaws of pool sharks. You gain $50,000!
+
 
 Negative
 
@@ -33,6 +35,18 @@ You've always been a sleepwalker, and apparently last night you walked in your s
 
 As an entrepeneur and child of a wealthy family, you've been successful with business endeavors like golf courses, fine steak distribution, high-class hotels, and real estate management. Unfortunately, you're also a dickhead, and need to declare financial bankruptcy for the fourth time before your presidential campaign. Lose $1,000,000, gain an orange gerbil for a toupee.
 
+You decide to further your education with a coding bootcamp; unfortunately, World War 3 just happened and computers are now completely useless. Lose $21,000.
+
+You invested in Zune. Lose $100,000.
+
+As a famous rapper, you are worth something like $100,000,000. However, after a failed push into the fashion industry, you lose much of that money. Despite your most heart-felt public tweets to Mark Zuckerburg, the jerk won't bail you out. You lose half of your money.
+
+You spent $500,000 installing bit-coin farming servers, but gold standard,  unstable currency blah blah blah you lose $100,000.
+
+The mafia shows up for your weekly protection fee, and you don't have it. Vinny takes a bat to your kneecaps, and the hospital bills total up to $40,000. The horse head in your hospital bed was pretty gross too.
+
+Your bank robbery goes horribly awry, and you end up cuffed in the back of a police cruiser. The judge set bail at $200,000, which you can afford. However, buying the fake passport and the tickets to Brazil end up costing you every penny you have left. You're a free man/woman, but you're now just as poor as everyone else living in your favella in Brazil.
+
 
 MARRIAGE
 
@@ -52,6 +66,8 @@ Your spouse suspected you were cheating and lit your car on fire. Whether you we
 Turns out your spouse is quite the con artist; they made off with $200,000 of your money and are living quite comfortably on the beaches of Cozumel. At least SOMEONE'S happy!
 
 Your spouse enrolled all of your kids in a private school with tuition to rival an Ivy League school. You pay $200,000, but your kids will get a great education! Right?
+
+You dropped your wedding ring into the toilet while cleaning, and accidentally hit the flush handle in your panic. That's $20,000 down the drain.
 
 
 NATURAL DISASTER
@@ -86,7 +102,7 @@ HEALTH
 
 Positive
 
-Due to advances in medicine, we can finally grow organs like kidneys and hearts. You get a brand new ticker and an extra hand! Gain 2 health.
+Due to advances in medicine, we can finally grow organs like kidneys and hearts. You get a brand new ticker and an extra hip! Gain 2 health.
 
 All those years of eating gluten-free has really paid off; gain 1 health!
 
@@ -129,12 +145,14 @@ You picked up a temporary job doing programming. Sitting in a chair all day is b
 
 While hiking in a canyon in Utah, a boulder is dislodged above you and it pins your arm to the wall. After 127 hours, you finally saw your arm off with a tiny Swiss Army knife and make it back to safety. You lose 5 health. Come to think of it, that could make a good movie...
 
+You were born with a tail. It's normally not a big deal, but you slipped in the shower and snapped your tailbone. Not only can you no longer balance yourself as well, but you also had to pay $60,000 in hospital bills.
+
 
 CHIPOTLE
 
 Negative
 
-They make some tasty, tasty food, but unfortunately it's rife with E. coli. You lose 1 health per turn.
+They make some tasty, tasty food, but unfortunately it's rife with E. coli. You lose 1 health per turn because you still can't resist eating at Chipotle.
 
 Chipotle has been known to have birds habitually living in some of their restaurants, and it turns out that wasn't sour cream on that bite you just took... You now have Avian flu. Lose 4 health.
 
@@ -143,3 +161,19 @@ You were enjoying your burrito so much until you found that rusty screw in it...
 That Chipotle burrito did something truly foul to your stomach, and you've been on the toilet for nearly 12 hours. You got sores on your tookus, and lost 2 health.
 
 While at Chipotle, a car came crashing through the front of the store. You were so surprised that you choked on your carnitas burrito, and immediately lost 1 health. Maybe if you took smaller bites this wouldn't happen!
+
+
+ADDICTION
+(They're all negative, I think)
+
+They say speed kills; I guess you'll find out if that's true. Your addiction to methamphetamines costs you $10,000 and 1 health per turn.
+
+Marijuana: the gateway drug. Because of your dependency on the wacky tabacky, you got into a myriad of other substances. You lose 1 health per turn.
+
+Your habit of smoking a dozen packs of cigarettes a day has earned you the nickname 'The Chimney'. You lose 1 health per turn.
+
+The average American watches 10 hours of TV a day (source needed). You average 25 hours of TV a day. You quit your job so you could watch reruns of Golden Girls and Seinfeld, so you no longer collect money on paydays.
+
+Everyone likes the smell of gasoline a bit, but you REALLY like it. Huffing those fumes costs you 1 health per turn.
+
+Your love for video games has turned into an addiction. You can no longer discern between reality and the virtual world; you have no clarity of vision, and your fine motor skills are deteriorating from carpal tunnel. You simply can't feel love or pain, joy or sorrow any more; the only things you experience are new high scores and the empty sadism of spewing slurs at 14-year-olds through your headset in Call of Duty games. Being unemployed, you don't collect money on paydays.
