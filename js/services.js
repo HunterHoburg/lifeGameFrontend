@@ -126,7 +126,12 @@ $http.get('http://content.guardianapis.com/search?q=unemployment%20AND%20jobs&pa
 }
 
 function CurrentGameData () {
-  return function() {
-    // contains player data from
+  var gameData = {};
+  gameData.game_id;
+  gameData.players = [];
+  gameData.addPlayer = function(player){
+    gameData.players.push(player);
   };
+    // contains player data from
+  return gameData;
 }

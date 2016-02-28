@@ -4,7 +4,6 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
 
   //CONTROLLER FOR QUERYING EL GUARDIAN API
   function MainController ($http, newGameService, playerJoinGame, insertArticles, signupService){
-
     var vm = this;
     vm.newPlayer = signupService;
     //CURRENTTITLE, CURRENTURL, AND CURRENTSENTIMENT ARE TEMPORARY AND FOR TESTING ONLY

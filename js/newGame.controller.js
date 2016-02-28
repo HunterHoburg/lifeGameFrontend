@@ -1,20 +1,11 @@
 angular.module('app')
-  .controller('NewGameController', ['signinService', 'signupService', 'insertArticles', 'newGameService', 'playerJoinGame', NewGameController]);
+  .controller('NewGameController', ['$location', 'signinService', 'signupService', 'insertArticles', 'newGameService', 'playerJoinGame', 'CurrentGameData', NewGameController]);
 
-function NewGameController (signinService, signupService, insertArticles, newGameService, playerJoinGame) {
+function NewGameController ($location, signinService, signupService, insertArticles, newGameService, playerJoinGame, CurrentGameData) {
 
   var vm = this;
   // all players to add to game
-  vm.players = [
-    {
-      id: 1,
-      color: 'blue'
-    },
-    {
-      id:2,
-      color: 'red'
-    }
-  ];
+  vm.players = [];
   // signin post route, returns player id
   vm.signin = signin;
   vm.signup = signup;
@@ -32,7 +23,6 @@ function NewGameController (signinService, signupService, insertArticles, newGam
           vm.players.push(playerData.data);
           vm.signinInfo.email = '';
           vm.signinInfo.password = '';
-          console.log(vm.players);
         } else {
           vm.errorMessage = 'wrong username or password';
         }
@@ -61,33 +51,43 @@ function NewGameController (signinService, signupService, insertArticles, newGam
         console.log(newGameID);
         var promiseArray = [];
 
-        // NOTE: ---------------- FIX PROMISES BELOW!!!
-
         // stories service insert with game_id
-        var storiesPromise = new Promise(function (resolve, reject){
-          insertArticles(newGameID);
-        });
-          // push to callarray
-          promiseArray.push(storiesPromise);
-
-        // hit newGamePlayers routes
-        for (var i = 0; i < vm.players.length; i++) {
-          // create promise for each player
-          var playerJoinPromise = new Promise(
-            playerJoinGame({
-              id: newGameID,
-              playerID: vm.players[i].id,
-              color: vm.players[i].color
-            })
-          );
-          // push promise to promiseArray
-          promiseArray.push(playerJoinPromise);
-        }
-        console.log(promiseArray);
-
+        insertArticles(newGameID);
+          // add players join calls to promise array
+          for (var i = 0; i < vm.players.length; i++) {
+            // create promise for each player
+            var playerJoinPromise =
+              playerJoinGame({
+                id: newGameID,
+                playerID: vm.players[i].id,
+                color: vm.players[i].color
+              });
+            // push promise to promiseArray
+            promiseArray.push(playerJoinPromise);
+          }
         Promise.all(promiseArray)
         .then(function(results){
           console.log(results);
+          // send to current game service
+          for (var i = 0; i < results.length; i++) {
+            var newPlayerAllData = results[i].data.message[0];
+            // add name to player info if match
+            if (newPlayerAllData.player_id === vm.players[i].id) {
+              newPlayerAllData.name = vm.players[i].name;
+            }
+            // add other helpful properties
+            newPlayerAllData.curr = [];
+            newPlayerAllData.next = [];
+            newPlayerAllData.remainMvmt = 0;
+            // add player to current game session service
+            CurrentGameData.addPlayer(newPlayerAllData);
+          }
+          // add game ID to current game session service
+          CurrentGameData.game_id = newGameID;
+
+          // redirect to /board route
+          $location.path('/board');
+          console.log();
         }, function(reasonFail){
           console.log(reasonFail);
         });
