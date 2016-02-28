@@ -522,6 +522,10 @@ width: 80%;
 .faded {
   background-color: rgba(247, 242, 220, .5);
   opacity: 1;
+  transition: opacity .7s;
+  -webkit-transition: opacity .7s;
+  -moz-transition: opacity .7s;
+  -o-transition: opacity .7s;
 }
 .colorList {
   list-style-type: none;
