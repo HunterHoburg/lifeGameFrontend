@@ -4,6 +4,8 @@ Positive
 
 You were walking down the street when you found a $600,000 bill. Good luck finding change for that one!
 
+You've invested wisely, and bought thousands of shares of stocks in a company that makes shoes that have individual toes, and hipster athletes nationwide are gobbling those toe shoes up! You get $600,000.
+
 While you were sitting on a restaurant patio eating lunch, someone mistook you for a beggar and dropped $100 in your cup of soda. Poor personal hygiene really CAN pay off!
 
 You found a $100 bill in your pants pocket! Well, it wasn't really in your pocket, really, and it was in someone else's pocket, but what's the difference?
@@ -22,6 +24,14 @@ Time for your weekly tithe. You lose $20,000, but gain eternal salvation!
 On the way home from the opera, a mugger hit you over the head with a rolling pin and made off with your wallet. You lose $40,000. Maybe you shouldn't carry so much cash in your wallet!
 
 Your identity has been compromised; someone took $100,000 out of your bank account! Sony really needs to beef up their security...
+
+You made a poor investment in a company that makes shoes with individual toes, and they just lost a class-action lawsuit from people who thought the shoes would make them better athletes. You lose $400,000.
+
+Years ago, you decided to begin cashing all of your paychecks in the form of pennies. Unfortunately for you, the US government just discontinued making pennies, and they are no longer valid currency. You now have a basement full of nearly 300,000,000 useless zinc coins.
+
+You've always been a sleepwalker, and apparently last night you walked in your sleep to an ATM, withdrew $200,000, and gave it to a hobo on the sidewalk. Sucks for you, but that was the best day of his life!
+
+As an entrepeneur and child of a wealthy family, you've been successful with business endeavors like golf courses, fine steak distribution, high-class hotels, and real estate management. Unfortunately, you're also a dickhead, and need to declare financial bankruptcy for the fourth time before your presidential campaign. Lose $1,000,000, gain an orange gerbil for a toupee.
 
 
 MARRIAGE
@@ -97,12 +107,39 @@ After years of a strictly candy-based diet, you have developed diabetes. On the 
 
 You've never broken a bone; at least until just now, when you got too into it at your piano recital and snapped all ten fingers. You lose 2 health and can no longer pursue your dream of being a professional pianist.
 
-The common cold isn't a big deal, but your cold ain't common, and it's actually not a cold. It's Fibrodysplasia ossificans progressiva, and it makes your skin slowly turn into bone. You lose 3 health.
+The common cold isn't a big deal, but your cold ain't common, and it's actually not a cold. It's Fibrodysplasia ossificans progressiva, and it makes your skin slowly turn into bone. You lose 3 health and all chances at winning beauty pageants.
 
+You're a pretty health-conscious person, and all those hours at the gym earned you a rockin' bod! But then you dropped a 120-pound dumbbell on your third set of skullcrushers, and it landed on your xyphoid process, which snapped and left you with chronic heart palpatations. You lose 3 health.
 
+A routine lasic surgery went horribly awry and the laser was flipped into 'overcharge mode'. The optometrist panicked, and the laser began spinning around the room. You lost several appendages. At least you're still alive, which can't be said for the good doctor. You lose 4 health.
 
+There are a lot of great benefits to practicing yoga; however, you went too hard in the paint while attempting a Full Lotus, and you developed Aquagenic urticaria. It's also known as 'water allergy', even though it's not technically an allergy. You lose 4 health through chronic dehydration.
+
+While abroad in Japan, you ate a suspicious-looking piece of beef stomach so you wouldn't offend your host. You contracted a typically harmless parasite called Blastocystis, except these ones are tearing apart your intestines like a group of tiny ronin; you lose 4 health. You also lose the contents of your bowels... Like, daily.
+
+You love the Dr. Oz Show and follow his medical advice religiously. Lose 4 health.
+
+I guess that WASN'T just a canker sore... Lose 2 health.
+
+You got in a bad tightrope walking accident, and fell into the ring with the lions. (Oh yeah, you're also a circus acrobat.) If you treated the lions nicer, maybe they wouldn't have nibbled on you so much. You lose 4 health.
+
+Things were never the same for you. Not after... the accident. Lose 4 health.
+
+You picked up a temporary job doing programming. Sitting in a chair all day is bad for your back, and you lose 2 health.
+
+While hiking in a canyon in Utah, a boulder is dislodged above you and it pins your arm to the wall. After 127 hours, you finally saw your arm off with a tiny Swiss Army knife and make it back to safety. You lose 5 health. Come to think of it, that could make a good movie...
 
 
 CHIPOTLE
 
 Negative
+
+They make some tasty, tasty food, but unfortunately it's rife with E. coli. You lose 1 health per turn.
+
+Chipotle has been known to have birds habitually living in some of their restaurants, and it turns out that wasn't sour cream on that bite you just took... You now have Avian flu. Lose 4 health.
+
+You were enjoying your burrito so much until you found that rusty screw in it... You had to get a Tetnis shot, and the needle had actually just been used, and you caught something nasty. Lose 3 health.
+
+That Chipotle burrito did something truly foul to your stomach, and you've been on the toilet for nearly 12 hours. You got sores on your tookus, and lost 2 health.
+
+While at Chipotle, a car came crashing through the front of the store. You were so surprised that you choked on your carnitas burrito, and immediately lost 1 health. Maybe if you took smaller bites this wouldn't happen!
