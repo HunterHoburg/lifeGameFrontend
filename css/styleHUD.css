@@ -6,9 +6,8 @@
   padding: 35px;
   font-size: 2em;
   margin-right: 50px;
-
-    font-family: "Englebert", sans-serif;
-    background-color: green;
+  font-family: "Englebert", sans-serif;
+  background-color: green;
 }
 .btn:hover {
   color: white;
@@ -22,7 +21,7 @@
   color: white;
 }
 i {
-  padding: 8px;
+  padding: 5px;
 }
 .HUDstats .navbar-text:hover {
   -webkit-stroke-width: 15.3px;
