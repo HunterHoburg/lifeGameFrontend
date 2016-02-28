@@ -18,6 +18,19 @@
     <div class='row signUpBar'>
       <div class="col-md-2 col-md-offset-1">
         <h2 class="numberOfPlayersLabel"> Sign in: </h2>
+        <div class="row">
+          <div class="col-md-3">
+            <a ng-click="MC.toggleModal4()"><h4 class="guestLink">Guest</h4></a>
+          </div>
+          <div class="col-md-1">
+            <h4 style="margin-top: .6em; margin-left: .4em;"> /</h4>
+          </div>
+          <div class="col-md-6">
+            <a ng-click="MC.toggleModal5()"><h4 class="signupLink">Sign Up</h4></a>
+          </div>
+          <div class="col-md-1">
+          </div>
+        </div>
       </div>
       <div class="col-md-2">
         <input type="text" class="playerFormInputs" name="emailInput" ng-model="emailInput" placeholder="Enter Email">
@@ -53,11 +66,7 @@
         <button type="button" class='addBtn btn' ng-click="NGC.signin(emailInput, passwordInput); emailInput = null; passwordInput = null">Add Player</button>
       </div>
     </div>
-    <div class='row'>
-      <div class='col-md-3 col-md-offset-1'>
-        <div class="guestSignup"><button class="btn guestBtn btn-default" ng-click="MC.toggleModal4()"><h4>Guest</button></div>
-        <div class="signInNewGamePage"><button class="btn guestBtn btn-default" ng-click="MC.toggleModal5()"><h4>Sign Up!</button></div>
-      </div>
+
       <div class="row topmargin">
         <div class="col-md-6" ng-repeat="player in NGC.players">
           <center>

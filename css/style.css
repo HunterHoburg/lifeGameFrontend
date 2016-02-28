@@ -376,8 +376,7 @@ width: 80%;
 .numberOfPlayersLabel {
   font-size: 4em;
 }
-.addBtn {
-  margin-top: 1.7rem;
+.addBtn{
   background-color: #4989f6;
 }
 
@@ -391,6 +390,22 @@ width: 80%;
   margin-top: 2em;
   margin-left: 2em;
 }*/
+
+.guestLink {
+  margin-left: .2em;
+}
+
+.guestLink:hover {
+  cursor: pointer;
+}
+
+.signupLink {
+  margin-right: 1em;
+}
+
+.signupLink:hover {
+  cursor: pointer;
+}
 
 #navLinks {
   position: absolute;
