@@ -420,6 +420,13 @@ width: 80%;
   background-color: #66adf6;
   width: 13rem;
 }
+.guestSubmitBtn {
+  background-color: #66adf6;
+  margin-left: 45%;
+}
+.submitSignUpBtn {
+  background-color: #66adf6;
+}
 
 .btn:hover {
   background: #357ebd;
@@ -502,6 +509,9 @@ width: 80%;
   display: none;
 }
 
+.playerName {
+  color: #ee4c30;
+}
 /*colors for guest modal*/
 .colorPalette {
   background-color: rgba(247, 242, 220, .5);
@@ -522,6 +532,9 @@ width: 80%;
   /*padding-right: none;*/
   display: inline-block;
   cursor: pointer;
+}
+.colorListModal li {
+  padding-top: 2rem;
 }
 
 .red {

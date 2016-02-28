@@ -4,6 +4,7 @@ angular.module('app')
   .service('insertArticles', ['$http', insertArticles])
   .service('signinService', ['$http', signinService])
   .service('signupService', ['$http', signupService])
+  .service('guestSigninService', ['$http', guestSigninService])
   .service('newPlayer', ['$http', newPlayer]);
 
 
@@ -44,6 +45,12 @@ function newGameService($http){
 function playerJoinGame($http){
   return function(gameSession) {
     return $http.post('//localhost:3000/newGamePlayer', gameSession);
+  };
+}
+
+function guestSigninService($http) {
+  return function(guest) {
+    return $http.post('//localhost:3000/newGamePlayer', guest);
   };
 }
 
