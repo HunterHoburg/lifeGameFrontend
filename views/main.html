@@ -34,7 +34,7 @@
     <div class="top">
     <div class="pulse1"></div>
     <div class="pulse2"></div>
-    <a href="#/newgame"><div class="icon1"> START NEW GAME!</div></a>
+    <a href="#/newgame"><div class="icon1"> Start New Game!</div></a>
 </div>
 
 </div>
@@ -70,74 +70,14 @@
 </div>
 <div id="navLinks">
   <div>
-    <button class='btn btn-info' href="#" ng-click="MC.toggleModal()"><h4> How to Play </h4></button>
+    <button class='howToPlayLink' href="#" ng-click="MC.toggleModal()"><h4> How to Play </h4></button>
   </div>
   <modal title="How to Play" visible="MC.showModal">
     <div class="gamenarrative">
       <p>This game is awesome. You will love it. You may find yourself addicted to a dangerous substance and you may die an early death. That's what makes this game super fun. GO PLAY!</p>
     </div>
   </modal>
-  <div>
-    <button class='btn btn-info' ng-click='MC.toggleModal2()' href="#"><h4> Sign In </h4></button>
-  </div>
-  <modal title="Sign In" visible="MC.showModal2">
-    <div class="loginmodal">
-      <form role="form">
-       <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email" ng-model="email"/>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Password" ng-model="password"/>
-      </div>
-      <button type="submit" ng-click="MC.loginSubmit(email, password)" class="btn btn-default">Submit</button>
-    </form>
-    </div>
-  </modal>
-  <div>
-    <button class="btn btn-primary" ng-click="MC.toggleModal3()" href='#'><h3>Sign Up</h3></button>
-  </div>
-  <modal title="Sign up!" visible="MC.showModal3">
-    <form role="form">
-      <div class="form-group">
-        <label for="firstname">First Name</label>
-        <input type="firstname" class="form-control" id="firstname" placeholder="Enter first name" />
-      </div>
-      <div class="form-group">
-        <label for="lastname">Last Name</label>
-        <input type="lastname" class="form-control" id="lastname" placeholder="Enter last name" />
-      </div>
-      <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email" />
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Password" />
-      </div>
-      <button type="submit" ng-click="MC.signupSubmit(firstname, lastname, email, password)" class="btn btn-default">Submit</button>
-    </form>
-  </modal>
-</div>
-<!-- <div>
-  <script type='text/ng-template' id='signUp.html'>
-    <div class='modal-header'>
-      <h3 class='modal-title'>Sign Up</h3>
-    </div>
-    <div class='modal-body'>
-      <form>
-        <input type='text' ng-model='username'>
-        <input type='text' ng-model='email'>
-        <input type='text' ng-model='password'>
-        <button type='submit' ng-click='MC.signUp(username, email, password)'>Sign up!</button>
-      </form>
-      <div class='modal-footer'>
-        <button class='btn btn-warning' type='button' ng-click='cancel()'>Cancel</button>
-      </div>
-    </div>
-  </script>
-</div> -->
+
 
 <!-- REMEMBER to inject ngDialog when ready to use -->
 

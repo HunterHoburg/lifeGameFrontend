@@ -378,12 +378,30 @@ width: 80%;
 }
 .addBtn{
   background-color: #4989f6;
+  margin-top: 1em;
+}
+
+.addBtn:hover {
+  color: white;
+}
+
+.howToPlayLink {
+  background-color: rgba(255, 255, 255, 0);;
+  color: #00aeef;
+  border: none;
+  margin-top: 1.5em;
+}
+
+.howToPlayLink:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .playerFormInputs {
-  margin-top: 3rem;
-  width: 10em;
-  height: 2em;
+  margin-top: 1.3em;
+  width: 12em;
+  height: 3em;
+  font-size: 1.1em;
 }
 
 /*.guestSignup h4 {
@@ -393,6 +411,7 @@ width: 80%;
 
 .guestLink {
   margin-left: .2em;
+  color: #00aeef;
 }
 
 .guestLink:hover {
@@ -401,6 +420,7 @@ width: 80%;
 
 .signupLink {
   margin-right: 1em;
+  color: #00aeef;
 }
 
 .signupLink:hover {
