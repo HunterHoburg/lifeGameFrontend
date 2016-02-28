@@ -82,3 +82,27 @@ All those years of eating gluten-free has really paid off; gain 1 health!
 
 
 Negative
+
+If only you had worn your retainer like your dentist told you to... Your panoply of crooked teeth is so heinous that you lose 1 health.
+
+Personal hygiene is important, but no one ever told you that. You develop leprosy and lose 2 health.
+
+In an unfortunate baking accident, your optic nerve is severed completely. You lose 2 health. Betcha didn't see that coming...
+
+There are two kinds of people: those with fully-functioning livers, and alcoholics. If you woulda laid off the sauce, you wouldn't be losing 2 health right now.
+
+Your mother had the Zyka virus when you were born, and you have a condition called 'microcephaly'. Normally it's not a big deal, but your bike helmet doesn't fit quite right, and you just wrecked into a parked car. Lose 1 health.
+
+After years of a strictly candy-based diet, you have developed diabetes. On the downside, you lose 1 health; on the upside, you can finally start that sick band you always wanted to be in: the Dia-beats!
+
+You've never broken a bone; at least until just now, when you got too into it at your piano recital and snapped all ten fingers. You lose 2 health and can no longer pursue your dream of being a professional pianist.
+
+The common cold isn't a big deal, but your cold ain't common, and it's actually not a cold. It's Fibrodysplasia ossificans progressiva, and it makes your skin slowly turn into bone. You lose 3 health.
+
+
+
+
+
+CHIPOTLE
+
+Negative
