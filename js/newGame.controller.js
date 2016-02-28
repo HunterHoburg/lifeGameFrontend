@@ -1,11 +1,20 @@
 angular.module('app')
-  .controller('NewGameController', ['signinService', 'signupService', 'insertArticles', 'newGameService', NewGameController]);
+  .controller('NewGameController', ['signinService', 'signupService', 'insertArticles', 'newGameService', 'playerJoinGame', NewGameController]);
 
-function NewGameController (signinService, signupService, insertArticles, newGameService) {
+function NewGameController (signinService, signupService, insertArticles, newGameService, playerJoinGame) {
 
   var vm = this;
   // all players to add to game
-  vm.players = [];
+  vm.players = [
+    {
+      id: 1,
+      color: 'blue'
+    },
+    {
+      id:2,
+      color: 'red'
+    }
+  ];
   // signin post route, returns player id
   vm.signin = signin;
   vm.signup = signup;
@@ -21,15 +30,9 @@ function NewGameController (signinService, signupService, insertArticles, newGam
         if (playerData.data.email === vm.signinInfo.email){
           // add returned player to players obj
           vm.players.push(playerData.data);
-<<<<<<< HEAD
           vm.signinInfo.email = '';
           vm.signinInfo.password = '';
           console.log(vm.players);
-=======
-          vm.emailInput = '';
-          vm.passwordInput = '';
-          // console.log(vm.players);
->>>>>>> 09e27b7ae0985ba01694e2405628f9b3c05727fd
         } else {
           vm.errorMessage = 'wrong username or password';
         }
@@ -55,18 +58,38 @@ function NewGameController (signinService, signupService, insertArticles, newGam
     newGameService()
       .then(function(newGameInfo){
         newGameID = newGameInfo.data[0];
-        var callarray = [];
+        console.log(newGameID);
+        var promiseArray = [];
+
+        // NOTE: ---------------- FIX PROMISES BELOW!!!
 
         // stories service insert with game_id
+        var storiesPromise = new Promise(function (resolve, reject){
+          insertArticles(newGameID);
+        });
           // push to callarray
+          promiseArray.push(storiesPromise);
 
         // hit newGamePlayers routes
-          // push to call array for each player
+        for (var i = 0; i < vm.players.length; i++) {
+          // create promise for each player
+          var playerJoinPromise = new Promise(
+            playerJoinGame({
+              id: newGameID,
+              playerID: vm.players[i].id,
+              color: vm.players[i].color
+            })
+          );
+          // push promise to promiseArray
+          promiseArray.push(playerJoinPromise);
+        }
+        console.log(promiseArray);
 
-
-        Promise.all(callarray)
+        Promise.all(promiseArray)
         .then(function(results){
           console.log(results);
+        }, function(reasonFail){
+          console.log(reasonFail);
         });
       });
 

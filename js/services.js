@@ -40,8 +40,8 @@ function newGameService($http){
 }
 
 function playerJoinGame($http){
-  return function(gameSession) {
-    return $http.post('//localhost:3000/newGamePlayer', gameSession);
+  return function(newGamePlayerInfo) {
+    return $http.post('//localhost:3000/newGamePlayer', newGamePlayerInfo);
   };
 }
 

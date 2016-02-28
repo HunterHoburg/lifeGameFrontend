@@ -1,5 +1,4 @@
 var app = angular.module("app");
-<<<<<<< HEAD
 
 app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', 'signupService', MainController]);
 
