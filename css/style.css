@@ -503,6 +503,10 @@ width: 80%;
 }
 
 /*colors for guest modal*/
+.colorPalette {
+  background-color: rgba(247, 242, 220, .5);
+  border-radius: 20px;
+}
 .colorList {
   list-style-type: none;
   padding-left: none;
@@ -510,9 +514,14 @@ width: 80%;
 }
 .colorListSub {
   list-style-type: none;
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+.colorListSub li {
+  /*padding-right: none;*/
   display: inline-block;
-  padding-left: none;
-  margin-left: none;
+  cursor: pointer;
 }
 
 .red {

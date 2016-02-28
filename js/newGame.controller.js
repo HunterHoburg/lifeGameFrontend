@@ -11,7 +11,11 @@ function NewGameController (signinService, signupService) {
   vm.signup = signup;
   vm.signinInfo = {};
   vm.signupInfo = {};
-
+  vm.chosenColor;
+  vm.colorPick = function(color) {
+    vm.chosenColor = color;
+    console.log(vm.chosenColor);
+  }
   function signin (emailIn, passwordIn) {
     // playerInfo should be: {email: '', password: ''}
     var playerInfo = {email: emailIn, password: passwordIn};
@@ -28,6 +32,9 @@ function NewGameController (signinService, signupService) {
           vm.errorMessage = 'wrong username or password';
         }
       });
+      //TODO: send this data to the games_players table
+      var gamesPlayersInfo = {color: vm.chosenColor};
+      console.log(gamesPlayersInfo);
   }
 
   function signup (newPlayer) {

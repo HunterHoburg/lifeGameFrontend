@@ -25,25 +25,32 @@
       <div class="col-md-1">
         <input type="password" class="playerFormInputs" name="passwordInput" ng-model="passwordInput" placeholder="Enter Password">
       </div>
-      <div class='col-md-3'>
-
-          <p>Pick<br>Your<br> Color!</p>
-            <ul class="colorList">
-              <ul class='colorListSub'>
-                <li class="red"></li>
-                <li class="orange"></li>
-                <li class="blue"></li>
-              </ul>
-              <ul class='colorListSub'>
-                <li class="yellow"></li>
-                <li class="olive"></li>
-                <li class="teal"></li>
-              </ul>
-
-            </ul>
+      <div class='col-md-1'>
 
       </div>
-      <div class="col-md-2">
+      <div class='col-md-3'>
+        <div class='row colorPalette'>
+          <div class='col-md-2 col-md-offset-1'>
+            <p><br>Pick<br>Your<br> Color!</p>
+          </div>
+          <div class='col-md-8'>
+              <ul class='colorListSub'>
+                <li class="red" ng-click='NGC.colorPick("red")'></li>
+                <li class="orange" ng-click='NGC.colorPick("orange")'></li>
+                <li class="blue" ng-click='NGC.colorPick("blue")'></li>
+              </ul>
+                <ul class='colorListSub'>
+                  <li class="yellow" ng-click='NGC.colorPick("yellow")'></li>
+                  <li class="olive" ng-click='NGC.colorPick("olive")'></li>
+                  <li class="teal" ng-click='NGC.colorPick("teal")'></li>
+                </ul>
+          </div>
+          <div class='col-md-1'>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1">
         <button type="button" class='addBtn' ng-click="NGC.signin(emailInput, passwordInput); emailInput = null">Add Player</button>
       </div>
     </div>
