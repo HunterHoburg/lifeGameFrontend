@@ -349,7 +349,7 @@ h3 {
 }
 
 .topmargin {
-  margin-top: 5em;
+  margin-top: 3rem;
 }
 
 #enterBoard {
@@ -377,7 +377,8 @@ width: 80%;
   font-size: 4em;
 }
 .addBtn {
-  margin-top: 3rem;
+  margin-top: 1.7rem;
+  background-color: #4989f6;
 }
 
 .playerFormInputs {
@@ -514,8 +515,13 @@ width: 80%;
 }
 /*colors for guest modal*/
 .colorPalette {
-  background-color: rgba(247, 242, 220, .5);
+  background-color: rgb(247, 242, 220);
+  opacity: .3;
   border-radius: 20px;
+}
+.faded {
+  background-color: rgba(247, 242, 220, .5);
+  opacity: 1;
 }
 .colorList {
   list-style-type: none;
@@ -527,6 +533,10 @@ width: 80%;
   display: inline;
   padding: 0;
   margin: 0;
+}
+.guestColor {
+  opacity: .9;
+  background-color: #ffffff;
 }
 .colorListSub li {
   /*padding-right: none;*/

@@ -29,7 +29,7 @@
 
       </div>
       <div class='col-md-3'>
-        <div class='row colorPalette'>
+        <div class='row colorPalette' ng-class='{"faded": emailInput && passwordInput}'>
           <div class='col-md-2 col-md-offset-1'>
             <p><br>Pick<br>Your<br> Color!</p>
           </div>
@@ -50,7 +50,7 @@
         </div>
       </div>
       <div class="col-md-1">
-        <button type="button" class='addBtn' ng-click="NGC.signin(emailInput, passwordInput); emailInput = null; passwordInput = null">Add Player</button>
+        <button type="button" class='addBtn btn' ng-click="NGC.signin(emailInput, passwordInput); emailInput = null; passwordInput = null">Add Player</button>
       </div>
     </div>
     <div class='row'>
@@ -58,8 +58,8 @@
         <div class="guestSignup"><button class="btn guestBtn btn-default" ng-click="MC.toggleModal4()"><h4>Guest</button></div>
         <div class="signInNewGamePage"><button class="btn guestBtn btn-default" ng-click="MC.toggleModal5()"><h4>Sign Up!</button></div>
       </div>
-      <div class="row topmargin" ng-repeat="player in NGC.players">
-        <div class="col-md-6 col-md-offset-3">
+      <div class="row topmargin">
+        <div class="col-md-6" ng-repeat="player in NGC.players">
           <center>
           <div class="col-md-4">
             <h4 class='playerName'>Player:</h4>
@@ -78,7 +78,7 @@
 
        <modal title="Guest Signup" visible="MC.showModal4">
         <div class="guest">
-            <div class='row colorPalette'>
+            <div class='row colorPalette guestColor'>
               <div class='col-md-2 col-md-offset-1'>
                 <p><br>Pick<br>Your<br> Color!</p>
               </div>
