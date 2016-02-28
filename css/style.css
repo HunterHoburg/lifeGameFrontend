@@ -349,7 +349,7 @@ h3 {
 }
 
 .topmargin {
-  margin-top: 5em;
+  margin-top: 3rem;
 }
 
 #enterBoard {
@@ -369,20 +369,62 @@ width: 80%;
 width: 80%;
 }
 
+/*Styling for game creation page*/
+/*.signUpBar {
+  background-color: hsl(72, 63%, 86%)
+}*/
 .numberOfPlayersLabel {
   font-size: 4em;
 }
-
-.playerFormInputs {
-  margin-top: .5em;
-  width: 6.2em;
-  height: 2em;
-  font-size: 2em;
+.addBtn{
+  background-color: #4989f6;
+  margin-top: 1em;
 }
 
-.guestSignup h4 {
+.addBtn:hover {
+  color: white;
+}
+
+.howToPlayLink {
+  background-color: rgba(255, 255, 255, 0);;
+  color: #00aeef;
+  border: none;
+  margin-top: 1.5em;
+}
+
+.howToPlayLink:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.playerFormInputs {
+  margin-top: 1.3em;
+  width: 12em;
+  height: 3em;
+  font-size: 1.1em;
+}
+
+/*.guestSignup h4 {
   margin-top: 2em;
   margin-left: 2em;
+}*/
+
+.guestLink {
+  margin-left: .2em;
+  color: #00aeef;
+}
+
+.guestLink:hover {
+  cursor: pointer;
+}
+
+.signupLink {
+  margin-right: 1em;
+  color: #00aeef;
+}
+
+.signupLink:hover {
+  cursor: pointer;
 }
 
 #navLinks {
@@ -394,21 +436,33 @@ width: 80%;
 
 
 /* Styling for the pop-up modal 'how to play' */
-/*.btn {
-  background: #428bca;
-  border: #357ebd solid 1px;
-  border-radius: 3px;
+.btn {
+  /*background: #428bca;*/
+  /*border: #357ebd solid 1px;*/
+  /*border-radius: 3px;*/
   color: #fff;
   display: inline-block;
   font-size: 14px;
   padding: 8px 15px;
+  margin: .75rem;
   text-decoration: none;
   text-align: center;
   min-width: 60px;
   position: relative;
   transition: color .1s ease;
-  top: 40em;
 }
+.guestBtn {
+  background-color: #66adf6;
+  width: 13rem;
+}
+.guestSubmitBtn {
+  background-color: #66adf6;
+  margin-left: 41%;
+}
+.submitSignUpBtn {
+  background-color: #66adf6;
+}
+
 .btn:hover {
   background: #357ebd;
 }
@@ -427,7 +481,7 @@ width: 80%;
 }
 .btn-close:hover {
   color: #919191;
-}*/
+}
 /*
 .modal:before {
   content: "";
@@ -490,22 +544,98 @@ width: 80%;
   display: none;
 }
 
-#plusButton {
-  width: 2em;
-  margin-top: .5em;
-  padding-top: .25em;
-  background-color: green;
-  color: white;
-  font-size: 2em;
-  border-radius: 50%;
+
+.playerName {
+  color: #ee4c30;
+}
+/*colors for guest modal*/
+.colorPalette {
+  background-color: rgb(247, 242, 220);
+  opacity: .3;
+  border-radius: 20px;
+}
+.faded {
+  background-color: rgba(247, 242, 220, .5);
+  opacity: 1;
+  transition: opacity .7s;
+  -webkit-transition: opacity .7s;
+  -moz-transition: opacity .7s;
+  -o-transition: opacity .7s;
+}
+.colorList {
+  list-style-type: none;
+  padding-left: none;
+  margin-left: none;
+}
+.colorListSub {
+  list-style-type: none;
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+.guestColor {
+  opacity: .9;
+  background-color: #ffffff;
+}
+.colorListSub li {
+  /*padding-right: none;*/
+  display: inline-block;
+  cursor: pointer;
+}
+.colorListModal li {
+  padding-top: 2rem;
 }
 
-#minusButton {
-  width: 2em;
-  margin-top: .5em;
-  padding-top: .25em;
-  background-color: red;
-  color: white;
-  font-size: 2em;
+.red {
+  width:35px;
+  height:35px;
+  background-color: #c22d29;
+  /*border: 1px solid black;*/
   border-radius: 50%;
+  margin: 5px;
+}
+
+.orange {
+  width:35px;
+  height:35px;
+  background-color: #e28811;
+  border-radius: 50%;
+  /*border: 1px solid black;*/
+  margin: 5px;
+}
+
+.blue {
+  width:35px;
+  height:35px;
+  background-color: #3b459f;
+  /*border: 1px solid black;*/
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.yellow {
+  width:35px;
+  height:35px;
+  background-color: #dae411;
+  /*border: 1px solid black;*/
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.olive {
+  width:35px;
+  height:35px;
+  background-color:olive;
+  /*border: 1px solid black;*/
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.teal {
+  width:35px;
+  height:35px;
+  background-color:teal;
+  /*border: 1px solid black;*/
+  border-radius: 50%;
+  margin: 5px;
 }
