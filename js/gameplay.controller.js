@@ -7,6 +7,7 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
   vm.show = true;
   vm.currRoll = 0;
   var turn = 0;
+  var jobsArray = [jobAccountant, jobPoliceman, jobModel, jobDrugDealer, jobDoctor, jobPolitician, jobAthlete];
 
   vm.hudStats = null;
   updateHud(CurrentGameData);
@@ -104,6 +105,7 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
       player.money -= 100000;
     } else if (isEvent === 'graduate') {
       player.college = true;
+      player.salary += 20000;
     } else if (isEvent === 'getMarried') {
       player.marriage = true;
     } else if (isEvent === 'stop') {
@@ -113,13 +115,19 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
 
   function eventLanding(player) {
     //TODO: actually change the player object with the function returned from eventFunc
-    if(eventSpaceService(player.curr[player.position], player) == 'smiley') {
+    var eventType = eventSpaceService(player.curr[player.position], player);
+    if(eventType == 'smiley') {
     var $newVar = $(player.curr[player.position]).attr('ng-model');
     var eventFunc = eventReturner[$newVar];
     eventFunc(player);
     vm.currentCardData.title = eventFunc(player).title;
     vm.currentCardData.text = eventFunc(player).text;
     vm.modalEnter(vm.currentCardData);
+    } else if (eventType === 'getJob') {
+      var jobReceived = jobsArray[Math.floor(Math.random() * 7)](player);
+      vm.currentCardData.title = jobReceived.title;
+      vm.currentCardData.text = jobReceived.text;
+      vm.modalEnter(vm.currentCardData);
     } else {
       var type = eventSpaceService(player.curr[player.position], player);
       var id = CurrentGameData.game_id;

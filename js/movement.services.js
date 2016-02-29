@@ -86,6 +86,8 @@ function eventSpaceService() {
       return 'health';
     } else if ($pieceData.hasClass('smiley')) {
       return 'smiley';
+    } else if ($pieceData.hasClass('getJob')) {
+      return 'getJob';
     } else {
       console.log('some other event');
     }
