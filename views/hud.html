@@ -18,7 +18,7 @@
 <body> -->
 
 <center>
-  <footer class="navbar-fixed-bottom" id="hideFooter" ng-click="show = !show">
+  <footer class="navbar-fixed-bottom" id="hideFooter" ng-click="GPC.show = !GPC.show">
     <i class="fa fa-caret-down"></i><i class="fa fa-caret-up"></i>
     <p style="color: #000088"> .</p>
     <p style="color: #000088"> .</p>
@@ -29,13 +29,13 @@
     <p>S</p>
   </footer>
 </center>
-  <footer class="navbar-fixed-bottom" ng-hide="!show">
+  <footer class="navbar-fixed-bottom" ng-hide="!GPC.show">
   </footer>
-<footer class="navbar navbar-default navbar-fixed-bottom" ng-show="show">
+<footer class="navbar navbar-default navbar-fixed-bottom magicHud" ng-show="GPC.show">
 
   <div class="container-fluid">
-    <div class="HUDstats navbar-text"><h2 class="navbar-text" ng-model="name"><i class="fa fa-female"></i>Lori</h2></div>
-    <div class="HUDstats navbar-text"> <h2 class="navbar-text" ng-model="money"><i class="fa fa-money"></i>$3</h2></div>
+    <div class="HUDstats navbar-text"><h2 class="navbar-text" ng-model="name"><i class="fa fa-female"></i>{{GPC.hudStats.name}}</h2></div>
+    <div class="HUDstats navbar-text"> <h2 class="navbar-text" ng-model="money"><i class="fa fa-money"></i>${{GPC.hudStats.money}}</h2></div>
     <div class="HUDstats navbar-text"><h2 class="HUDstats navbar-text" ng-model="addiction"><svg class="icon icon-aid-kit"><i class="fa fa-medkit"></i>Meth Addiction</h2></div>
     <div class="HUDstats navbar-text"><h2 class="navbar-text" ng-model="marriage"><svg class="icon icon-aid-kit"><i class="fa fa-diamond"></i>Married</h2></div>
     <div class="HUDstats navbar-text"><h2 class="navbar-text" ng-model="children"><svg class="icon icon-aid-kit"><i class="fa fa-child"></i>2 Children</h2></div>

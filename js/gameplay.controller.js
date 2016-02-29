@@ -4,14 +4,21 @@ app.controller('gameplayController', ['forkingService', 'passingService', 'event
 
 function gameplayController(forkingService, passingService, eventSpaceService, playerAddTokenService, playerRemoveTokenService, $timeout, CurrentGameData) {
   var vm = this;
-
+  vm.show = true;
   vm.currRoll = 0;
   var turn = 0;
+
+  vm.hudStats = null;
+  updateHud(CurrentGameData);
+
+  function updateHud(playerData) {
+    vm.hudStats = playerData.players[turn];
+  }
 
   vm.rollDie = function() {
     vm.currRoll = Math.floor(Math.random() * 10);
     vm.startGame(CurrentGameData, vm.currRoll);
-  }
+  };
 
   vm.startGame = function(playerData, roll) {
     playerMove(playerData.players[turn], roll);
@@ -19,7 +26,8 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
     if (!playerData.players[turn]) {
       turn = 0;
     }
-  }
+    updateHud(CurrentGameData);
+  };
 
   var $gameBoard = $('.board');
   // pathCollege pathWork join to pathJoinWorkCollege; pathJoinWorkCollege splits to the single and married routes
@@ -104,8 +112,14 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
   }
 
   function eventLanding(player) {
+    //TODO: actually change the player object with the function returned from eventFunc
     eventSpaceService(player.curr[player.position], player);
-    console.log(player.curr[player.position]);
+    // console.log(player.curr[player.position]['ng-model']);
+    var $newVar = $(player.curr[player.position]).attr('ng-model');
+    var eventFunc = eventReturner[$newVar];
+    vm.currentCardData.title = eventFunc(player).title;
+    vm.currentCardData.text = eventFunc(player).text;
+    vm.modalEnter(vm.currentCardData);
   }
 
   function addToken(player) {
@@ -260,12 +274,15 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
     $timeout(function(data){
       if(vm.flag){
         //TODO: implement something that pulls event data from the event page and plugs it in here
-        vm.currentCardData.title;
+        // vm.currentCardData.title;
         // vm.currentCardData.title = 'College';
-        vm.currentCardData.content = data;
+        // vm.currentCardData.content = data;
         vm.popoverIsVisible = true;
       }
     }, 700);
+    return{
+      data
+    }
   };
   vm.splitModalEnter = function(data) {
     vm.flag = true;
