@@ -279,7 +279,7 @@ body {
 .board span i {
   position: relative;
   top: 50%;
-  transform: translateY(-400%);
+  transform: translateY(-300%);
 }
 
 .board .playerHolder {
