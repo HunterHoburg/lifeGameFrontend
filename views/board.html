@@ -12,7 +12,7 @@
     <div class='board elbowRed'><div class='playerHolder'></div><span class='stop glyphicon glyphicon-exclamation-sign'></div>
   </div><div class='row'>
     <div class='board straightNSGreen'><div class='playerHolder'></div><span class='payCollege glyphicon glyphicon-usd'></span></div>
-    <div class='board straightNSBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board straightNSBlue' ng-model='college3'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
     <div class='board'></div>
     <div class='board straightNSYellow'><div class='playerHolder'></div><span class='mystery glyphicon glyphicon-question-sign'></span></div>
     <div class='board'></div>
@@ -23,8 +23,8 @@
     <div class='board straightNSYellow'><div class='playerHolder'></div><span class='jobs glyphicon glyphicon-briefcase'></span></div>
   </div><div class='row'>
     <div class='board fork forkNS junctionWYellow clickable' ng-mouseenter='GPC.splitModalEnter(collegeChoice)' ng-mouseleave='GPC.splitModalCancel()'><div class='playerHolder'></div><span>S</span></div>
-    <div class='board elbowNEBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board elbowBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowNEBlue' ng-model='college4'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowBlue' ng-model='college5'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
     <div class='board elbowNEBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
     <div class='board fork forkEW junctionSYellow clickable' ng-mouseenter='GPC.splitModalEnter(collegeChoice)' ng-mouseleave='GPC.splitModalCancel()'><div class='playerHolder'></div><span class='nature glyphicon glyphicon-tree-deciduous'></div>
     <div class='board straightEWYellow'><div class='playerHolder'></div><span class='marriage'><i class="fa fa-heartbeat"></i></span></div>
@@ -34,8 +34,8 @@
     <div class='board straightNSYellow'><div class='playerHolder'></div><span class='marriage'><i class="fa fa-heartbeat"></i></span></div>
   </div><div class='row'>
     <div class='board straightNSYellow'><div class='playerHolder'></div><span class='mystery glyphicon glyphicon-question-sign'></span></div>
-    <div class='board elbowSEBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board elbowNWBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowSEBlue' ng-model='college6'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowNWBlue' ng-model='college7'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
     <div class='board'></div>
     <div class='board junctionEGreen'><div class='playerHolder'></div><span class='payday glyphicon glyphicon-usd'></span></div>
     <div class='board straightEWBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
@@ -114,7 +114,7 @@
 </div>
 <hud-footer></hud-footer>
 <modal visible='GPC.popoverIsVisible' ng-mouseleave='GPC.closeModal()' close='GPC.closeModal()' title='{{GPC.currentCardData.title}}'>
-  {{GPC.currentCardData.content}}
+  {{GPC.currentCardData.text}}
 </modal>
 <modal visible='GPC.splitPopoverIsVisible' ng-mouseleave='GPC.splitCloseModal()' close='GPC.splitCloseModal()'>
   <div class='row'>

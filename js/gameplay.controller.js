@@ -112,7 +112,14 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
   }
 
   function eventLanding(player) {
+    //TODO: actually change the player object with the function returned from eventFunc
     eventSpaceService(player.curr[player.position], player);
+    // console.log(player.curr[player.position]['ng-model']);
+    var $newVar = $(player.curr[player.position]).attr('ng-model');
+    var eventFunc = eventReturner[$newVar];
+    vm.currentCardData.title = eventFunc(player).title;
+    vm.currentCardData.text = eventFunc(player).text;
+    vm.modalEnter(vm.currentCardData);
   }
 
   function addToken(player) {
@@ -264,26 +271,26 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
   vm.currentCardData = {};
   vm.modalEnter = function(data) {
     vm.flag = true;
-    console.log('banana');
     $timeout(function(data){
       if(vm.flag){
         //TODO: implement something that pulls event data from the event page and plugs it in here
-        vm.currentCardData.title;
+        // vm.currentCardData.title;
         // vm.currentCardData.title = 'College';
-        vm.currentCardData.content = data;
+        // vm.currentCardData.content = data;
         vm.popoverIsVisible = true;
       }
     }, 700);
+    return{
+      data
+    }
   };
   vm.splitModalEnter = function(data) {
     vm.flag = true;
-    console.log('apple');
     $timeout(function(){
       if(vm.flag){
         vm.currentCardData.title;
         vm.currentCardData.content = 'You pay $5,000!';
         vm.splitPopoverIsVisible = true;
-        console.log('success');
       }
     }, 700);
   };
