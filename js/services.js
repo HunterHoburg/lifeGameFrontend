@@ -5,6 +5,7 @@ angular.module('app')
   .service('signinService', ['$http', signinService])
   .service('signupService', ['$http', signupService])
   .service('CurrentGameData', [CurrentGameData])
+  .service('drawCardService', [drawCardService])
   .service('guestSigninService', ['$http', guestSigninService]);
 
 function signinService ($http){
@@ -114,6 +115,12 @@ $http.get('http://content.guardianapis.com/search?q=unemployment%20AND%20jobs&pa
         }
       }
     });
+  };
+}
+
+function drawCardService ($http){
+  return function(cardType, gameid) {
+    return $http.post('//localhost:3000/drawCard', {type: cardType, game_id: gameid });
   };
 }
 

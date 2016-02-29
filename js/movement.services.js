@@ -67,27 +67,25 @@ function eventSpaceService() {
     var $pieceData = $($piece.children()[1]);
     console.log($piece);
     if ($pieceData.hasClass('marriage')) {
-      console.log('marriage event');
+      return 'marriage';
     } else if ($pieceData.hasClass('nature')) {
-      console.log('nature event');
+      return 'nature';
     } else if ($pieceData.hasClass('jobs')) {
-      console.log('unemployment event');
+      return 'jobs';
     } else if ($pieceData.hasClass('financial')) {
-      console.log('financial event');
+      return 'finance';
     } else if ($pieceData.hasClass('mystery')) {
-      console.log('any event');
+      return 'mystery';
     } else if ($pieceData.hasClass('death')) {
-      console.log('death event');
+      return 'death';
     } else if ($pieceData.hasClass('drugs')) {
-      console.log('drug event');
+      return 'drugs';
     } else if ($pieceData.hasClass('crime')) {
-      console.log('crime event');
+      return 'crime';
     } else if ($pieceData.hasClass('health')) {
-      console.log('health event');
-    } else if ($pieceData.hasClass('getJob')) {
-      console.log('get a job');
+      return 'health';
     } else if ($pieceData.hasClass('smiley')) {
-      console.log("it's a smiley");
+      return 'smiley';
     } else {
       console.log('some other event');
     }
