@@ -1,12 +1,15 @@
 var app = angular.module('app');
 
-app.controller('gameplayController', ['forkingService', 'passingService', 'eventSpaceService', 'playerAddTokenService', 'playerRemoveTokenService', '$timeout', 'CurrentGameData', 'drawCardService', gameplayController]);
+app.controller('gameplayController', ['$scope', '$rootScope', 'forkingService', 'passingService', 'eventSpaceService', 'playerAddTokenService', 'playerRemoveTokenService', '$timeout', 'CurrentGameData', 'drawCardService', gameplayController]);
 
-function gameplayController(forkingService, passingService, eventSpaceService, playerAddTokenService, playerRemoveTokenService, $timeout, CurrentGameData, drawCardService) {
+function gameplayController($scope, $rootScope, forkingService, passingService, eventSpaceService, playerAddTokenService, playerRemoveTokenService, $timeout, CurrentGameData, drawCardService) {
   var vm = this;
   vm.show = true;
   vm.currRoll = 0;
+  vm.collegeChoiceIsVisible = false;
+  vm.collegeChoice = 's';
   var turn = 0;
+  var jobsArray = [jobAccountant, jobPoliceman, jobModel, jobDrugDealer, jobDoctor, jobPolitician, jobAthlete];
 
   vm.hudStats = null;
   updateHud(CurrentGameData);
@@ -104,6 +107,7 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
       player.money -= 100000;
     } else if (isEvent === 'graduate') {
       player.college = true;
+      player.salary += 20000;
     } else if (isEvent === 'getMarried') {
       player.marriage = true;
     } else if (isEvent === 'stop') {
@@ -113,7 +117,8 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
 
   function eventLanding(player) {
     //TODO: actually change the player object with the function returned from eventFunc
-    if(eventSpaceService(player.curr[player.position], player) == 'smiley') {
+    var eventType = eventSpaceService(player.curr[player.position], player);
+    if(eventType == 'smiley') {
     var $newVar = $(player.curr[player.position]).attr('ng-model');
     var eventFunc = eventReturner[$newVar];
     // eventFunc(player);
@@ -123,6 +128,11 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
     vm.currentCardData.title = updatedPlayer.title;
     vm.currentCardData.text = updatedPlayer.text;
     vm.modalEnter(vm.currentCardData);
+    } else if (eventType === 'getJob') {
+      var jobReceived = jobsArray[Math.floor(Math.random() * 7)](player);
+      vm.currentCardData.title = jobReceived.title;
+      vm.currentCardData.text = jobReceived.text;
+      vm.modalEnter(vm.currentCardData);
     } else {
       var type = eventSpaceService(player.curr[player.position], player);
       var id = CurrentGameData.game_id;
@@ -140,11 +150,27 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
   function playerMove(playerData, roll) {
     playerRemoveTokenService(playerData);
     if (playerData.curr[playerData.position] === start[0]) {
-      fork(playerData);
+      // fork(playerData);
+      console.log('stuff is here');
+      vm.player = playerData;
+      vm.currRoll = roll;
+      vm.collegeChoiceIsVisible = true;
+      // $scope.$apply();
+    } else {
+      vm.continueMove(playerData, roll);
     }
+  }
 
-    console.log(roll);
-    for (var i = roll; i >= 0; i--) {
+    vm.continueMove = function(playerData, roll, direction) {
+      if(direction) {
+        if (direction === 'n') {
+          playerData.next = pathCollege;
+        } else if (direction === 's') {
+          playerData.next = pathWork;
+        }
+      }
+      console.log(roll);
+      for (var i = roll; i >= 0; i--) {
       console.log(i);
       playerData.remainMvmt = i;
       playerData.position++;
