@@ -1,8 +1,8 @@
 var app = angular.module('app');
 
-app.controller('gameplayController', ['forkingService', 'passingService', 'eventSpaceService', 'playerAddTokenService', 'playerRemoveTokenService', '$timeout', 'CurrentGameData', gameplayController]);
+app.controller('gameplayController', ['forkingService', 'passingService', 'eventSpaceService', 'playerAddTokenService', 'playerRemoveTokenService', '$timeout', 'CurrentGameData', 'drawCardService', gameplayController]);
 
-function gameplayController(forkingService, passingService, eventSpaceService, playerAddTokenService, playerRemoveTokenService, $timeout, CurrentGameData) {
+function gameplayController(forkingService, passingService, eventSpaceService, playerAddTokenService, playerRemoveTokenService, $timeout, CurrentGameData, drawCardService) {
   var vm = this;
   vm.show = true;
   vm.currRoll = 0;
@@ -113,13 +113,21 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
 
   function eventLanding(player) {
     //TODO: actually change the player object with the function returned from eventFunc
-    eventSpaceService(player.curr[player.position], player);
-    // console.log(player.curr[player.position]['ng-model']);
+    if(eventSpaceService(player.curr[player.position], player) == 'smiley') {
     var $newVar = $(player.curr[player.position]).attr('ng-model');
     var eventFunc = eventReturner[$newVar];
+    eventFunc(player);
     vm.currentCardData.title = eventFunc(player).title;
     vm.currentCardData.text = eventFunc(player).text;
     vm.modalEnter(vm.currentCardData);
+    } else {
+      var type = eventSpaceService(player.curr[player.position], player);
+      var id = CurrentGameData.game_id;
+      var randoCard = drawCardService(type, id);
+      vm.currentCardData.title = randoCard.title;
+      vm.currentCardData.text = randoCard.title;
+      vm.modalEnter(vm.currentCardData);
+    }
   }
 
   function addToken(player) {
@@ -276,7 +284,24 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
         //TODO: implement something that pulls event data from the event page and plugs it in here
         // vm.currentCardData.title;
         // vm.currentCardData.title = 'College';
-        // vm.currentCardData.content = data;
+        vm.currentCardData.text
+        vm.popoverIsVisible = true;
+      }
+    }, 700);
+    return{
+      data
+    }
+  };
+  vm.modalHover = function(data) {
+    vm.flag = true;
+    console.log(eventReturner.data);
+    // var title = eventReturner[data].title;
+    // var text = eventReturner[data].text;
+    // vm.currentCardData.title = title;
+    // vm.currentCardData.text = text;
+    $timeout(function(){
+      if(vm.flag){
+        //TODO: implement something that pulls event data from the event page and plugs it in here
         vm.popoverIsVisible = true;
       }
     }, 700);

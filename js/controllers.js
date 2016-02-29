@@ -59,7 +59,7 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
           var type = res.response.results[i].type;
           $http({
             method: 'POST',
-            url: 'http://localhost:3000/insert',
+            url: 'https://powerful-sea-93234.herokuapp.com/insert',
             data: {
               title: title,
               url: url,
@@ -82,7 +82,7 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
     vm.listArticles = function() {
       $http({
         method: 'POST',
-        url: 'http://localhost:3000/getstories',
+        url: 'https://powerful-sea-93234.herokuapp.com/getstories',
         data: {
           game_id: 1
         }
@@ -144,7 +144,7 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
     vm.loginSubmit = function(email, password){
       $http({
         method: 'POST',
-        url: 'http://localhost:3000/signin',
+        url: 'https://powerful-sea-93234.herokuapp.com/signin',
         data: {
           email: email,
           password: password
@@ -157,7 +157,7 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
     vm.signupSubmit = function(firstname, lastname, email, password){
       $http({
         method: 'POST',
-        url: 'http://localhost:3000/newPlayer',
+        url: 'https://powerful-sea-93234.herokuapp.com/newPlayer',
         data: {
           firstname: firstname,
           lastname: lastname,

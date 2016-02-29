@@ -35,9 +35,10 @@ angular.module('app')
         scope.title = attrs.title;
 
         scope.$watch(attrs.visible, function(value){
-          if(value == true)
+          if(value == true) {
             $(element).modal('show');
-          else
+            scope.title = attrs.title;
+          } else
             $(element).modal('hide');
         });
         $(element).on('shown.bs.modal', function(){

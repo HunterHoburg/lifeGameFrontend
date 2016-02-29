@@ -1,114 +1,114 @@
 <div class='boardWrapper'>
   <div class='row'>
-    <div class='board elbowSEBlue' ng-mouseenter='GPC.modalEnter(college1)' ng-mouseleave='GPC.modalCancel()' ng-model='college1'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></span></div>
-    <div class='board elbowBlue' ng-mouseenter='GPC.modalEnter(college2)' ng-mouseleave='GPC.modalCancel()' ng-model='college2'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowSEBlue' ng-mouseenter='GPC.modalHover(college1)' ng-mouseleave='GPC.modalCancel()' ng-model='college1'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></span></div>
+    <div class='board elbowBlue' ng-mouseenter='GPC.modalHover(college2)' ng-mouseleave='GPC.modalCancel()' ng-model='college2'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
     <div class='board'></div>
-    <div class='board elbowSEYellow'><div class='playerHolder'></div><span class='marriage'><i class="fa fa-heartbeat"></i></span></div>
-    <div class='board straightEWYellow'><div class='playerHolder'></div><span class='nature glyphicon glyphicon-tree-deciduous'></span></div>
-    <div class='board straightEWYellow'><div class='playerHolder'></div><span class='jobs glyphicon glyphicon-briefcase'></span></div>
+    <div class='board elbowSEYellow' ng-model='marriage'><div class='playerHolder'></div><span class='marriage'><i class="fa fa-heartbeat"></i></span></div>
+    <div class='board straightEWYellow' ng-model='nature'><div class='playerHolder'></div><span class='nature glyphicon glyphicon-tree-deciduous'></span></div>
+    <div class='board straightEWYellow' ng-model='jobs'><div class='playerHolder'></div><span class='jobs glyphicon glyphicon-briefcase'></span></div>
     <div class='board junctionSGreen'><div class='playerHolder'></div><span class='payday glyphicon glyphicon-usd'></span></div>
-    <div class='board straightEWYellow'><div class='playerHolder'></div><span class='financial glyphicon glyphicon-piggy-bank'></span></div>
-    <div class='board straightEWYellow'><div class='playerHolder'></div><span class='mystery glyphicon glyphicon-question-sign'></span></div>
+    <div class='board straightEWYellow' ng-model='finance'><div class='playerHolder'></div><span class='financial glyphicon glyphicon-piggy-bank'></span></div>
+    <div class='board straightEWYellow' ng-model='mystery'><div class='playerHolder'></div><span class='mystery glyphicon glyphicon-question-sign'></span></div>
     <div class='board elbowRed'><div class='playerHolder'></div><span class='stop glyphicon glyphicon-exclamation-sign'></div>
   </div><div class='row'>
     <div class='board straightNSGreen'><div class='playerHolder'></div><span class='payCollege glyphicon glyphicon-usd'></span></div>
-    <div class='board straightNSBlue' ng-model='college3'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board straightNSBlue' ng-model='college3' ng-mouseenter='GPC.modalHover(college3)' ng-mouseleave='GPC.modalCancel()'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
     <div class='board'></div>
-    <div class='board straightNSYellow'><div class='playerHolder'></div><span class='mystery glyphicon glyphicon-question-sign'></span></div>
+    <div class='board straightNSYellow' ng-model='mystery'><div class='playerHolder'></div><span class='mystery glyphicon glyphicon-question-sign'></span></div>
     <div class='board'></div>
     <div class='board'></div>
-    <div class='board elbowNEYellow'><div class='playerHolder'></div><span class='financial glyphicon glyphicon-piggy-bank'></span></div>
-    <div class='board elbowBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowNEYellow' ng-model='finance'><div class='playerHolder'></div><span class='financial glyphicon glyphicon-piggy-bank'></span></div>
+    <div class='board elbowBlue' ng-mouseenter='GPC.modalHover(finance)' ng-mouseleave='GPC.modalCancel()' ng-model='financial7'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
     <div class='board'></div>
-    <div class='board straightNSYellow'><div class='playerHolder'></div><span class='jobs glyphicon glyphicon-briefcase'></span></div>
+    <div class='board straightNSYellow' ng-model='jobs'><div class='playerHolder'></div><span class='jobs glyphicon glyphicon-briefcase'></span></div>
   </div><div class='row'>
     <div class='board fork forkNS junctionWYellow clickable' ng-mouseenter='GPC.splitModalEnter(collegeChoice)' ng-mouseleave='GPC.splitModalCancel()'><div class='playerHolder'></div><span>S</span></div>
-    <div class='board elbowNEBlue' ng-model='college4'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board elbowBlue' ng-model='college5'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board elbowNEBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowNEBlue' ng-model='college4' ng-mouseenter='GPC.modalHover(college4)' ng-mouseleave='GPC.modalCancel()'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowBlue' ng-model='college5' ng-mouseenter='GPC.modalHover(college5)' ng-mouseleave='GPC.modalCancel()'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowNEBlue' ng-model='disaster3' ng-mouseenter='GPC.modalHover(disaster3)' ng-mouseleave='GPC.modalCancel()'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
     <div class='board fork forkEW junctionSYellow clickable' ng-mouseenter='GPC.splitModalEnter(collegeChoice)' ng-mouseleave='GPC.splitModalCancel()'><div class='playerHolder'></div><span class='nature glyphicon glyphicon-tree-deciduous'></div>
-    <div class='board straightEWYellow'><div class='playerHolder'></div><span class='marriage'><i class="fa fa-heartbeat"></i></span></div>
-    <div class='board straightEWBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board elbowNWBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board straightEWYellow' ng-model='nature'><div class='playerHolder'></div><span class='marriage'><i class="fa fa-heartbeat"></i></span></div>
+    <div class='board straightEWBlue' ng-model='addiction4' ng-mouseenter='GPC.modalHover(addiction4)' ng-mouseleave='GPC.modalCancel()'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowNWBlue' ng-model='financial6' ng-mouseenter='GPC.modalHover(financial6)' ng-mouseleave='GPC.modalCancel()'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
     <div class='board'></div>
-    <div class='board straightNSYellow'><div class='playerHolder'></div><span class='marriage'><i class="fa fa-heartbeat"></i></span></div>
+    <div class='board straightNSYellow' ng-model='marriage'><div class='playerHolder'></div><span class='marriage'><i class="fa fa-heartbeat"></i></span></div>
   </div><div class='row'>
-    <div class='board straightNSYellow'><div class='playerHolder'></div><span class='mystery glyphicon glyphicon-question-sign'></span></div>
-    <div class='board elbowSEBlue' ng-model='college6'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board elbowNWBlue' ng-model='college7'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board straightNSYellow' ng-model='mystery'><div class='playerHolder'></div><span class='mystery glyphicon glyphicon-question-sign'></span></div>
+    <div class='board elbowSEBlue' ng-model='college6' ng-mouseenter='GPC.modalHover(college6)' ng-mouseleave='GPC.modalCancel()'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowNWBlue' ng-model='college7' ng-mouseenter='GPC.modalHover(college7)' ng-mouseleave='GPC.modalCancel()'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
     <div class='board'></div>
     <div class='board junctionEGreen'><div class='playerHolder'></div><span class='payday glyphicon glyphicon-usd'></span></div>
-    <div class='board straightEWBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board straightEWBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board straightEWBlue' ng-model='health5' ng-mouseenter='GPC.modalHover(health5)' ng-mouseleave='GPC.modalCancel()'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board straightEWBlue' ng-model='financial5' ng-mouseenter='GPC.modalHover(financial5)' ng-mouseleave='GPC.modalCancel()'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
     <div class='board fork forkSW junctionSYellow clickable' ng-mouseenter='GPC.splitModalEnter(collegeChoice)' ng-mouseleave='GPC.splitModalCancel()'><div class='playerHolder'></div><span class='jobs glyphicon glyphicon-briefcase'></div>
-    <div class='board elbowYellow'><div class='playerHolder'></div><span class='death glyphicon glyphicon-remove'></span></div>
-    <div class='board elbowNEBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowYellow' ng-model='death'><div class='playerHolder'></div><span class='death glyphicon glyphicon-remove'></span></div>
+    <div class='board elbowNEBlue' ng-model='chipotle2' ng-mouseenter='GPC.modalHover(chipotle2)' ng-mouseleave='GPC.modalCancel()'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
   </div><div class='row'>
-    <div class='board straightNSYellow'><div class='playerHolder'></div><span class='health glyphicon glyphicon-plus'></span></div>
+    <div class='board straightNSYellow' ng-model='health'><div class='playerHolder'></div><span class='health glyphicon glyphicon-plus'></span></div>
     <div class='board straightNSGreen'><div class='playerHolder'></div><span class='graduate glyphicon glyphicon-education'></span></div>
-    <div class='board elbowSEYellow'><div class='playerHolder'></div><span class='drugs'><i class="fa fa-cloud-upload"></i></span></div>
-    <div class='board elbowBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board straightNSBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board elbowSEYellow'><div class='playerHolder'></div><span class='marriage'><i class="fa fa-heartbeat"></i></span></div>
-    <div class='board elbowYellow'><div class='playerHolder'></div><span class='drugs'><i class="fa fa-cloud-upload"></i></div>
-    <div class='board straightNSYellow'><div class='playerHolder'></div><span class='marriage'><i class="fa fa-heartbeat"></i></span></div>
-    <div class='board elbowNEYellow'><div class='playerHolder'></div><span class='crime glyphicon glyphicon-screenshot'></span></div>
+    <div class='board elbowSEYellow' ng-model='drugs'><div class='playerHolder'></div><span class='drugs'><i class="fa fa-cloud-upload"></i></span></div>
+    <div class='board elbowBlue' ng-model='addiction1' ng-mouseenter='GPC.modalHover(addiction1)' ng-mouseleave='GPC.modalCancel()'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board straightNSBlue' ng-model='addiction3'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowSEYellow' ng-model='marriage'><div class='playerHolder'></div><span class='marriage'><i class="fa fa-heartbeat"></i></span></div>
+    <div class='board elbowYellow' ng-model='drugs'><div class='playerHolder'></div><span class='drugs'><i class="fa fa-cloud-upload"></i></div>
+    <div class='board straightNSYellow' ng-model='marriage'><div class='playerHolder'></div><span class='marriage'><i class="fa fa-heartbeat"></i></span></div>
+    <div class='board elbowNEYellow' ng-model='crime'><div class='playerHolder'></div><span class='crime glyphicon glyphicon-screenshot'></span></div>
     <div class='board elbowGreen'><div class='playerHolder'></div><span class='payday glyphicon glyphicon-usd'></span></div>
   </div><div class='row'>
-    <div class='board elbowNEYellow'><div class='playerHolder'></div><span class='crime glyphicon glyphicon-screenshot'></span></div>
+    <div class='board elbowNEYellow' ng-model='crime'><div class='playerHolder'></div><span class='crime glyphicon glyphicon-screenshot'></span></div>
     <div class='board junctionNRed clickable' ng-mouseenter='GPC.splitModalEnter(collegeChoice)' ng-mouseleave='GPC.splitModalCancel()'><div class='playerHolder'></div><span class='stop getJob glyphicon glyphicon-exclamation-sign'></div>
     <div class='board elbowNWGreen'><div class='playerHolder'></div><span class='payday glyphicon glyphicon-usd'></span></div>
-    <div class='board straightNSYellow'><div class='playerHolder'></div><span class='death glyphicon glyphicon-remove'></span></div>
-    <div class='board straightNSBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board elbowNEYellow'><div class='playerHolder'></div><span class='death glyphicon glyphicon-remove'></span></div>
-    <div class='board elbowNWBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board straightNSYellow'><div class='playerHolder'></div><span class='crime glyphicon glyphicon-screenshot'></span></div>
+    <div class='board straightNSYellow' ng-model='death'><div class='playerHolder'></div><span class='death glyphicon glyphicon-remove'></span></div>
+    <div class='board straightNSBlue' ng-model='financial4'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowNEYellow' ng-model='death'><div class='playerHolder'></div><span class='death glyphicon glyphicon-remove'></span></div>
+    <div class='board elbowNWBlue' ng-model='health4'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board straightNSYellow' ng-model='crime'><div class='playerHolder'></div><span class='crime glyphicon glyphicon-screenshot'></span></div>
     <div class='board'></div>
-    <div class='board straightNSYellow'><div class='playerHolder'></div><span class='nature glyphicon glyphicon-tree-deciduous'></div>
+    <div class='board straightNSYellow' ng-model='nature'><div class='playerHolder'></div><span class='nature glyphicon glyphicon-tree-deciduous'></div>
   </div><div class='row'>
-    <div class='board elbowSEYellow'><div class='playerHolder'></div><span class='jobs glyphicon glyphicon-briefcase'></span></div>
-    <div class='board straightEWYellow'><div class='playerHolder'></div><span class='health glyphicon glyphicon-plus'></span></div>
-    <div class='board straightEWYellow'><div class='playerHolder'></div><span class='nature glyphicon glyphicon-tree-deciduous'></div>
-    <div class='board elbowNWYellow'><div class='playerHolder'></div><span class='crime glyphicon glyphicon-screenshot'></span></div>
-    <div class='board elbowNEBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board straightEWBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board straightEWBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board elbowNWBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowSEYellow' ng-model='jobs'><div class='playerHolder'></div><span class='jobs glyphicon glyphicon-briefcase'></span></div>
+    <div class='board straightEWYellow' ng-model='health'><div class='playerHolder'></div><span class='health glyphicon glyphicon-plus'></span></div>
+    <div class='board straightEWYellow' ng-model='nature'><div class='playerHolder'></div><span class='nature glyphicon glyphicon-tree-deciduous'></div>
+    <div class='board elbowNWYellow' ng-model='crime'><div class='playerHolder'></div><span class='crime glyphicon glyphicon-screenshot'></span></div>
+    <div class='board elbowNEBlue' ng-model='chipotle1'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board straightEWBlue' ng-model='health3'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board straightEWBlue' ng-model='disaster2'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowNWBlue' ng-model='financial3'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
     <div class='board'></div>
-    <div class='board straightNSBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board straightNSBlue' ng-model='addiction2'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
   </div><div class='row'>
-    <div class='board straightNSYellow'><div class='playerHolder'></div><span class='drugs'><i class="fa fa-cloud-upload"></i></div>
-    <div class='board elbowSEBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board straightEWYellow'><div class='playerHolder'></div><span class='jobs glyphicon glyphicon-briefcase'></span></div>
-    <div class='board straightEWYellow'><div class='playerHolder'></div><span class='financial glyphicon glyphicon-piggy-bank'></span></div>
-    <div class='board straightEWBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board straightEWYellow'><div class='playerHolder'></div><span class='mystery glyphicon glyphicon-question-sign'></span></div>
-    <div class='board straightEWYellow'><div class='playerHolder'></div><span class='health glyphicon glyphicon-plus'></span></div>
-    <div class='board straightEWBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board elbowYellow'><div class='playerHolder'></div><span class='drugs'><i class="fa fa-cloud-upload"></i></div>
-    <div class='board straightNSYellow'><div class='playerHolder'></div><span class='drugs'><i class="fa fa-cloud-upload"></i></div>
+    <div class='board straightNSYellow' ng-model='drugs'><div class='playerHolder'></div><span class='drugs'><i class="fa fa-cloud-upload"></i></div>
+    <div class='board elbowSEBlue' ng-model='financial1'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board straightEWYellow' ng-model='jobs'><div class='playerHolder'></div><span class='jobs glyphicon glyphicon-briefcase'></span></div>
+    <div class='board straightEWYellow' ng-model='finance'><div class='playerHolder'></div><span class='financial glyphicon glyphicon-piggy-bank'></span></div>
+    <div class='board straightEWBlue' ng-model='disaster1'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board straightEWYellow' ng-model='finance'><div class='playerHolder'></div><span class='mystery glyphicon glyphicon-question-sign'></span></div>
+    <div class='board straightEWYellow' ng-model='health'><div class='playerHolder'></div><span class='health glyphicon glyphicon-plus'></span></div>
+    <div class='board straightEWBlue' ng-model='financial2'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowYellow' ng-model='drugs'><div class='playerHolder'></div><span class='drugs'><i class="fa fa-cloud-upload"></i></div>
+    <div class='board straightNSYellow' ng-model='drugs'><div class='playerHolder'></div><span class='drugs'><i class="fa fa-cloud-upload"></i></div>
   </div><div class='row'>
-    <div class='board straightNSYellow'><div class='playerHolder'></div><span class='financial glyphicon glyphicon-piggy-bank'></span></div>
-    <div class='board elbowNEYellow'><div class='playerHolder'></div><span class='death glyphicon glyphicon-remove'></span></div>
-    <div class='board straightEWYellow'><div class='playerHolder'></div><span class='health glyphicon glyphicon-plus'></span></div>
-    <div class='board straightEWBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board elbowYellow'><div class='playerHolder'></div><span class='financial glyphicon glyphicon-piggy-bank'></span></div>
-    <div class='board elbowSEBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board elbowBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board straightNSYellow' ng-model='finance'><div class='playerHolder'></div><span class='financial glyphicon glyphicon-piggy-bank'></span></div>
+    <div class='board elbowNEYellow' ng-model='death'><div class='playerHolder'></div><span class='death glyphicon glyphicon-remove'></span></div>
+    <div class='board straightEWYellow' ng-model='health'><div class='playerHolder'></div><span class='health glyphicon glyphicon-plus'></span></div>
+    <div class='board straightEWBlue' ng-model='health1'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowYellow' ng-model='finance'><div class='playerHolder'></div><span class='financial glyphicon glyphicon-piggy-bank'></span></div>
+    <div class='board elbowSEBlue' ng-model='marriage3'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowBlue' ng-model='marriage4'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
     <div class='board'></div>
-    <div class='board straightNSYellow'><div class='playerHolder'></div><span class='crime glyphicon glyphicon-screenshot'></span></div>
-    <div class='board straightNSBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board straightNSYellow' ng-model='crime'><div class='playerHolder'></div><span class='crime glyphicon glyphicon-screenshot'></span></div>
+    <div class='board straightNSBlue' ng-model='health2'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
   </div><div class='row'>
-    <div class='board elbowNEYellow'><div class='playerHolder'></div><span class='death glyphicon glyphicon-remove'></span></div>
+    <div class='board elbowNEYellow' ng-model='death'><div class='playerHolder'></div><span class='death glyphicon glyphicon-remove'></span></div>
     <div class='board straightEWGreen'><div class='playerHolder'></div><span class='payday glyphicon glyphicon-usd'></span></div>
-    <div class='board straightEWYellow'><div class='playerHolder'></div><span class='nature glyphicon glyphicon-tree-deciduous'></div>
-    <div class='board straightEWYellow'><div class='playerHolder'></div><span class='mystery glyphicon glyphicon-question-sign'></span></div>
+    <div class='board straightEWYellow' ng-model='nature'><div class='playerHolder'></div><span class='nature glyphicon glyphicon-tree-deciduous'></div>
+    <div class='board straightEWYellow' ng-model='mystery'><div class='playerHolder'></div><span class='mystery glyphicon glyphicon-question-sign'></span></div>
     <div class='board fork forkNE junctionNRed clickable' ng-mouseenter='GPC.splitModalEnter(collegeChoice)' ng-mouseleave='GPC.splitModalCancel()'><div class='playerHolder'></div><span class='stop glyphicon glyphicon-exclamation-sign'></div>
-    <div class='board elbowNWBlue'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
-    <div class='board elbowNEBlue'><div class='playerHolder'></div><span class='smiley'f><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowNWBlue' ng-model='marriage1'><div class='playerHolder'></div><span class='smiley'><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowNEBlue' ng-model='marriage2'><div class='playerHolder'></div><span class='smiley'f><i class="fa fa-smile-o"></i></div>
     <div class='board straightEWGreen'><div class='playerHolder'></div><span class='married glyphicon glyphicon-heart'></span></div>
     <div class='board junctionNGreen'><div class='playerHolder'></div><span class='payday glyphicon glyphicon-usd'></span></div>
-    <div class='board elbowNWYellow'><div class='playerHolder'></div><span class='health glyphicon glyphicon-plus'></span></div>
+    <div class='board elbowNWYellow' ng-model='health'><div class='playerHolder'></div><span class='health glyphicon glyphicon-plus'></span></div>
   </div>
   <!-- Doing modal popups for decisions -->
 </div>
