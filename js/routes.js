@@ -10,6 +10,7 @@ angular.module("app")
         controller: 'NewGameController as NGC'
       })
     .when('/board', {
-      templateUrl: 'views/board.html'
+      templateUrl: 'views/board.html',
+      controller: 'gameplayController as GPC'
     });
 });

@@ -52,20 +52,6 @@ function insertArticles($http) {
     var articles = [];
     var promises = [];
 
-    // $http.get('http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=5&q=http://www.theonion.com/feeds/rss')
-    // .then(function(satireArticles) {
-    //   satireArticles.data.responseData.entries.forEach(function(article) {
-    //     article.gameSession = gameSession;
-    //     article.type = 'satire';
-    //     articles.push(article);
-    //   });
-    //   return $http.get('http://ajax.googleapis.com/ajax/services/feed/load?v=1.0&num=5&q=http://www.buzzfeed.com/cute.xml');
-    // }).then(function(cuteArticles) {
-    //   cuteArticles.responseData.entries.forEach(function(article) {
-    //     article.gameSession = gameSession;
-    //     article.type = 'cute';
-    //     articles.push(article);
-    //   });
 $http.get('http://content.guardianapis.com/search?q=unemployment%20AND%20jobs&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0')
 .then(function(jobsArticles) {
       jobsArticles.data.response.results.forEach(function(article) {
