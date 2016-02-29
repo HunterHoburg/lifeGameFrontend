@@ -1,8 +1,8 @@
 var app = angular.module('app');
 
-app.controller('gameplayController', ['forkingService', 'passingService', 'eventSpaceService', 'playerAddTokenService', 'playerRemoveTokenService', '$timeout', 'CurrentGameData', gameplayController]);
+app.controller('gameplayController', ['forkingService', 'passingService', 'eventSpaceService', 'playerAddTokenService', 'playerRemoveTokenService', '$timeout', 'CurrentGameData', 'drawCardService', gameplayController]);
 
-function gameplayController(forkingService, passingService, eventSpaceService, playerAddTokenService, playerRemoveTokenService, $timeout, CurrentGameData) {
+function gameplayController(forkingService, passingService, eventSpaceService, playerAddTokenService, playerRemoveTokenService, $timeout, CurrentGameData, drawCardService) {
   var vm = this;
   vm.show = true;
   vm.currRoll = 0;
@@ -122,7 +122,7 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
     vm.modalEnter(vm.currentCardData);
     } else {
       var type = eventSpaceService(player.curr[player.position], player);
-      var id = currentGameData.game_id;
+      var id = CurrentGameData.game_id;
       drawCardService(type, id);
     }
   }

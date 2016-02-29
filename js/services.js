@@ -5,7 +5,7 @@ angular.module('app')
   .service('signinService', ['$http', signinService])
   .service('signupService', ['$http', signupService])
   .service('CurrentGameData', [CurrentGameData])
-  .service('drawCardService', [drawCardService])
+  .service('drawCardService', ['$http', drawCardService])
   .service('guestSigninService', ['$http', guestSigninService]);
 
 function signinService ($http){
