@@ -10,13 +10,13 @@ angular.module('app')
 
 function signinService ($http){
   return function(playerObject) {
-    return $http.post('//localhost:3000/signin', playerObject);
+    return $http.post('https://powerful-sea-93234.herokuapp.com/signin', playerObject);
   };
 }
 
 // function signupService ($http) {
 //   return function (newPlayerObject) {
-//     return $http.post('//localhost:3000/newPlayer', newPlayerObject);
+//     return $http.post('https://powerful-sea-93234.herokuapp.com/newPlayer', newPlayerObject);
 //   };
 // }
 
@@ -30,25 +30,25 @@ function signupService($http){
     //   gender: playerGender
     // };
     console.log('service was called for this player: ' + newPlayerData);
-    return $http.post('//localhost:3000/newPlayer', newPlayerData);
+    return $http.post('https://powerful-sea-93234.herokuapp.com/newPlayer', newPlayerData);
   };
 }
 
 function newGameService($http){
   return function() {
-    return $http.post('//localhost:3000/newGame');
+    return $http.post('https://powerful-sea-93234.herokuapp.com/newGame');
   };
 }
 
 function playerJoinGame($http){
   return function(newGamePlayerInfo) {
-    return $http.post('//localhost:3000/newGamePlayer', newGamePlayerInfo);
+    return $http.post('https://powerful-sea-93234.herokuapp.com/newGamePlayer', newGamePlayerInfo);
   };
 }
 
 function guestSigninService($http) {
   return function(guest) {
-    return $http.post('//localhost:3000/newGamePlayer', guest);
+    return $http.post('https://powerful-sea-93234.herokuapp.com/newGamePlayer', guest);
   };
 }
 
@@ -107,7 +107,7 @@ $http.get('http://content.guardianapis.com/search?q=unemployment%20AND%20jobs&pa
         articles.push(marriageArticles.data.response.results[i]);
         if (i === marriageArticles.data.response.results.length - 1) {
           for (var j = 0; j < articles.length; j++) {
-            promises.push($http.post('//localhost:3000/newGameStories', articles[j]));
+            promises.push($http.post('https://powerful-sea-93234.herokuapp.com/newGameStories', articles[j]));
           }
           Promise.all(promises).then(function(finished) {
             // console.log(finished);
@@ -120,7 +120,7 @@ $http.get('http://content.guardianapis.com/search?q=unemployment%20AND%20jobs&pa
 
 function drawCardService ($http){
   return function(cardType, gameid) {
-    return $http.post('//localhost:3000/drawCard', {type: cardType, game_id: gameid });
+    return $http.post('https://powerful-sea-93234.herokuapp.com/drawCard', {type: cardType, game_id: gameid });
   };
 }
 
