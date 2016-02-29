@@ -4,7 +4,7 @@ app.controller('gameplayController', ['forkingService', 'passingService', 'event
 
 function gameplayController(forkingService, passingService, eventSpaceService, playerAddTokenService, playerRemoveTokenService, $timeout, CurrentGameData) {
   var vm = this;
-
+  vm.show = true;
   vm.currRoll = 0;
   var turn = 0;
 
