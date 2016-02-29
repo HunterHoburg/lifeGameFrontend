@@ -9,7 +9,9 @@ angular.module("app")
         templateUrl: 'views/newgame.html',
         controller: 'NewGameController as NGC'
       })
-    .when('/board', {
-      templateUrl: 'views/board.html'
+      .when('/board', {
+        templateUrl: 'views/board.html',
+        controller: 'MainController as MC'
+        //TODO: change this controller
     });
 });

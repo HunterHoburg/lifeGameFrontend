@@ -16,6 +16,7 @@ function NewGameController (signinService, signupService, guestSigninService) {
   vm.guestCounter = 1;
   vm.colorPick = function(color) {
     vm.chosenColor = color;
+    $(event.target).addClass('highlightedColor');
   };
   function signin (emailIn, passwordIn) {
     // playerInfo should be: {email: '', password: ''}

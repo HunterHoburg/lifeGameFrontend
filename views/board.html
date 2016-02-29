@@ -1,5 +1,5 @@
 <div class='boardWrapper'>
-  <div class='row'>
+  <div class='row' ng-mouseenter='MC.modalEnter()'>
     <div class='board elbowSEBlue'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></span></div>
     <div class='board elbowBlue'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
     <div class='board'></div>
@@ -110,4 +110,9 @@
     <div class='board junctionNGreen'><div class='playerHolder'></div><span class='glyphicon glyphicon-usd'></span></div>
     <div class='board elbowNWYellow'><div class='playerHolder'></div><span class='glyphicon glyphicon-plus'></span></div>
   </div>
+  <!-- Doing modal popups for decisions -->
 </div>
+<button ng-mouseenter='MC.modalEnter()'>Click here</button>
+<modal visible='MC.popoverIsVisible' ng-mouseleave='MC.closeModal()' close='closeModal()'>
+
+</modal>

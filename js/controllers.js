@@ -119,34 +119,41 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
     vm.toggleModal = function(){
     vm.showModal = !vm.showModal;
 
-  };
+    };
 
 
     vm.showModal2 = false;
     vm.toggleModal2 = function(){
     vm.showModal2 = !vm.showModal2;
 
-  };
+    };
 
     vm.showModal3 = false;
     vm.toggleModal3 = function(){
     vm.showModal3 = !vm.showModal3;
 
-  };
+    };
 
     vm.showModal4 = false;
     vm.toggleModal4 = function(){
     vm.showModal4 = !vm.showModal4;
 
-  };
+    };
 
     vm.showModal5 = false;
     vm.toggleModal5 = function(){
     vm.showModal5 = !vm.showModal5;
 
-  };
+    };
 
-  //login button WE SHOULD TAKE THESE OUT 
+    vm.modalEnter = function() {
+      vm.popoverIsVisible = true;
+    };
+    vm.closeModal = function() {
+      vm.popoverIsVisible = false;
+    }
+    
+  //login button WE SHOULD TAKE THESE OUT
     vm.loginSubmit = function(email, password){
       $http({
         method: 'POST',
@@ -154,7 +161,7 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
         data: {
           email: email,
           password: password
-        } 
+        }
       }).then(function(data){
         console.log(data);
       });
@@ -169,10 +176,9 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
           lastname: lastname,
           email: email,
           password: password
-        } 
+        }
       }).then(function(data){
         console.log(data);
       });
     };
-
 }

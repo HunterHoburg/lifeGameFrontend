@@ -192,7 +192,7 @@ Regardless of whether you're male or female, Viagra should never be taken in han
 
 Charlie Sheen and Robert Downey Jr. combined couldn't keep up with you when it comes to railing cobra-sized lines of cocaine. The nosebleeds don't even hold you back from playing Hoover vacuum with entire 8-balls of coke at a time. You lose 1 health per turn.
 
-Acid isn't necessarily harmful in and of itself, but the fact that every time you're in the middle of an eight-hour trip, you start banging holes in the drywall with your head makes LSD kinda bad for you. You lose 1 health per turn.
+Acid isn't necessarily harmful in and of itself, but the fact that every time you're in the middle of an eight-hour trip, you start banging holes in the drywall with your head... THAT makes LSD kinda bad for you. You lose 1 health per turn.
 
 Starbucks makes so much money off of you, they gave you a gold customer loyalty card. They don't even MAKE those. Your coffee addiction may lead to heart palpations or brain disease, but you can't help but drain five Trenta lattes a day. You lose 1 health per turn.
 
@@ -240,7 +240,7 @@ Your company found a way to replace you with a robot. Sure, it's not as fun at o
 
 In a lengthy investigation, your company is found to be a Ponzi scheme. And you're the Ponzi. You get fined $200,000.
 
-In a classic stickup, your business gets robbed by a creepy clown and some cheap-bit thugs in rubber clown masks. They all off each other except for one, who makes away with $100,000 from your wallet.
+In a classic stickup, your business gets robbed by a creepy clown and some cheap 2-bit thugs in rubber clown masks. They all off each other except for one, who makes away with $100,000 from your wallet.
 
 There's nothing quite as good as the satisfaction of a job well done, and you don't feel that satisfaction often. You're pretty bad at your job. Well, you were. You got fired.
 
