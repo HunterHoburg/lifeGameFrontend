@@ -63,7 +63,7 @@
         </div>
       </div>
       <div class="col-md-1">
-        <button type="button" style="margin-top: 1.8em; background-color: #00aeef;" class='addBtn btn' ng-click="NGC.signin(emailInput, passwordInput); emailInput = null; passwordInput = null">Add Player</button>
+        <button type="button" id="addBtn" ng-click="NGC.signin(emailInput, passwordInput); emailInput = null; passwordInput = null">Add Player</button>
       </div>
     </div>
 
@@ -141,3 +141,5 @@
     <div class="icon2" type="button" name="enterGame">Enter Game!</button>
   </div>
 </div>
+
+<hud-footer></hud-footer>

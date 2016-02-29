@@ -376,13 +376,21 @@ width: 80%;
 .numberOfPlayersLabel {
   font-size: 4em;
 }
-.addBtn{
-  background-color: #4989f6;
-  margin-top: 1em;
+#addBtn{
+  background-color: #00aeef;
+  margin-top: 1.8em;
+  padding: 1em;
+  width: 7em;
+  border-radius: 25%;
+  color: white;
+  margin-left: 1em;
 }
 
-.addBtn:hover {
-  color: white;
+#addBtn:hover {
+  color: black;
+  background-color: #22aeef;
+  font-weight: bold;
+  border-color: white;
 }
 
 .howToPlayLink {
