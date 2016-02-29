@@ -1,6 +1,6 @@
 <div class='boardWrapper'>
-  <div class='row' ng-mouseenter='MC.modalEnter()'>
-    <div class='board elbowSEBlue'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></span></div>
+  <div class='row'>
+    <div class='board elbowSEBlue'><div class='playerHolder'></div><span ng-mouseenter='MC.modalEnter(college1)' ng-mouseleave='MC.modalCancel()' ng-model='college1'><i class="fa fa-smile-o"></i></span></div>
     <div class='board elbowBlue'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
     <div class='board'></div>
     <div class='board elbowSEYellow'><div class='playerHolder'></div><span><i class="fa fa-heartbeat"></i></span></div>
@@ -113,6 +113,6 @@
   <!-- Doing modal popups for decisions -->
 </div>
 <button ng-mouseenter='MC.modalEnter()'>Click here</button>
-<modal visible='MC.popoverIsVisible' ng-mouseleave='MC.closeModal()' close='closeModal()'>
-
+<modal visible='MC.popoverIsVisible' ng-mouseleave='MC.closeModal()' close='closeModal()' title='{{MC.currentCardData.title}}'>
+  {{MC.currentCardData.content}}
 </modal>

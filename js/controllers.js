@@ -1,8 +1,8 @@
 var app = angular.module("app");
-app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', 'newPlayer', MainController]);
+app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', 'newPlayer', '$timeout', MainController]);
 
   //CONTROLLER FOR QUERYING EL GUARDIAN API
-  function MainController ($http, newGameService, playerJoinGame, insertArticles, newPlayer){
+  function MainController ($http, newGameService, playerJoinGame, insertArticles, newPlayer, $timeout){
 
     var vm = this;
     vm.newPlayer = newPlayer;
@@ -145,14 +145,31 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
     vm.showModal5 = !vm.showModal5;
 
     };
+    vm.currentCardData = {};
+    vm.flag = false;
+    vm.modalEnter = function(data) {
+      vm.flag = true;
+      $timeout(function(){
+        if(vm.flag){
+          //TODO: implement something that pulls event data from the event page and plugs it in here
+          vm.currentCardData.title;
+          // vm.currentCardData.title = 'College';
+          vm.currentCardData.content = 'You pay $5,000!';
+          vm.popoverIsVisible = true;
 
-    vm.modalEnter = function() {
-      vm.popoverIsVisible = true;
+        }
+      }, 700);
     };
     vm.closeModal = function() {
       vm.popoverIsVisible = false;
     }
-    
+    vm.modalCancel = function() {
+      vm.flag = false;
+    }
+
+    //TODO: implement the above two functions on all modals so they close and open correctly every time
+    //TODO: will probably need to give HUD a z-index greater than the modal so the mouseleave will work
+
   //login button WE SHOULD TAKE THESE OUT
     vm.loginSubmit = function(email, password){
       $http({
