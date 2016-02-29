@@ -86,10 +86,11 @@ function eventSpaceService() {
       console.log('health event');
     } else if ($pieceData.hasClass('getJob')) {
       console.log('get a job');
+    } else if ($pieceData.hasClass('smiley')) {
+      console.log("it's a smiley");
     } else {
       console.log('some other event');
     }
-
   };
 }
 
