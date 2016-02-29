@@ -63,7 +63,7 @@
         </div>
       </div>
       <div class="col-md-1">
-        <button type="button" style="margin-top: 1.8em; background-color: #00aeef;" class='addBtn btn' ng-click="NGC.signin(emailInput, passwordInput); emailInput = null; passwordInput = null">Add Player</button>
+        <button type="button" id="addBtn" ng-click="NGC.signin(emailInput, passwordInput); emailInput = null; passwordInput = null">Add Player</button>
       </div>
     </div>
 
@@ -133,8 +133,6 @@
         </form>
       </modal>
     </div>
-
-</div>
 
 <div class="row" id="enterBoard">
   <div class="col-md-6 col-md-offset-3">
