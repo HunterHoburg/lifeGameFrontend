@@ -357,8 +357,8 @@ h3 {
 }
 
 #enterBoard .icon1 {
-height: 2.5em;
-font-size: 4em;
+  height: 2.5em;
+  font-size: 4em;
 }
 
 #enterBoard .pulse1 {
@@ -458,7 +458,6 @@ width: 80%;
   min-width: 60px;
   position: relative;
   transition: color .1s ease;
-
 }
 .guestBtn {
   background-color: #66adf6;
@@ -552,6 +551,7 @@ width: 80%;
 #close {
   display: none;
 }
+
 
 .playerName {
   color: #ee4c30;

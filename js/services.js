@@ -4,34 +4,31 @@ angular.module('app')
   .service('insertArticles', ['$http', insertArticles])
   .service('signinService', ['$http', signinService])
   .service('signupService', ['$http', signupService])
-  .service('guestSigninService', ['$http', guestSigninService])
-  .service('newPlayer', ['$http', newPlayer]);
-
+  .service('CurrentGameData', [CurrentGameData])
+  .service('guestSigninService', ['$http', guestSigninService]);
 
 function signinService ($http){
   return function(playerObject) {
-    console.log('signin service was called!');
-    console.log(playerObject);
     return $http.post('//localhost:3000/signin', playerObject);
   };
 }
 
-function signupService ($http) {
-  return function (newPlayerObject) {
-    return $http.post('//localhost:3000/newPlayer', newPlayerObject);
-  };
-}
+// function signupService ($http) {
+//   return function (newPlayerObject) {
+//     return $http.post('//localhost:3000/newPlayer', newPlayerObject);
+//   };
+// }
 
-function newPlayer($http){
-  return function(playerName, playerEmail, playerPassword, playerColor, playerGender) {
-    var newPlayerData = {
-      name: playerName,
-      email: playerEmail,
-      password: playerPassword,
-      color: playerColor,
-      gender: playerGender
-    };
-    console.log(newPlayerData);
+function signupService($http){
+  return function(newPlayerData) {
+    // var newPlayerData = {
+    //   name: playerName,
+    //   email: playerEmail,
+    //   password: playerPassword,
+    //   color: playerColor,
+    //   gender: playerGender
+    // };
+    console.log('service was called for this player: ' + newPlayerData);
     return $http.post('//localhost:3000/newPlayer', newPlayerData);
   };
 }
@@ -43,8 +40,8 @@ function newGameService($http){
 }
 
 function playerJoinGame($http){
-  return function(gameSession) {
-    return $http.post('//localhost:3000/newGamePlayer', gameSession);
+  return function(newGamePlayerInfo) {
+    return $http.post('//localhost:3000/newGamePlayer', newGamePlayerInfo);
   };
 }
 
@@ -132,4 +129,15 @@ $http.get('http://content.guardianapis.com/search?q=unemployment%20AND%20jobs&pa
       }
     });
   };
+}
+
+function CurrentGameData () {
+  var gameData = {};
+  gameData.game_id;
+  gameData.players = [];
+  gameData.addPlayer = function(player){
+    gameData.players.push(player);
+  };
+    // contains player data from
+  return gameData;
 }

@@ -1,11 +1,12 @@
 var app = angular.module("app");
-app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', 'newPlayer', MainController]);
+
+app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', 'signupService',  'CurrentGameData', MainController]);
 
   //CONTROLLER FOR QUERYING EL GUARDIAN API
-  function MainController ($http, newGameService, playerJoinGame, insertArticles, newPlayer){
-
+  function MainController ($http, newGameService, playerJoinGame, insertArticles, signupService, CurrentGameData){
     var vm = this;
-    vm.newPlayer = newPlayer;
+    console.log(CurrentGameData);
+    vm.newPlayer = signupService;
     //CURRENTTITLE, CURRENTURL, AND CURRENTSENTIMENT ARE TEMPORARY AND FOR TESTING ONLY
     vm.currentTitle;
     vm.currentURL;
@@ -140,13 +141,8 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
 
   };
 
-    vm.showModal5 = false;
-    vm.toggleModal5 = function(){
-    vm.showModal5 = !vm.showModal5;
 
-  };
-
-  //login button WE SHOULD TAKE THESE OUT 
+  //login button WE SHOULD TAKE THESE OUT
     vm.loginSubmit = function(email, password){
       $http({
         method: 'POST',
@@ -154,7 +150,7 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
         data: {
           email: email,
           password: password
-        } 
+        }
       }).then(function(data){
         console.log(data);
       });
@@ -169,7 +165,7 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
           lastname: lastname,
           email: email,
           password: password
-        } 
+        }
       }).then(function(data){
         console.log(data);
       });
