@@ -123,7 +123,10 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
     } else {
       var type = eventSpaceService(player.curr[player.position], player);
       var id = CurrentGameData.game_id;
-      drawCardService(type, id);
+      var randoCard = drawCardService(type, id);
+      vm.currentCardData.title = eventFunc(player.title);
+      vm.currentCardData.text = eventFunc(player).text;
+      vm.modalEnter(vm.currentCardData);
     }
   }
 
@@ -281,7 +284,24 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
         //TODO: implement something that pulls event data from the event page and plugs it in here
         // vm.currentCardData.title;
         // vm.currentCardData.title = 'College';
-        // vm.currentCardData.content = data;
+        vm.currentCardData.text
+        vm.popoverIsVisible = true;
+      }
+    }, 700);
+    return{
+      data
+    }
+  };
+  vm.modalHover = function(data) {
+    vm.flag = true;
+    console.log(eventReturner.data);
+    // var title = eventReturner[data].title;
+    // var text = eventReturner[data].text;
+    // vm.currentCardData.title = title;
+    // vm.currentCardData.text = text;
+    $timeout(function(){
+      if(vm.flag){
+        //TODO: implement something that pulls event data from the event page and plugs it in here
         vm.popoverIsVisible = true;
       }
     }, 700);

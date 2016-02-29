@@ -32,7 +32,7 @@ angular.module('app')
       replace:true,
       scope:true,
       link: function postLink(scope, element, attrs) {
-        // scope.title = attrs.title;
+        scope.title = attrs.title;
 
         scope.$watch(attrs.visible, function(value){
           if(value == true) {

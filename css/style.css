@@ -10,6 +10,9 @@ body {
     ),
     url('skulls.png');
 }
+.strikethrough {
+  text-decoration: line-through;
+}
 
 .navbar {
   margin-top: -3rem;
