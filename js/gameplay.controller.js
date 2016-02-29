@@ -113,13 +113,18 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
 
   function eventLanding(player) {
     //TODO: actually change the player object with the function returned from eventFunc
-    eventSpaceService(player.curr[player.position], player);
-    // console.log(player.curr[player.position]['ng-model']);
+    if(eventSpaceService(player.curr[player.position], player) == 'smiley') {
     var $newVar = $(player.curr[player.position]).attr('ng-model');
     var eventFunc = eventReturner[$newVar];
+    eventFunc(player);
     vm.currentCardData.title = eventFunc(player).title;
     vm.currentCardData.text = eventFunc(player).text;
     vm.modalEnter(vm.currentCardData);
+    } else {
+      var type = eventSpaceService(player.curr[player.position], player);
+      var id = currentGameData.game_id;
+      drawCardService(type, id);
+    }
   }
 
   function addToken(player) {

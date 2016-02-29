@@ -85,6 +85,8 @@ marriage4: function(player) {
 //ADDICTION
 addiction1: function(player) {
   player.addiction = true;
+  player.curr = drugCircle;
+  player.position = 0;
   return {
     title: "The Needle and the Damage Done",
     text: "Track marks, collapsed veins, gangrene, bloodshot eyes, rotting teeth, and a cornucopia of infectious diseases should have turned you back. But heroin is all you crave. She's your lover, and with her in your veins, you finally escape from that crushing defeat of never living up to what mom and dad always said you could achieve. Enter the addiction circle."
@@ -92,6 +94,8 @@ addiction1: function(player) {
 },
 addiction2: function(player) {
   player.addiction = true;
+  player.curr = drugCircle;
+  player.position = 0;
   return {
     title: "You are, quite simply, a Viagra Addict.",
     text: "Regardless of whether you're male or female, Viagra should never be taken in handfuls, but you don't care. It's been 34 hours... Maybe you should go see a doctor. Enter the addiction circle."
@@ -99,6 +103,8 @@ addiction2: function(player) {
 },
 addiction3: function(player) {
   player.addiction = true;
+  player.curr = drugCircle;
+  player.position = 0;
   return {
     title: "The Video Game Rehab Center for Troubled Gamers is Your New Home.",
     text: "Your love for video games has turned into an addiction. You can no longer discern between reality and the virtual world; you have no clarity of vision, and your fine motor skills are deteriorating from carpal tunnel. You simply can't feel love or pain, joy or sorrow any more; the only things you experience are new high scores and the empty sadism of spewing slurs at 14-year-olds through your headset in Call of Duty games. Enter the addiction circle."
@@ -106,6 +112,8 @@ addiction3: function(player) {
 },
 addiction4: function(player) {
   player.addiction = true;
+  player.curr = drugCircle;
+  player.position = 0;
   return {
     title: "Speed Kills",
     text: "The need for speed; you've got it. Your addiction to methamphetamines puts you in the addiction circle. You've also destroyed every house you've ever lived in."
