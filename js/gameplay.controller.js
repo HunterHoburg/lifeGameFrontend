@@ -1,11 +1,13 @@
 var app = angular.module('app');
 
-app.controller('gameplayController', ['forkingService', 'passingService', 'eventSpaceService', 'playerAddTokenService', 'playerRemoveTokenService', '$timeout', 'CurrentGameData', 'drawCardService', gameplayController]);
+app.controller('gameplayController', ['$scope', '$rootScope', 'forkingService', 'passingService', 'eventSpaceService', 'playerAddTokenService', 'playerRemoveTokenService', '$timeout', 'CurrentGameData', 'drawCardService', gameplayController]);
 
-function gameplayController(forkingService, passingService, eventSpaceService, playerAddTokenService, playerRemoveTokenService, $timeout, CurrentGameData, drawCardService) {
+function gameplayController($scope, $rootScope, forkingService, passingService, eventSpaceService, playerAddTokenService, playerRemoveTokenService, $timeout, CurrentGameData, drawCardService) {
   var vm = this;
   vm.show = true;
   vm.currRoll = 0;
+  vm.collegeChoiceIsVisible = false;
+  vm.collegeChoice = 's';
   var turn = 0;
   var jobsArray = [jobAccountant, jobPoliceman, jobModel, jobDrugDealer, jobDoctor, jobPolitician, jobAthlete];
 
@@ -145,11 +147,27 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
   function playerMove(playerData, roll) {
     playerRemoveTokenService(playerData);
     if (playerData.curr[playerData.position] === start[0]) {
-      fork(playerData);
+      // fork(playerData);
+      console.log('stuff is here');
+      vm.player = playerData;
+      vm.currRoll = roll;
+      vm.collegeChoiceIsVisible = true;
+      // $scope.$apply();
+    } else {
+      vm.continueMove(playerData, roll);
     }
+  }
 
-    console.log(roll);
-    for (var i = roll; i >= 0; i--) {
+    vm.continueMove = function(playerData, roll, direction) {
+      if(direction) {
+        if (direction === 'n') {
+          playerData.next = pathCollege;
+        } else if (direction === 's') {
+          playerData.next = pathWork;
+        }
+      }
+      console.log(roll);
+      for (var i = roll; i >= 0; i--) {
       console.log(i);
       playerData.remainMvmt = i;
       playerData.position++;

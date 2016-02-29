@@ -116,17 +116,17 @@
 <modal visible='GPC.popoverIsVisible' ng-mouseleave='GPC.closeModal()' close='GPC.closeModal()' title='{{GPC.currentCardData.title}}'>
   {{GPC.currentCardData.text}}
 </modal>
-<modal visible='GPC.splitPopoverIsVisible' ng-mouseleave='GPC.splitCloseModal()' close='GPC.splitCloseModal()'>
+<modal visible='GPC.collegeChoiceIsVisible'>
   <div class='row'>
     <div class='col-md-4 col-md-offset-1'>
-      <div class='decisionBtn1'>
+      <div class='decisionBtn1' ng-click="GPC.collegeChoice = 'n'; GPC.continueMove(GPC.player, GPC.currRoll, GPC.collegeChoice); GPC.collegeChoiceIsVisible = false">
         <p class='decisionBtnText'>
           Go to college!
         </p>
       </div>
     </div>
     <div class='col-md-4 col-md-offset-2'>
-      <div class='decisionBtn2'>
+      <div class='decisionBtn2' ng-click="GPC.collegeChoice = 's'; GPC.continueMove(GPC.player, GPC.currRoll, GPC.collegeChoice); GPC.collegeChoiceIsVisible = false">
         <p class='decisionBtnText'>
           Flip burgers for the rest of your life instead!
         </p>
