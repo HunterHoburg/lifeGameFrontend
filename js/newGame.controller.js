@@ -67,7 +67,6 @@ function NewGameController ($location, signinService, signupService, insertArtic
           }
         Promise.all(promiseArray)
         .then(function(results){
-          console.log(results);
           // send to current game service
           for (var i = 0; i < results.length; i++) {
             var newPlayerAllData = results[i].data.message[0];
@@ -87,11 +86,9 @@ function NewGameController ($location, signinService, signupService, insertArtic
 
           // redirect to /board route
           $location.path('/board');
-          console.log();
         }, function(reasonFail){
           console.log(reasonFail);
         });
       });
-
   }
 }
