@@ -10,9 +10,11 @@
   background-color: green;
   margin-top: 1em;
   border-radius: 25%;
+  border: black solid 1px;
 }
 #rollButton:hover {
   color: white;
+  border: white solid 1px;
 }
 .icon {
   display: inline-block;
@@ -38,7 +40,26 @@
   transition: all 0.3s ease-in;
   text-decoration: none;
   font-family: "Englebert", sans-serif;
-  text-align: center;
+  text-align: left;
+  margin-left: 2em;
+}
+
+.HUDstats h3 {
+  text-align: left;
+}
+
+.HUDstats h2 {
+  font-size: 2.5em;
+  color: #444444;
+}
+
+.HUDstats h2:hover {
+  -webkit-stroke-width: 15.3px;
+  -webkit-stroke-color: #FFFFFF;
+  -webkit-fill-color: #FFFFFF;
+  text-shadow: 2px 0px 20px green;
+  color: white;
+  cursor: url(http://ani.cursors-4u.net/smiley/smi-3/smi307.cur), progress !important;
 }
 
 #hideFooter {
