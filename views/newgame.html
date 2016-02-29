@@ -5,7 +5,7 @@
         <h2 class="numberOfPlayersLabel"> Sign in: </h2>
         <div class="row">
           <div class="col-md-3">
-            <a ng-click="MC.toggleModal4()"><h4 class="guestLink">Guest</h4></a>
+            <a ng-click="NGC.toggleModal4()"><h4 class="guestLink">Guest</h4></a>
           </div>
           <div class="col-md-1">
             <h4 style="margin-top: .6em; margin-left: .4em;"> /</h4>
@@ -71,7 +71,7 @@
     </div>
     <div class="col-md-2">
 
-      <modal title="Guest Signup" visible="MC.showModal4">
+      <modal title="Guest Signup" visible="NGC.showModal4">
         <div class="guest" style="margin-left: 3em;">
             <div class='row colorPalette guestColor'>
               <div class='col-md-2 col-md-offset-1'>
@@ -79,20 +79,20 @@
               </div>
               <div style="margin-top: 1.5em; margin-left: 8em;">
                   <ul class='colorListSub'>
-                    <li class="red" ng-click='NGC.colorPick("red")'></li>
-                    <li class="orange" ng-click='NGC.colorPick("orange")'></li>
-                    <li class="blue" ng-click='NGC.colorPick("blue")'></li>
+                    <li class="red" ng-click='NGC.colorPick("red"); NGC.signinInfo = NGC.guests.guest1'></li>
+                    <li class="orange" ng-click='NGC.colorPick("orange"); NGC.signinInfo = NGC.guests.guest2'></li>
+                    <li class="blue" ng-click='NGC.colorPick("blue"); NGC.signinInfo = NGC.guests.guest3'></li>
                   </ul>
                     <ul class='colorListSub'>
-                      <li class="yellow" ng-click='NGC.colorPick("yellow")'></li>
-                      <li class="olive" ng-click='NGC.colorPick("olive")'></li>
-                      <li class="teal" ng-click='NGC.colorPick("teal")'></li>
+                      <li class="yellow" ng-click='NGC.colorPick("yellow"); NGC.signinInfo = NGC.guests.guest4'></li>
+                      <li class="olive" ng-click='NGC.colorPick("olive"); NGC.signinInfo = NGC.guests.guest5'></li>
+                      <li class="teal" ng-click='NGC.colorPick("teal"); NGC.signinInfo = NGC.guests.guest6'></li>
                     </ul></div>
               <div class='col-md-1'>
 
               </div>
           </div>
-           <button type="submit" ng-click="NGC.guestSubmit()" class="btn btn-default guestSubmitBtn">Add Guest</button>
+           <button type="submit" ng-click="NGC.signin(); NGC.toggleModal4()" class="btn btn-default guestSubmitBtn">Add Guest</button>
           </form>
         </div>
       </modal>

@@ -1,8 +1,8 @@
 var app = angular.module('app');
 
-app.controller('gameplayController', ['forkingService', 'passingService', 'eventSpaceService', 'playerAddTokenService', 'playerRemoveTokenService', gameplayController]);
+app.controller('gameplayController', ['forkingService', 'passingService', 'eventSpaceService', 'playerAddTokenService', 'playerRemoveTokenService', '$timeout', gameplayController]);
 
-function gameplayController(forkingService, passingService, eventSpaceService, playerAddTokenService, playerRemoveTokenService) {
+function gameplayController(forkingService, passingService, eventSpaceService, playerAddTokenService, playerRemoveTokenService, $timeout) {
   var vm = this;
 
   vm.rollDie = function() {
@@ -241,4 +241,44 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
     98: pathJoinSingleMarriage[0],
     99: pathJoinSingleMarriage[1]
   }
+
+  vm.flag = false;
+  vm.currentCardData = {};
+  vm.modalEnter = function(data) {
+    vm.flag = true;
+    console.log('banana');
+    $timeout(function(data){
+      if(vm.flag){
+        //TODO: implement something that pulls event data from the event page and plugs it in here
+        vm.currentCardData.title;
+        // vm.currentCardData.title = 'College';
+        vm.currentCardData.content = data;
+        vm.popoverIsVisible = true;
+      }
+    }, 700);
+  };
+  vm.splitModalEnter = function(data) {
+    vm.flag = true;
+    console.log('apple');
+    $timeout(function(){
+      if(vm.flag){
+        vm.currentCardData.title;
+        vm.currentCardData.content = 'You pay $5,000!';
+        vm.splitPopoverIsVisible = true;
+        console.log('success');
+      }
+    }, 700);
+  };
+  vm.closeModal = function() {
+    vm.popoverIsVisible = false;
+  };
+  vm.splitCloseModal = function() {
+    vm.splitPopoverIsVisible = false;
+  };
+  vm.modalCancel = function() {
+    vm.flag = false;
+  };
+  vm.splitModalCancel = function() {
+    vm.flag = false;
+  };
 }

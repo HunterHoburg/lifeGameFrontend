@@ -6,6 +6,34 @@ function NewGameController ($location, signinService, signupService, insertArtic
   var vm = this;
   // all players to add to game
   vm.players = [];
+  // hardcoded guests for signin as
+  vm.guests = {
+    guest1: {
+      email: 'guest1@guest.com',
+      password: 'guest'
+    },
+    guest2: {
+      email: 'guest2@guest.com',
+      password: 'guest'
+    },
+    guest3: {
+      email: 'guest3@guest.com',
+      password: 'guest'
+    },
+    guest4: {
+      email: 'guest4@guest.com',
+      password: 'guest'
+    },
+    guest5: {
+      email: 'guest5@guest.com',
+      password: 'guest'
+    },
+    guest6: {
+      email: 'guest6@guest.com',
+      password: 'guest'
+    }
+  };
+
   // signin post route, returns player id
   vm.signin = signin;
   vm.signup = signup;
@@ -28,35 +56,25 @@ function NewGameController ($location, signinService, signupService, insertArtic
           var newPlayerInGame = playerData.data;
           // add returned player to players obj
           newPlayerInGame.color = vm.chosenColor;
-          vm.players.push(playerData.data);
-          vm.signinInfo.email = '';
-          vm.signinInfo.password = '';
+          vm.players.push(newPlayerInGame);
+          vm.signinInfo.email = null;
+          vm.signinInfo.password = null;
+          vm.chosenColor = null;
         } else {
           vm.errorMessage = 'wrong username or password';
         }
       });
   }
 
-  // GUEST SUBMIT FUNCTION
-  vm.guestSubmit = guestSubmit;
-  function guestSubmit() {
-    //TODO: implement routes for adding a guest
-    var guest = {};
-    guest.color = vm.chosenColor;
-    guest.name = 'Guest ' + vm.guestCounter;
-    guestSigninService(guest)
-      .then(function(guest){
-        vm.players.push(guest);
-      });
-      vm.chosenColor = '';
-      vm.guestCounter += 1;
-  }
+  vm.showModal4 = false;
+  vm.toggleModal4 = function(){
+    vm.showModal4 = !vm.showModal4;
+  };
 
-
-    vm.showModal5 = false;
-    vm.toggleModal5 = function(){
-      vm.showModal5 = !vm.showModal5;
-    };
+  vm.showModal5 = false;
+  vm.toggleModal5 = function(){
+    vm.showModal5 = !vm.showModal5;
+  };
 
   function signup () {
     signupService(vm.signupInfo)
@@ -66,12 +84,6 @@ function NewGameController ($location, signinService, signupService, insertArtic
       vm.signupInfo.password = null;
       vm.toggleModal5();
       console.log(insertResult);
-      // SHOW message based on result of insert attempt
-      // if (insertResult.data[0].insert === 1) {
-      //   vm.successMessage = vm.signupInfo.name + ' is signed up!';
-      // } else {
-      //   vm.errorMessage = 'unsuccessful signup, try again!';
-      // }
     });
   }
 

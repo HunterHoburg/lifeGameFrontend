@@ -137,55 +137,6 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
 
     };
 
-    vm.showModal4 = false;
-    vm.toggleModal4 = function(){
-    vm.showModal4 = !vm.showModal4;
-
-    };
-    vm.showModal5 = false;
-    vm.toggleModal5 = function(){
-    vm.showModal5 = !vm.showModal5;
-
-    };
-
-    vm.flag = false;
-    vm.modalEnter = function(data) {
-      vm.flag = true;
-      $timeout(function(data){
-        if(vm.flag){
-          //TODO: implement something that pulls event data from the event page and plugs it in here
-          vm.currentCardData.title;
-          // vm.currentCardData.title = 'College';
-          vm.currentCardData.content = data;
-          vm.popoverIsVisible = true;
-
-        }
-      }, 700);
-    };
-    vm.splitModalEnter = function(data) {
-      vm.flag = true;
-      $timeout(function(){
-        if(vm.flag){
-          vm.currentCardData.title;
-          vm.currentCardData.content = 'You pay $5,000!';
-          vm.splitPopoverIsVisible = true;
-          console.log('success');
-        }
-      }, 700);
-    };
-    vm.closeModal = function() {
-      vm.popoverIsVisible = false;
-    };
-    vm.splitCloseModal = function() {
-      vm.splitPopoverIsVisible = false;
-    }
-    vm.modalCancel = function() {
-      vm.flag = false;
-    }
-    vm.splitModalCancel = function() {
-      vm.flag = false;
-    };
-
     //TODO: implement the above two functions on all modals so they close and open correctly every time
     //TODO: will probably need to give HUD a z-index greater than the modal so the mouseleave will work
 
