@@ -97,9 +97,10 @@ function playerAddTokenService() {
   return function(player) {
     var $piece = $(player.curr[player.position]);
     var $pieceData = $($piece.children()[0]);
+    console.log($piece);
     // console.log($piece.children());
-    $pieceData.append('<div class="playerMark" id='+player.name+'></div>');
-    $landingSquare = $($pieceData.children()[0]);
+    $pieceData.append('<div class="playerMark" id=' + player.name.split(' ').join('') + '></div>');
+    $landingSquare = $($pieceData.children()[$pieceData.children().length - 1]);
     $landingSquare.css('background-color', player.color);
   };
 }
@@ -109,13 +110,9 @@ function playerRemoveTokenService() {
     var $piece = $(player.curr[player.position]);
     var $pieceData = $($piece.children()[0]);
     var $newChild = $($pieceData[0]);
-    console.log($newChild);
-
     for (var i = 0; i < $newChild.length; i++) {
       var $pieceChild = $($newChild.children()[i]);
-      console.log($pieceChild);
-      console.log($pieceChild.is('#' + player.name));
-      if ($pieceChild.is('#'+player.name)) {
+      if ($pieceChild.is('#'+player.name.split(' ').join(''))) {
         $pieceChild.remove();
       }
     }

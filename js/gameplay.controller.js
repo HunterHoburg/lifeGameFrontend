@@ -1,12 +1,24 @@
 var app = angular.module('app');
 
-app.controller('gameplayController', ['forkingService', 'passingService', 'eventSpaceService', 'playerAddTokenService', 'playerRemoveTokenService', '$timeout', gameplayController]);
+app.controller('gameplayController', ['forkingService', 'passingService', 'eventSpaceService', 'playerAddTokenService', 'playerRemoveTokenService', '$timeout', 'CurrentGameData', gameplayController]);
 
-function gameplayController(forkingService, passingService, eventSpaceService, playerAddTokenService, playerRemoveTokenService, $timeout) {
+function gameplayController(forkingService, passingService, eventSpaceService, playerAddTokenService, playerRemoveTokenService, $timeout, CurrentGameData) {
   var vm = this;
 
+  vm.currRoll = 0;
+  var turn = 0;
+
   vm.rollDie = function() {
-    return Math.floor(Math.random() * 10);
+    vm.currRoll = Math.floor(Math.random() * 10);
+    vm.startGame(CurrentGameData, vm.currRoll);
+  }
+
+  vm.startGame = function(playerData, roll) {
+    playerMove(playerData.players[turn], roll);
+    turn++;
+    if (!playerData.players[turn]) {
+      turn = 0;
+    }
   }
 
   var $gameBoard = $('.board');
@@ -47,7 +59,13 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
    salary: 0,
    addiction: []
   };
-  addToken(billy);
+
+  console.log(CurrentGameData.players);
+  CurrentGameData.players.forEach(function(player) {
+    console.log(player);
+    player.curr = start;
+    addToken(player);
+  });
   // function checkPosition() {
   //   playerPosition(pathCollege[4], 0);
   //   // playerPosition(pathJoinWorkCollege[15]);
@@ -93,18 +111,17 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
     playerAddTokenService(player);
   }
 
-  vm.playerMove = function(playerData) {
+  function playerMove(playerData, roll) {
     playerRemoveTokenService(playerData);
-
     if (playerData.curr[playerData.position] === start[0]) {
       fork(playerData);
     }
-    for (var i = vm.rollDie(); i >= 0; i--) {
+
+    console.log(roll);
+    for (var i = roll; i >= 0; i--) {
       console.log(i);
-      console.log(playerData.curr[playerData.position]);
       playerData.remainMvmt = i;
       playerData.position++;
-      // console.log(!playerData.curr[playerData.position]);
       if (!playerData.curr[playerData.position] && (playerData.next === pathWork || playerData.next === pathCollege)) {
         playerData.curr = playerData.next;
         playerData.next = pathJoinWorkCollege;
@@ -113,7 +130,6 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
         playerData.curr = playerData.next;
         playerData.next = pathJoinSingleMarriage;
         playerData.position = 0;
-
       } else if (!playerData.curr[playerData.position] && (playerData.next === pathLeftTop || playerData.next === pathRightTop)) {
         playerData.curr = playerData.next;
         playerData.next = pathFinal;
@@ -134,20 +150,14 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
         passSpace(playerData);
       }
       i = playerData.remainMvmt;
-      console.log(i);
       if (i <= 0) {
+        console.log('in here');
         // check to see what event they landed on
         eventLanding(playerData);
         addToken(playerData);
       }
     }
   };
-
-  vm.playerMove(billy);
-  vm.playerMove(billy);
-  vm.playerMove(billy);
-
-
 
   var positionMap = {
     0: pathCollege[1],
