@@ -116,9 +116,12 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
     if(eventSpaceService(player.curr[player.position], player) == 'smiley') {
     var $newVar = $(player.curr[player.position]).attr('ng-model');
     var eventFunc = eventReturner[$newVar];
-    eventFunc(player);
+    // eventFunc(player);
     vm.currentCardData.title = eventFunc(player).title;
     vm.currentCardData.text = eventFunc(player).text;
+    var updatedPlayer = eventFunc(player);
+    vm.currentCardData.title = updatedPlayer.title;
+    vm.currentCardData.text = updatedPlayer.text;
     vm.modalEnter(vm.currentCardData);
     } else {
       var type = eventSpaceService(player.curr[player.position], player);
@@ -294,20 +297,14 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
   };
   vm.modalHover = function(data) {
     vm.flag = true;
-    console.log(eventReturner.data);
-    // var title = eventReturner[data].title;
-    // var text = eventReturner[data].text;
-    // vm.currentCardData.title = title;
-    // vm.currentCardData.text = text;
     $timeout(function(){
       if(vm.flag){
-        //TODO: implement something that pulls event data from the event page and plugs it in here
+        var returnedEvent = eventReturner[data](billy);
+        vm.currentCardData.title = returnedEvent.title;
+        vm.currentCardData.text = returnedEvent.text;
         vm.popoverIsVisible = true;
       }
-    }, 700);
-    return{
-      data
-    }
+    }, 1000);
   };
   vm.splitModalEnter = function(data) {
     vm.flag = true;
@@ -321,9 +318,11 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
   };
   vm.closeModal = function() {
     vm.popoverIsVisible = false;
+    vm.currentCardData = {};
   };
   vm.splitCloseModal = function() {
     vm.splitPopoverIsVisible = false;
+    vm.currentCardData = {};
   };
   vm.modalCancel = function() {
     vm.flag = false;

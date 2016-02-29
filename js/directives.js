@@ -32,18 +32,19 @@ angular.module('app')
       replace:true,
       scope:true,
       link: function postLink(scope, element, attrs) {
-        scope.title = attrs.title;
+        // scope.title = attrs.title;
 
         scope.$watch(attrs.visible, function(value){
           if(value == true) {
             $(element).modal('show');
-            scope.title = attrs.title;
+            // scope.title = attrs.title;
           } else
             $(element).modal('hide');
         });
         $(element).on('shown.bs.modal', function(){
           scope.$apply(function(){
             scope.$parent[attrs.visible] = true;
+            scope.title = attrs.title;
           });
         });
         $(element).on('hidden.bs.modal', function(){
