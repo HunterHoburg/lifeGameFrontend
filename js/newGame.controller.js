@@ -113,6 +113,7 @@ function NewGameController ($location, signinService, signupService, insertArtic
         .then(function(results){
           // send to current game service
           for (var i = 0; i < results.length; i++) {
+            console.log(results[i].data);
             var newPlayerAllData = results[i].data.message[0];
             // add name to player info if match
             if (newPlayerAllData.player_id === vm.players[i].id) {
