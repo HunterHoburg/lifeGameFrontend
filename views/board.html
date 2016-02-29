@@ -1,7 +1,7 @@
 <div class='boardWrapper'>
   <div class='row'>
-    <div class='board elbowSEBlue'><div class='playerHolder'></div><span ng-mouseenter='MC.modalEnter(college1)' ng-mouseleave='MC.modalCancel()' ng-model='college1'><i class="fa fa-smile-o"></i></span></div>
-    <div class='board elbowBlue'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
+    <div class='board elbowSEBlue' ng-mouseenter='MC.modalEnter(college1)' ng-mouseleave='MC.modalCancel()' ng-model='college1'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></span></div>
+    <div class='board elbowBlue' ng-mouseenter='MC.modalEnter(college2)' ng-mouseleave='MC.modalCancel()' ng-model='college2'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
     <div class='board'></div>
     <div class='board elbowSEYellow'><div class='playerHolder'></div><span><i class="fa fa-heartbeat"></i></span></div>
     <div class='board straightEWYellow'><div class='playerHolder'></div><span class='glyphicon glyphicon-tree-deciduous'></span></div>
@@ -22,11 +22,11 @@
     <div class='board'></div>
     <div class='board straightNSYellow'><div class='playerHolder'></div><span class='glyphicon glyphicon-briefcase'></span></div>
   </div><div class='row'>
-    <div class='board junctionWYellow'><div class='playerHolder'><div class='playerMark'></div><div class='playerMark'></div><div class='playerMark'></div><div class='playerMark'></div><div class='playerMark'></div><div class='playerMark'></div></div><span>S</span></div>
+    <div class='board junctionWYellow clickable' ng-mouseenter='MC.splitModalEnter(collegeChoice)' ng-mouseleave='MC.splitModalCancel()'><div class='playerHolder'><div class='playerMark'></div><div class='playerMark'></div><div class='playerMark'></div><div class='playerMark'></div><div class='playerMark'></div><div class='playerMark'></div></div><span>S</span></div>
     <div class='board elbowNEBlue'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
     <div class='board elbowBlue'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
     <div class='board elbowNEBlue'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
-    <div class='board junctionSYellow'><div class='playerHolder'></div><span class='glyphicon glyphicon-tree-deciduous'></div>
+    <div class='board junctionSYellow clickable' ng-mouseenter='MC.splitModalEnter(collegeChoice)' ng-mouseleave='MC.splitModalCancel()'><div class='playerHolder'></div><span class='glyphicon glyphicon-tree-deciduous'></div>
     <div class='board straightEWYellow'><div class='playerHolder'></div><span><i class="fa fa-heartbeat"></i></span></div>
     <div class='board straightEWBlue'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
     <div class='board elbowNWBlue'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
@@ -40,7 +40,7 @@
     <div class='board junctionEGreen'><div class='playerHolder'></div><span class='glyphicon glyphicon-usd'></span></div>
     <div class='board straightEWBlue'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
     <div class='board straightEWBlue'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
-    <div class='board junctionSYellow'><div class='playerHolder'></div><span class='glyphicon glyphicon-briefcase'></div>
+    <div class='board junctionSYellow clickable' ng-mouseenter='MC.splitModalEnter(collegeChoice)' ng-mouseleave='MC.splitModalCancel()'><div class='playerHolder'></div><span class='glyphicon glyphicon-briefcase'></div>
     <div class='board elbowYellow'><div class='playerHolder'></div><span class='glyphicon glyphicon-remove'></span></div>
     <div class='board elbowNEBlue'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
   </div><div class='row'>
@@ -56,7 +56,13 @@
     <div class='board elbowGreen'><div class='playerHolder'></div><span class='glyphicon glyphicon-usd'></span></div>
   </div><div class='row'>
     <div class='board elbowNEYellow'><div class='playerHolder'></div><span class='glyphicon glyphicon-screenshot'></span></div>
-    <div class='board junctionNRed'><div class='playerHolder'></div><span class='glyphicon glyphicon-exclamation-sign'></div>
+    <div class='board junctionNRed' ng-mouseenter='MC.splitModalEnter(collegeChoice)' ng-mouseleave='MC.splitModalCancel()'>
+
+
+
+
+
+      <div class='playerHolder'></div><span class='glyphicon glyphicon-exclamation-sign'></div>
     <div class='board elbowNWGreen'><div class='playerHolder'></div><span class='glyphicon glyphicon-usd'></span></div>
     <div class='board straightNSYellow'><div class='playerHolder'></div><span class='glyphicon glyphicon-remove'></span></div>
     <div class='board straightNSBlue'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
@@ -103,7 +109,7 @@
     <div class='board straightEWGreen'><div class='playerHolder'></div><span class='glyphicon glyphicon-usd'></span></div>
     <div class='board straightEWYellow'><div class='playerHolder'></div><span class='glyphicon glyphicon-tree-deciduous'></div>
     <div class='board straightEWYellow'><div class='playerHolder'></div><span class='glyphicon glyphicon-question-sign'></span></div>
-    <div class='board junctionNRed'><div class='playerHolder'></div><span class='glyphicon glyphicon-exclamation-sign'></div>
+    <div class='board junctionNRed clickable' ng-mouseenter='MC.splitModalEnter(collegeChoice)' ng-mouseleave='MC.splitModalCancel()'><div class='playerHolder'></div><span class='glyphicon glyphicon-exclamation-sign'></div>
     <div class='board elbowNWBlue'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
     <div class='board elbowNEBlue'><div class='playerHolder'></div><span><i class="fa fa-smile-o"></i></div>
     <div class='board straightEWGreen'><div class='playerHolder'></div><span class='glyphicon glyphicon-heart'></span></div>
@@ -112,7 +118,24 @@
   </div>
   <!-- Doing modal popups for decisions -->
 </div>
-<button ng-mouseenter='MC.modalEnter()'>Click here</button>
 <modal visible='MC.popoverIsVisible' ng-mouseleave='MC.closeModal()' close='closeModal()' title='{{MC.currentCardData.title}}'>
   {{MC.currentCardData.content}}
+</modal>
+<modal visible='MC.splitPopoverIsVisible' ng-mouseleave='MC.splitCloseModal()' close='splitCloseModal()'>
+  <div class='row'>
+    <div class='col-md-4 col-md-offset-1'>
+      <div class='decisionBtn1'>
+        <p class='decisionBtnText'>
+          Go to college!
+        </p>
+      </div>
+    </div>
+    <div class='col-md-4 col-md-offset-2'>
+      <div class='decisionBtn2'>
+        <p class='decisionBtnText'>
+          Flip burgers for the rest of your life instead!
+        </p>
+      </div>
+    </div>
+  </div>
 </modal>

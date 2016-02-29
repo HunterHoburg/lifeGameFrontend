@@ -76,7 +76,7 @@ NATURAL DISASTER
 
 Positive
 
-Your town experienced the largest hurricane ever seen, and you're not above looting a few electronics stores. You gain $40,000 and bitchin' new movie room in your basement!
+Your town experienced the largest hurricane ever seen, and you're not above looting a few electronics stores. You gain $40,000 and a bitchin' new movie room in your basement!
 
 A tornado tore through downtown, and picked up an armored van containing $500,000, which landed in your backyard. You had to buy a pretty hefty drill to open the doors, but even after that you made $495,000!
 
