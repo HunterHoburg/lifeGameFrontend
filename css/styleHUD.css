@@ -37,3 +37,15 @@ i {
   text-decoration: none;
   font-family: "Englebert", sans-serif;
 }
+
+#hideFooter {
+  background-color: #000088;
+  padding-left: 0em;
+  padding-right: 0em;
+  width: 4em;
+  color: white;
+}
+
+#hideFooter:hover {
+  cursor: pointer;
+}
