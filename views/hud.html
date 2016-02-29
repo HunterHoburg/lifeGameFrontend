@@ -18,7 +18,7 @@
 <body> -->
 
 <center>
-  <footer class="navbar-fixed-bottom" id="hideFooter" ng-click="show = !show">
+  <footer class="navbar-fixed-bottom" id="hideFooter" ng-click="GPC.show = !GPC.show">
     <i class="fa fa-caret-down"></i><i class="fa fa-caret-up"></i>
     <p style="color: #000088"> .</p>
     <p style="color: #000088"> .</p>
@@ -29,9 +29,9 @@
     <p>S</p>
   </footer>
 </center>
-  <footer class="navbar-fixed-bottom" ng-hide="!show">
+  <footer class="navbar-fixed-bottom" ng-hide="!GPC.show">
   </footer>
-<footer class="navbar navbar-default navbar-fixed-bottom" ng-show="show">
+<footer class="navbar navbar-default navbar-fixed-bottom magicHud" ng-show="GPC.show">
 
   <div class="container-fluid">
     <div class="HUDstats navbar-text"><h2 class="navbar-text" ng-model="name"><i class="fa fa-female"></i>Lori</h2></div>
