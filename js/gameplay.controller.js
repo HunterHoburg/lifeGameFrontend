@@ -124,8 +124,8 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
       var type = eventSpaceService(player.curr[player.position], player);
       var id = CurrentGameData.game_id;
       var randoCard = drawCardService(type, id);
-      vm.currentCardData.title = eventFunc(player.title);
-      vm.currentCardData.text = eventFunc(player).text;
+      vm.currentCardData.title = randoCard.title;
+      vm.currentCardData.text = randoCard.title;
       vm.modalEnter(vm.currentCardData);
     }
   }
