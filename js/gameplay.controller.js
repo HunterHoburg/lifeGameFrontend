@@ -105,6 +105,7 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
 
   function eventLanding(player) {
     eventSpaceService(player.curr[player.position], player);
+    console.log(player.curr[player.position]);
   }
 
   function addToken(player) {
@@ -256,7 +257,6 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
   vm.currentCardData = {};
   vm.modalEnter = function(data) {
     vm.flag = true;
-    console.log('banana');
     $timeout(function(data){
       if(vm.flag){
         //TODO: implement something that pulls event data from the event page and plugs it in here
@@ -269,13 +269,11 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
   };
   vm.splitModalEnter = function(data) {
     vm.flag = true;
-    console.log('apple');
     $timeout(function(){
       if(vm.flag){
         vm.currentCardData.title;
         vm.currentCardData.content = 'You pay $5,000!';
         vm.splitPopoverIsVisible = true;
-        console.log('success');
       }
     }, 700);
   };
