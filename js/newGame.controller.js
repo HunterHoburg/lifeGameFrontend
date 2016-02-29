@@ -1,7 +1,7 @@
 angular.module('app')
-  .controller('NewGameController', ['$location', 'signinService', 'signupService', 'insertArticles', 'newGameService', 'playerJoinGame', 'CurrentGameData', NewGameController]);
+  .controller('NewGameController', ['$location', 'signinService', 'signupService', 'insertArticles', 'newGameService', 'playerJoinGame', 'CurrentGameData', 'guestSigninService', NewGameController]);
 
-function NewGameController ($location, signinService, signupService, insertArticles, newGameService, playerJoinGame, CurrentGameData) {
+function NewGameController ($location, signinService, signupService, insertArticles, newGameService, playerJoinGame, CurrentGameData, guestSigninService) {
 
   var vm = this;
   // all players to add to game
@@ -12,14 +12,21 @@ function NewGameController ($location, signinService, signupService, insertArtic
   vm.startGame = startGame;
   vm.signinInfo = {};
   vm.signupInfo = {};
-
+  vm.chosenColor = '';
+  vm.playerId = 0;
+  vm.guestCounter = 1;
+  vm.colorPick = function(color) {
+    vm.chosenColor = color;
+  };
+  // SIGNIN FUNCTION
   function signin () {
-    // playerInfo should be: {email: '', password: ''}
-    // var playerInfo = {email: vm.emailInput, password: vm.passwordInput};
+    //use signinInfo to make API call
     signinService(vm.signinInfo)
       .then(function(playerData){
         if (playerData.data.email === vm.signinInfo.email){
+          var newPlayerInGame = playerData.data;
           // add returned player to players obj
+          newPlayerInGame.color = vm.chosenColor;
           vm.players.push(playerData.data);
           vm.signinInfo.email = '';
           vm.signinInfo.password = '';
@@ -29,9 +36,34 @@ function NewGameController ($location, signinService, signupService, insertArtic
       });
   }
 
+  // GUEST SUBMIT FUNCTION
+  vm.guestSubmit = guestSubmit;
+  function guestSubmit() {
+    //TODO: implement routes for adding a guest
+    var guest = {};
+    guest.color = vm.chosenColor;
+    guest.name = 'Guest ' + vm.guestCounter;
+    guestSigninService(guest)
+      .then(function(guest){
+        vm.players.push(guest);
+      });
+      vm.chosenColor = '';
+      vm.guestCounter += 1;
+  }
+
+
+    vm.showModal5 = false;
+    vm.toggleModal5 = function(){
+      vm.showModal5 = !vm.showModal5;
+    };
+
   function signup () {
     signupService(vm.signupInfo)
     .then(function(insertResult){
+      vm.signupInfo.name = null;
+      vm.signupInfo.email = null;
+      vm.signupInfo.password = null;
+      vm.toggleModal5();
       console.log(insertResult);
       // SHOW message based on result of insert attempt
       // if (insertResult.data[0].insert === 1) {

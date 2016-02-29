@@ -1,10 +1,11 @@
 var app = angular.module("app");
 
-app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', 'signupService', MainController]);
+app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', 'signupService',  'CurrentGameData', MainController]);
 
   //CONTROLLER FOR QUERYING EL GUARDIAN API
-  function MainController ($http, newGameService, playerJoinGame, insertArticles, signupService){
+  function MainController ($http, newGameService, playerJoinGame, insertArticles, signupService, CurrentGameData){
     var vm = this;
+    console.log(CurrentGameData);
     vm.newPlayer = signupService;
     //CURRENTTITLE, CURRENTURL, AND CURRENTSENTIMENT ARE TEMPORARY AND FOR TESTING ONLY
     vm.currentTitle;
@@ -114,12 +115,60 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
     };
 
 
-  //controlling the modal signup window
+  //controlling the modal windows
     vm.showModal = false;
     vm.toggleModal = function(){
     vm.showModal = !vm.showModal;
 
   };
 
+
+    vm.showModal2 = false;
+    vm.toggleModal2 = function(){
+    vm.showModal2 = !vm.showModal2;
+
+  };
+
+    vm.showModal3 = false;
+    vm.toggleModal3 = function(){
+    vm.showModal3 = !vm.showModal3;
+
+  };
+
+    vm.showModal4 = false;
+    vm.toggleModal4 = function(){
+    vm.showModal4 = !vm.showModal4;
+
+  };
+
+
+  //login button WE SHOULD TAKE THESE OUT
+    vm.loginSubmit = function(email, password){
+      $http({
+        method: 'POST',
+        url: 'http://localhost:3000/signin',
+        data: {
+          email: email,
+          password: password
+        }
+      }).then(function(data){
+        console.log(data);
+      });
+    };
+
+    vm.signupSubmit = function(firstname, lastname, email, password){
+      $http({
+        method: 'POST',
+        url: 'http://localhost:3000/newPlayer',
+        data: {
+          firstname: firstname,
+          lastname: lastname,
+          email: email,
+          password: password
+        }
+      }).then(function(data){
+        console.log(data);
+      });
+    };
 
 }
