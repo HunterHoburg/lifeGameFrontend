@@ -11,7 +11,7 @@ function NewGameController (signinService, signupService, guestSigninService) {
   vm.signup = signup;
   vm.signinInfo = {};
   vm.signupInfo = {};
-  vm.chosenColor;
+  vm.chosenColor = '';
   vm.playerId;
   vm.guestCounter = 1;
   vm.colorPick = function(color) {
