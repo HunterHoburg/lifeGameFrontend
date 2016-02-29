@@ -11,6 +11,6 @@ angular.module("app")
       })
     .when('/board', {
       templateUrl: 'views/board.html',
-      controller: 'MainController as MC'
+      controller: 'gameplayController as GPC'
     });
 });
