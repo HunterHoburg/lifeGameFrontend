@@ -8,10 +8,17 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
   vm.currRoll = 0;
   var turn = 0;
 
+  vm.hudStats = null;
+  updateHud(CurrentGameData);
+
+  function updateHud(playerData) {
+    vm.hudStats = playerData.players[turn];
+  }
+
   vm.rollDie = function() {
     vm.currRoll = Math.floor(Math.random() * 10);
     vm.startGame(CurrentGameData, vm.currRoll);
-  }
+  };
 
   vm.startGame = function(playerData, roll) {
     playerMove(playerData.players[turn], roll);
@@ -19,7 +26,8 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
     if (!playerData.players[turn]) {
       turn = 0;
     }
-  }
+    updateHud(CurrentGameData);
+  };
 
   var $gameBoard = $('.board');
   // pathCollege pathWork join to pathJoinWorkCollege; pathJoinWorkCollege splits to the single and married routes
