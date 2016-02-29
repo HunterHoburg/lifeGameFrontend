@@ -29,6 +29,7 @@ i {
   -webkit-fill-color: #FFFFFF;
   text-shadow: 2px 0px 20px green;
   color: white;
+  cursor: url(http://ani.cursors-4u.net/smiley/smi-3/smi307.cur), progress !important;
 }
 .HUDstats .navbar-text {
   color: #666666;
