@@ -1,11 +1,13 @@
 var app = angular.module("app");
-app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', 'newPlayer', '$timeout', MainController]);
+
+app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', 'signupService',  'CurrentGameData', '$timeout', MainController]);
+
 
   //CONTROLLER FOR QUERYING EL GUARDIAN API
-  function MainController ($http, newGameService, playerJoinGame, insertArticles, newPlayer, $timeout){
-
+  function MainController ($http, newGameService, playerJoinGame, insertArticles, signupService, CurrentGameData, $timeout){
     var vm = this;
-    vm.newPlayer = newPlayer;
+    console.log(CurrentGameData);
+    vm.newPlayer = signupService;
     //CURRENTTITLE, CURRENTURL, AND CURRENTSENTIMENT ARE TEMPORARY AND FOR TESTING ONLY
     vm.currentTitle;
     vm.currentURL;
@@ -140,7 +142,6 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
     vm.showModal4 = !vm.showModal4;
 
     };
-
     vm.showModal5 = false;
     vm.toggleModal5 = function(){
     vm.showModal5 = !vm.showModal5;

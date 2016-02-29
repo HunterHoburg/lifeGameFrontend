@@ -1,14 +1,13 @@
 .navbar {
-  height: 230px;
+  height: 15em;
   background-color: #DE9A52;
 }
 .btn {
   padding: 35px;
   font-size: 2em;
   margin-right: 50px;
-
-    font-family: "Englebert", sans-serif;
-    background-color: green;
+  font-family: "Englebert", sans-serif;
+  background-color: green;
 }
 .btn:hover {
   color: white;
@@ -22,7 +21,7 @@
   color: white;
 }
 i {
-  padding: 8px;
+  padding: 5px;
 }
 .HUDstats .navbar-text:hover {
   -webkit-stroke-width: 15.3px;
@@ -30,10 +29,23 @@ i {
   -webkit-fill-color: #FFFFFF;
   text-shadow: 2px 0px 20px green;
   color: white;
+  cursor: url(http://ani.cursors-4u.net/smiley/smi-3/smi307.cur), progress !important;
 }
 .HUDstats .navbar-text {
   color: #666666;
   transition: all 0.3s ease-in;
   text-decoration: none;
   font-family: "Englebert", sans-serif;
+}
+
+#hideFooter {
+  background-color: #000088;
+  padding-left: 0em;
+  padding-right: 0em;
+  width: 4em;
+  color: white;
+}
+
+#hideFooter:hover {
+  cursor: pointer;
 }

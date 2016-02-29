@@ -9,7 +9,11 @@ angular.module('app')
       templateUrl: './views/board.html'
     };
   }])
-
+  .directive('hudFooter', [function() {
+    return {
+      templateUrl: './views/hud.html'
+    };
+  }])
 .directive('modal', function () {
     return {
       template: '<div class="modal fade">' +

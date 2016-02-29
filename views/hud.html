@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
  <meta charset="utf-8">
@@ -15,10 +15,24 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
 </head>
-<body>
+<body> -->
 
+<center>
+  <footer class="navbar-fixed-bottom" id="hideFooter" ng-click="show = !show">
+    <i class="fa fa-caret-down"></i><i class="fa fa-caret-up"></i>
+    <p style="color: #000088"> .</p>
+    <p style="color: #000088"> .</p>
+    <p>S</p>
+    <p>T</p>
+    <p>A</p>
+    <p>T</p>
+    <p>S</p>
+  </footer>
+</center>
+  <footer class="navbar-fixed-bottom" ng-hide="!show">
+  </footer>
+<footer class="navbar navbar-default navbar-fixed-bottom" ng-show="show">
 
-<footer class="navbar navbar-default navbar-fixed-bottom">
   <div class="container-fluid">
     <div class="HUDstats navbar-text"><h2 class="navbar-text" ng-model="name"><i class="fa fa-female"></i>Lori</h2></div>
     <div class="HUDstats navbar-text"> <h2 class="navbar-text" ng-model="money"><i class="fa fa-money"></i>$3</h2></div>
@@ -28,14 +42,13 @@
     <div class="HUDstats navbar-text" style="margin-left: -1em;"><h2 class="navbar-text" ng-model="college"><svg class="icon icon-aid-kit"><i class="fa fa-graduation-cap"></i>College: Expelled</h2></div>
     <div class="HUDstats navbar-text" style="margin-left: -1em;"><h2 class="navbar-text" ng-model="occupation"><svg class="icon icon-aid-kit"><i class="fa fa-briefcase"></i>Unemployed</h2></div>
     <div class="HUDstats navbar-text" style="margin-left: 2em;"><h2 class="navbar-text" ng-model="salary"><svg class="icon icon-aid-kit"><i class="fa fa-university"></i>Salary: $0</h2></div>
-    <div class="HUDstats navbar-text" style="margin-left: 1em;"><h2 class="navbar-text" ng-model="happysad"><svg class="icon icon-aid-kit"><span>Happiness: </span><i class="fa fa-frown-o"></i></h2></div>
-    <div class="HUDstats navbar-text"><h2 class="navbar-text" ng-model="chipotle"><svg class="icon icon-aid-kit"><i class="fa fa-ambulance"></i></i>Chipotle: Yes</h2></div>
-      <a class="navbar-btn btn-success btn pull-right" style="margin-top: -5.8em;">ROLL</a>
+    <div class="HUDstats navbar-text" style="margin-left: .9em;"><h2 class="navbar-text" ng-model="happysad"><svg class="icon icon-aid-kit"><span>Happiness: </span><i class="fa fa-frown-o"></i></h2></div>
+      <a class="navbar-btn btn-success btn pull-right" style="margin-top: -2em;">ROLL</a>
 
   </div>
 </footer>
 
- <script src="./js/app.js"></script>
+ <!-- <script src="./js/app.js"></script>
   <script src="./js/controllers.js"></script>
   <script src="./js/directives.js"></script>
   <script src="./js/services.js"></script>
@@ -47,4 +60,4 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
-</html>
+</html> -->

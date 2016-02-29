@@ -273,13 +273,13 @@ body {
   transform: translateY(-50%);
   text-align: center;
   margin-left: 25%;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .board span i {
   position: relative;
   top: 50%;
-  transform: translateY(-350%);
+  transform: translateY(-400%);
 }
 
 .board .playerHolder {
@@ -291,7 +291,6 @@ body {
 .board .playerHolder .playerMark {
   height: 25px;
   width: 100%;
-  background-color: red;
 }
 h1 {
   font-size: 10em;
@@ -354,11 +353,12 @@ h3 {
 
 #enterBoard {
   margin-top: 15em;
+  margin-left: -3em;
 }
 
 #enterBoard .icon1 {
-height: 2.5em;
-font-size: 4em;
+  height: 2.5em;
+  font-size: 4em;
 }
 
 #enterBoard .pulse1 {
@@ -376,13 +376,21 @@ width: 80%;
 .numberOfPlayersLabel {
   font-size: 4em;
 }
-.addBtn{
-  background-color: #4989f6;
-  margin-top: 1em;
+#addBtn{
+  background-color: #00aeef;
+  margin-top: 1.8em;
+  padding: 1em;
+  width: 7em;
+  border-radius: 25%;
+  color: white;
+  margin-left: 1em;
 }
 
-.addBtn:hover {
-  color: white;
+#addBtn:hover {
+  color: black;
+  background-color: #22aeef;
+  font-weight: bold;
+  border-color: white;
 }
 
 .howToPlayLink {
@@ -450,7 +458,6 @@ width: 80%;
   min-width: 60px;
   position: relative;
   transition: color .1s ease;
-
 }
 .guestBtn {
   background-color: #66adf6;
@@ -565,9 +572,22 @@ width: 80%;
   display: none;
 }
 
-.playerName {
+
+.playerAdded {
   color: #ee4c30;
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-left: .5em;
 }
+.playerName {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+.playerColor {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
 /*colors for guest modal*/
 .colorPalette {
   background-color: rgb(247, 242, 220);
