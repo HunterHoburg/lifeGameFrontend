@@ -1,10 +1,11 @@
+Skip to content This repository Search Pull requests Issues Gist @mattSMobley Unwatch 5 Star 0 Fork 0 HunterHoburg/lifeGameFrontend Code Issues 0 Pull requests 0 Wiki Pulse Graphs Branch: master Find file Copy pathlifeGameFrontend/views/hud.html f23215f
+27 minutes ago @lukevance lukevance Merge branch 'master' of github.com:HunterHoburg/lifeGameFrontend 4 contributors @mattSMobley @lukevance @DavidBayless @LoriNitzel RawBlameHistory 64 lines (56 sloc) 3.56 KB
 <!-- <!DOCTYPE html>
 <html>
 <head>
  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>LISATYD</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -29,34 +30,88 @@
     <p>S</p>
   </footer>
 </center>
-  <footer class="navbar-fixed-bottom" ng-hide="!GPC.show">
-  </footer>
+<footer class="navbar-fixed-bottom" ng-hide="!GPC.show">
+</footer>
 <footer class="navbar navbar-default navbar-fixed-bottom magicHud" ng-show="GPC.show">
-
   <div class="container-fluid">
-    <div class="HUDstats navbar-text"><h2 class="navbar-text" ng-model="name"><i class="fa fa-female"></i>{{GPC.hudStats.name}}</h2></div>
-    <div class="HUDstats navbar-text"> <h2 class="navbar-text" ng-model="money"><i class="fa fa-money"></i>${{GPC.hudStats.money}}</h2></div>
-    <div class="HUDstats navbar-text"><h2 class="HUDstats navbar-text" ng-model="addiction"><svg class="icon icon-aid-kit"><i class="fa fa-medkit"></i>Meth Addiction</h2></div>
-    <div class="HUDstats navbar-text"><h2 class="navbar-text" ng-model="marriage"><svg class="icon icon-aid-kit"><i class="fa fa-diamond"></i>Married</h2></div>
-    <div class="HUDstats navbar-text"><h2 class="navbar-text" ng-model="children"><svg class="icon icon-aid-kit"><i class="fa fa-child"></i>2 Children</h2></div>
-    <div class="HUDstats navbar-text" style="margin-left: -1em;"><h2 class="navbar-text" ng-model="college"><svg class="icon icon-aid-kit"><i class="fa fa-graduation-cap"></i>College: Expelled</h2></div>
-    <div class="HUDstats navbar-text" style="margin-left: -1em;"><h2 class="navbar-text" ng-model="occupation"><svg class="icon icon-aid-kit"><i class="fa fa-briefcase"></i>Unemployed</h2></div>
-    <div class="HUDstats navbar-text" style="margin-left: 2em;"><h2 class="navbar-text" ng-model="salary"><svg class="icon icon-aid-kit"><i class="fa fa-university"></i>Salary: $0</h2></div>
-    <div class="HUDstats navbar-text" style="margin-left: .9em;"><h2 class="navbar-text" ng-model="happysad"><svg class="icon icon-aid-kit"><span>Happiness: </span><i class="fa fa-frown-o"></i></h2></div>
-      <button class="navbar-btn btn-success btn pull-right" style="margin-top: -2em;" ng-click='GPC.rollDie()'>ROLL</button>
-
+    <div class="row">
+      <div class="col-md-12">
+        <div class="col-md-3">
+          <div class="row">
+            <div class="HUDstats">
+              <h2 ng-model="name"><i class="fa fa-female"></i>{{GPC.hudStats.name}}</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="HUDstats">
+              <h3 ng-model="addiction">
+                <svg class="icon icon-aid-kit"><i class="fa fa-medkit"></i>Meth Addiction</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="HUDstats">
+              <h3 ng-model="marriage">
+                <svg class="icon icon-aid-kit"><i class="fa fa-diamond"></i>Married</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="row">
+            <div class="HUDstats">
+              <h2 ng-model="money"><i class="fa fa-money"></i>${{GPC.hudStats.money}}</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="HUDstats ">
+              <h3 ng-model="children">
+                <svg class="icon icon-aid-kit"><i class="fa fa-child"></i>2 Children</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="HUDstats">
+              <h3 ng-model="college">
+                <svg class="icon icon-aid-kit"><i class="fa fa-graduation-cap"></i>College: Expelled</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="row">
+            <div class="HUDstats">
+              <h2 ng-model="happysad">
+                <svg class="icon icon-aid-kit">
+                  <span>Happiness: </span><i class="fa fa-frown-o"></i></h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="HUDstats">
+              <h3 ng-model="occupation">
+                <svg class="icon icon-aid-kit"><i class="fa fa-briefcase"></i>Unemployed</h3>
+            </div>
+          </div>
+          <div class="row">
+            <div class="HUDstats">
+              <h3 ng-model="salary">
+                <svg class="icon icon-aid-kit"><i class="fa fa-university"></i>Salary: $0</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <center>
+            <button id="rollButton" ng-click='GPC.rollDie()'>ROLL</button>
+          </center>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 
- <!-- <script src="./js/app.js"></script>
+<!-- <script src="./js/app.js"></script>
   <script src="./js/controllers.js"></script>
   <script src="./js/directives.js"></script>
   <script src="./js/services.js"></script>
   <script src="./js/factories.js"></script>
   <script src="./js/filters.js"></script>
   <script src="./js/routes.js"></script>
-
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
