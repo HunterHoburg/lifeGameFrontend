@@ -120,8 +120,10 @@ function gameplayController(forkingService, passingService, eventSpaceService, p
     vm.currentCardData.title = eventFunc(player).title;
     vm.currentCardData.text = eventFunc(player).text;
     vm.modalEnter(vm.currentCardData);
-  } else {
-    drawCard()
+    } else {
+      var type = eventSpaceService(player.curr[player.position], player);
+      var id = currentGameData.game_id;
+      drawCardService(type, id);
     }
   }
 
