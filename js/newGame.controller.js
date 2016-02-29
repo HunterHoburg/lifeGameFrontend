@@ -45,6 +45,7 @@ function NewGameController ($location, signinService, signupService, insertArtic
   vm.guestCounter = 1;
   vm.colorPick = function(color) {
     vm.chosenColor = color;
+    $(event.target).addClass('highlightedColor');
   };
   // SIGNIN FUNCTION
   function signin () {

@@ -1,9 +1,10 @@
 var app = angular.module("app");
 
-app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', 'signupService',  'CurrentGameData', MainController]);
+app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', 'insertArticles', 'signupService',  'CurrentGameData', '$timeout', MainController]);
+
 
   //CONTROLLER FOR QUERYING EL GUARDIAN API
-  function MainController ($http, newGameService, playerJoinGame, insertArticles, signupService, CurrentGameData){
+  function MainController ($http, newGameService, playerJoinGame, insertArticles, signupService, CurrentGameData, $timeout){
     var vm = this;
     console.log(CurrentGameData);
     vm.newPlayer = signupService;
@@ -12,6 +13,7 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
     vm.currentURL;
     vm.currentSentiment;
     vm.storiesArr = [];
+    vm.currentCardData = {};
     vm.title = "Life is Short, and Then You Die :)";
     //QUERYING THE GUARDIAN FOR 50 STORIES
     vm.getArticles = function(topic) {
@@ -120,21 +122,23 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
     vm.toggleModal = function(){
     vm.showModal = !vm.showModal;
 
-  };
+    };
 
 
     vm.showModal2 = false;
     vm.toggleModal2 = function(){
     vm.showModal2 = !vm.showModal2;
 
-  };
+    };
 
     vm.showModal3 = false;
     vm.toggleModal3 = function(){
     vm.showModal3 = !vm.showModal3;
 
-  };
+    };
 
+    //TODO: implement the above two functions on all modals so they close and open correctly every time
+    //TODO: will probably need to give HUD a z-index greater than the modal so the mouseleave will work
 
   //login button WE SHOULD TAKE THESE OUT
     vm.loginSubmit = function(email, password){
@@ -164,5 +168,4 @@ app.controller('MainController', ['$http', 'newGameService', 'playerJoinGame', '
         console.log(data);
       });
     };
-
 }
