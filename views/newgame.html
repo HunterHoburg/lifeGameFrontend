@@ -28,7 +28,7 @@
     </div>
 
       <div class='col-md-3' style="margin-left: -2em;">
-        <div class='row colorPalette' style="margin-top: -.4em; margin-left: 2em;" ng-class='{"faded": emailInput && passwordInput}'>
+        <div class='row colorPalette' style="margin-top: -.4em; margin-left: 2em;" ng-class='{"faded": NGC.signinInfo.email && NGC.signinInfo.password}'>
           <div class='col-md-2 col-md-offset-1' style="margin-top: .5em;">
             <p><br>Pick<br>Your<br> Color!</p>
           </div>
@@ -54,18 +54,18 @@
     </div>
 
       <div class="row topmargin">
-        <div class="col-md-6" ng-repeat="player in NGC.players">
-          <center>
-          <div class="col-md-4">
-            <h4 class='playerName'>Player:</h4>
+        <div class="col-md-4 col-md-offset-4" ng-repeat="player in NGC.players">
+
+          <div class="col-md-6">
+            <h4 class='playerAdded'>Player Added:</h4>
           </div>
-          <div class="col-md-4">
-            <h4>{{ player.name }}</h4>
+          <div class="col-md-3">
+            <h4 class='playerName'>{{ player.name }}</h4>
           </div>
-          <div class="col-md-4">
-            <h4>{{ player.color }}</h4>
+          <div class="col-md-3">
+            <h4 class='playerColor'>{{ player.color }}</h4>
           </div>
-        </center>
+
         </div>
       </div>
     </div>
@@ -89,7 +89,7 @@
                       <li class="teal" ng-click='NGC.colorPick("teal")'></li>
                     </ul></div>
               <div class='col-md-1'>
-                
+
               </div>
           </div>
            <button type="submit" ng-click="NGC.guestSubmit()" class="btn btn-default guestSubmitBtn">Add Guest</button>
@@ -123,10 +123,12 @@
 
 <div class="row" id="enterBoard">
   <div class="col-md-6 col-md-offset-3">
+    
     <div class="pulse1"></div>
     <div class="pulse2"></div>
     <div class="icon2" type="button" name="enterGame" ng-click="NGC.startGame()">Enter Game!</button>
   </div>
+
 </div>
 
 <!-- <hud-footer></hud-footer> -->
