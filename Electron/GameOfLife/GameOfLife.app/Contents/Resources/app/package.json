@@ -1,0 +1,31 @@
+{
+  "name": "electron-life-game",
+  "version": "0.2.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "build": "electron-packager . GameOfLife --platform=darwin --arch=x64 --version=0.35.6"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atom/electron-quick-start.git"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/atom/electron-quick-start/issues"
+  },
+  "homepage": "https://github.com/atom/electron-quick-start#readme",
+  "devDependencies": {
+    "electron-packager": "^5.2.1",
+    "electron-prebuilt": "^0.36.0"
+  }
+}

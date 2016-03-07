@@ -1,0 +1,17 @@
+
+  <script type='text/ng-template' id='signUp.html'>
+    <div class='modal-header'>
+      <h3 class='modal-title'>Sign Up</h3>
+    </div>
+    <div class='modal-body'>
+      <form>
+        <input type='text' ng-model='username'>
+        <input type='text' ng-model='email'>
+        <input type='text' ng-model='password'>
+        <button type='submit' ng-click='MC.signUp(username, email, password)'>Sign up!</button>
+      </form>
+      <div class='modal-footer'>
+        <button class='btn btn-warning' type='button' ng-click='cancel()'>Cancel</button>
+      </div>
+    </div>
+  </script>

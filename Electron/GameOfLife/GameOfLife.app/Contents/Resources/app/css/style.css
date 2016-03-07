@@ -1,0 +1,697 @@
+body {
+  padding-top: 50px;
+  font-family: 'Englebert', sans-serif;
+  /*background-image: url('skulls.png');
+  background-color: rgba(0,255,0,.2);*/
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url('skulls.png');
+}
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.navbar {
+  margin-top: -3rem;
+}
+.navbar .brandWrapper {
+  width: 5rem;
+  height: 5rem;
+  display: inline-block;
+}
+
+.navbar .brandWrapper img {
+  height: inherit;
+  width: 100%;
+}
+
+.navbar ul,
+.navbar ul li {
+  display: inline-block;
+}
+
+.navbar ul li {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 5rem;
+}
+
+.boardWrapper {
+  /*width: 95%;*/
+  width: 1500px;
+  margin: 5%;
+  /*margin-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;*/
+  /*padding-left: 1.1%;
+  padding-right: 1.1%;*/
+  background: url('../static/img/board.jpg')center center no-repeat;
+  background-size: cover;
+  border: 3px ridge #212121;
+  box-shadow: -1px -1px 1px 1px #212121;
+}
+
+.boardWrapper .row {
+  margin-left: -3px;
+}
+.board {
+  width: 150px;
+  height: 150px;
+  /*padding-top:10%;*/
+  margin: 0;
+  float: left;
+  background-size: cover;
+  box-sizing: border-box;
+  /*border: 1px solid black;*/
+  border-right: 1px solid #212121;
+  border-bottom: 1px solid #212121;
+}
+
+.junctionNYellow {
+  background: url('../static/img/junction/yfork-N-yellow.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionEYellow {
+  background: url('../static/img/junction/yfork-E-yellow.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionSYellow {
+  background: url('../static/img/junction/yfork-S-yellow.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionWYellow {
+  background: url('../static/img/junction/yfork-W-yellow.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionNBlue {
+  background: url('../static/img/junction/yfork-N-blue.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionEBlue {
+  background: url('../static/img/junction/yfork-E-blue.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionSBlue {
+  background: url('../static/img/junction/yfork-S-blue.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionWBlue {
+  background: url('../static/img/junction/yfork-W-blue.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionNGreen {
+  background: url('../static/img/junction/yfork-N-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionEGreen {
+  background: url('../static/img/junction/yfork-E-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionSGreen {
+  background: url('../static/img/junction/yfork-S-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionWGreen {
+  background: url('../static/img/junction/yfork-W-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionNRed {
+  background: url('../static/img/junction/yfork-N-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionERed {
+  background: url('../static/img/junction/yfork-E-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionSRed {
+  background: url('../static/img/junction/yfork-S-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.junctionWRed {
+  background: url('../static/img/junction/yfork-W-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowYellow {
+  background: url('../static/img/elbow/elbow-SW-yellow.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowSEYellow {
+  background: url('../static/img/elbow/elbow-SE-yellow.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowNWYellow {
+  background: url('../static/img/elbow/elbow-NW-yellow.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowNEYellow {
+  background: url('../static/img/elbow/elbow-NE-yellow.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowBlue {
+  background: url('../static/img/elbow/elbow-SW-blue.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowSEBlue {
+  background: url('../static/img/elbow/elbow-SE-blue.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowNWBlue {
+  background: url('../static/img/elbow/elbow-NW-blue.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowNEBlue {
+  background: url('../static/img/elbow/elbow-NE-blue.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowRed {
+  background: url('../static/img/elbow/elbow-SW-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowSERed {
+  background: url('../static/img/elbow/elbow-SE-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowNWRed {
+  background: url('../static/img/elbow/elbow-NW-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowNERed {
+  background: url('../static/img/elbow/elbow-NE-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowGreen {
+  background: url('../static/img/elbow/elbow-SW-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowSEGreen {
+  background: url('../static/img/elbow/elbow-SE-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowNWGreen {
+  background: url('../static/img/elbow/elbow-NW-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.elbowNEGreen {
+  background: url('../static/img/elbow/elbow-NE-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.straightEWYellow {
+  background: url('../static/img/straight/straight-EW-yellow.png')center center no-repeat;
+  background-size: cover;
+}
+
+.straightNSYellow {
+  background: url('../static/img/straight/straight-NS-yellow.png');
+  background-size: cover;
+}
+
+.straightEWBlue {
+  background: url('../static/img/straight/straight-EW-blue.png')center center no-repeat;
+  background-size: cover;
+}
+
+.straightNSBlue {
+  background: url('../static/img/straight/straight-NS-blue.png');
+  background-size: cover;
+}
+
+.straightEWRed {
+  background: url('../static/img/straight/straight-EW-red.png')center center no-repeat;
+  background-size: cover;
+}
+
+.straightNSRed {
+  background: url('../static/img/straight/straight-NS-red.png');
+  background-size: cover;
+}
+
+.straightEWGreen {
+  background: url('../static/img/straight/straight-EW-green.png')center center no-repeat;
+  background-size: cover;
+}
+
+.straightNSGreen {
+  background: url('../static/img/straight/straight-NS-green.png');
+  background-size: cover;
+}
+
+.board span {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  margin-left: 25%;
+  font-size: 20px;
+}
+
+.board span i {
+  position: relative;
+  top: 50%;
+  transform: translateY(-400%);
+}
+
+.board .playerHolder {
+  float: left;
+  height: inherit;
+  width: 25px;
+}
+
+.board .playerHolder .playerMark {
+  height: 25px;
+  width: 100%;
+}
+h1 {
+  font-size: 10em;
+  text-align: center;
+  color: white;
+}
+
+#greenL {
+  background-color: green;
+  height: 10em;
+  text-align: left;
+  box-shadow: 10px 10px 5px #888888;
+  box-shadow: inset 0 -5px 5px rgba(0,0,0,0.5),
+  inset 0 5px 5px rgba(255,255,255,.5);
+}
+#blueI {
+  background-color: blue;
+  height: 10em;
+  text-align: left;
+  box-shadow: 10px 10px 5px #888888;
+  box-shadow: inset 0 -5px 5px rgba(0,0,0,0.5),
+  inset 0 5px 5px rgba(255,255,255,.5);
+}
+#redF {
+  background-color: #FF6200;
+  height: 10em;
+  text-align: left;
+  box-shadow: 10px 10px 5px #888888;
+  box-shadow: inset 0 -5px 5px rgba(0,0,0,0.5),
+  inset 0 5px 5px rgba(255,255,255,.5);
+}
+#purpleE {
+  background-color: purple;
+  height: 10em;
+  text-align: left;
+  box-shadow: 10px 10px 5px #888888;
+  box-shadow: inset 0 -5px 5px rgba(0,0,0,0.5),
+  inset 0 5px 5px rgba(255,255,255,.5);
+}
+
+h3 {
+  text-align: center;
+}
+
+#logo {
+  margin: 1em;
+  margin-left: 3em;
+  padding: 0em;
+}
+
+.numberOfPlayers {
+  width: 2em;
+  font-size: 2.5em;
+  text-align: center;
+  margin-top: .5em;
+}
+
+.topmargin {
+  margin-top: 3rem;
+}
+
+#enterBoard {
+  margin-top: 15em;
+  margin-left: -3em;
+}
+
+#enterBoard .icon1 {
+  height: 2.5em;
+  font-size: 4em;
+}
+
+#enterBoard .pulse1 {
+width: 80%;
+}
+
+#enterBoard .pulse2 {
+width: 80%;
+}
+
+/*Styling for game creation page*/
+/*.signUpBar {
+  background-color: hsl(72, 63%, 86%)
+}*/
+.numberOfPlayersLabel {
+  font-size: 4em;
+}
+#addBtn{
+  background-color: #00aeef;
+  margin-top: 1.8em;
+  padding: 1em;
+  width: 7em;
+  border-radius: 25%;
+  color: white;
+  margin-left: 1em;
+}
+
+#addBtn:hover {
+  color: black;
+  background-color: #22aeef;
+  font-weight: bold;
+  border-color: white;
+}
+
+.howToPlayLink {
+  background-color: rgba(255, 255, 255, 0);;
+  color: #00aeef;
+  border: none;
+  margin-top: 1.5em;
+}
+
+.howToPlayLink:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.playerFormInputs {
+  margin-top: 1.3em;
+  width: 12em;
+  height: 3em;
+  font-size: 1.1em;
+}
+
+/*.guestSignup h4 {
+  margin-top: 2em;
+  margin-left: 2em;
+}*/
+
+.guestLink {
+  margin-left: .2em;
+  color: #00aeef;
+}
+
+.guestLink:hover {
+  cursor: pointer;
+}
+
+.signupLink {
+  margin-right: 1em;
+  color: #00aeef;
+}
+
+.signupLink:hover {
+  cursor: pointer;
+}
+
+#navLinks {
+  position: absolute;
+  top: 18%;
+  right: 12%;
+  text-align: center;
+}
+
+
+/* Styling for the pop-up modal 'how to play' */
+.btn {
+  /*background: #428bca;*/
+  /*border: #357ebd solid 1px;*/
+  /*border-radius: 3px;*/
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  padding: 8px 15px;
+  margin: .75rem;
+  text-decoration: none;
+  text-align: center;
+  min-width: 60px;
+  position: relative;
+  transition: color .1s ease;
+}
+.guestBtn {
+  background-color: #66adf6;
+  width: 13rem;
+}
+.guestSubmitBtn {
+  background-color: #66adf6;
+  margin-left: 41%;
+}
+.submitSignUpBtn {
+  background-color: #66adf6;
+}
+
+.btn:hover {
+  background: #357ebd;
+}
+.btn.btn-big {
+  font-size: 18px;
+  padding: 15px 20px;
+  min-width: 100px;
+}
+.btn-close {
+  color: #aaa;
+  font-size: 30px;
+  text-decoration: none;
+  position: absolute;
+  right: 5px;
+  top: 0;
+}
+.btn-close:hover {
+  color: #919191;
+}
+
+.decisionBtn1 {
+  background-color: #47cd70;
+  width: 16rem;
+  height: 16rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.decisionBtn2 {
+  background-color: #e27061;
+  width: 16rem;
+  height: 16rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.decisionBtnText {
+  padding: 6rem 3rem 0 3rem;
+}
+
+/*.modal:before {
+  content: "";
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}*/
+/*.modal:target:before {
+  display: block;
+}*/
+/*.modal:target .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  top: 20%;
+}*/
+/*.modal-dialog {
+  background: #fefefe;
+  border: #333 solid 1px;
+  border-radius: 5px;
+  margin-left: -200px;
+  position: fixed;
+  left: 50%;
+  top: -100%;
+  z-index: 11;
+  width: 360px;
+  -webkit-transform: translate(0, -500%);
+  -ms-transform: translate(0, -500%);
+  transform: translate(0, -500%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}*/
+/*.modal-body {
+  padding: 20px;
+}*/
+/*.modal-header,
+.modal-footer {
+  padding: 10px 20px;
+}*/
+/*.modal-header {
+  border-bottom: #eee solid 1px;
+}*/
+/*.modal-header h2 {
+  font-size: 20px;
+}*/
+/*.modal-footer {
+  border-top: #eee solid 1px;
+  text-align: right;
+}*/
+
+/*ADDED TO STOP SCROLLING TO TOP*/
+#close {
+  display: none;
+}
+
+
+.playerAdded {
+  color: #ee4c30;
+  font-size: 1.5em;
+  font-weight: 400;
+  margin-left: .5em;
+}
+.playerName {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+.playerColor {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+/*colors for guest modal*/
+.colorPalette {
+  background-color: rgb(247, 242, 220);
+  opacity: .3;
+  border-radius: 20px;
+}
+.faded {
+  background-color: rgba(247, 242, 220, .5);
+  opacity: 1;
+  transition: opacity .7s;
+  -webkit-transition: opacity .7s;
+  -moz-transition: opacity .7s;
+  -o-transition: opacity .7s;
+}
+.colorList {
+  list-style-type: none;
+  padding-left: none;
+  margin-left: none;
+}
+.colorListSub {
+  list-style-type: none;
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+.guestColor {
+  opacity: .9;
+  background-color: #ffffff;
+}
+.colorListSub li {
+  /*padding-right: none;*/
+  display: inline-block;
+  cursor: pointer;
+}
+.colorListModal li {
+  padding-top: 2rem;
+}
+.highlightedColor {
+  border: 2px solid #357ebd;
+}
+
+
+.red {
+  width:35px;
+  height:35px;
+  background-color: #c22d29;
+  /*border: 1px solid black;*/
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.orange {
+  width:35px;
+  height:35px;
+  background-color: #e28811;
+  border-radius: 50%;
+  /*border: 1px solid black;*/
+  margin: 5px;
+}
+
+.blue {
+  width:35px;
+  height:35px;
+  background-color: #3b459f;
+  /*border: 1px solid black;*/
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.yellow {
+  width:35px;
+  height:35px;
+  background-color: #dae411;
+  /*border: 1px solid black;*/
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.olive {
+  width:35px;
+  height:35px;
+  background-color:olive;
+  /*border: 1px solid black;*/
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.teal {
+  width:35px;
+  height:35px;
+  background-color:teal;
+  /*border: 1px solid black;*/
+  border-radius: 50%;
+  margin: 5px;
+}
+.clickable {
+  cursor: pointer;
+  z-index: 5;
+}
+.clickable:hover {
+  opacity: .7;
+  transition: opacity 1.5s;
+}
