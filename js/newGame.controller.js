@@ -92,8 +92,9 @@ function NewGameController ($location, signinService, signupService, insertArtic
     var newGameID;
     newGameService()
       .then(function(newGameInfo){
+        console.log(newGameInfo);
         newGameID = newGameInfo.data[0];
-        console.log(newGameID);
+        console.log('game id '+ newGameID);
         var promiseArray = [];
 
         // stories service insert with game_id

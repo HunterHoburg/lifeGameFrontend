@@ -56,51 +56,57 @@ function insertArticles($http) {
   return function(gameSession) {
     var articles = [];
     var promises = [];
-
-$http.get('http://content.guardianapis.com/search?q=unemployment%20AND%20jobs&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0')
+    console.log('hello world');
+$http.get('https://content.guardianapis.com/search?q=unemployment%20AND%20jobs&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0')
 .then(function(jobsArticles) {
+  console.log('jobs');
       jobsArticles.data.response.results.forEach(function(article) {
         article.gameSession = gameSession;
         article.type = 'jobs';
         articles.push(article);
       });
-      return $http.get('http://content.guardianapis.com/search?q=despair%20AND%20death&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0');
+      return $http.get('https://content.guardianapis.com/search?q=despair%20AND%20death&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0');
     }).then(function(deathArticles) {
+      console.log('death');
       deathArticles.data.response.results.forEach(function(article) {
         article.gameSession = gameSession;
         article.type = 'death';
         articles.push(article);
       });
-      return $http.get('http://content.guardianapis.com/search?q=flooding%20OR%20earthquake%20OR%20wildfire%OR%20sinkhole&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0');
+      return $http.get('https://content.guardianapis.com/search?q=flooding%20OR%20earthquake%20OR%20wildfire%OR%20sinkhole&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0');
     }).then(function(natureArticles) {
+      console.log('nature');
       natureArticles.data.response.results.forEach(function(article) {
         article.type = 'nature';
         articles.push(article);
       });
-      return $http.get('http://content.guardianapis.com/search?q=stock%20market%20AND%20crash&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0');
+      return $http.get('https://content.guardianapis.com/search?q=stock%20market%20AND%20crash&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0');
     }).then(function(financeArticles) {
+      console.log('finance');
       financeArticles.data.response.results.forEach(function(article) {
         article.gameSession = gameSession;
         article.type = 'finance';
         articles.push(article);
       });
-      return $http.get('http://content.guardianapis.com/search?q=druge%20abuse&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0');
+      return $http.get('https://content.guardianapis.com/search?q=druge%20abuse&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0');
     }).then(function(drugsArticles) {
+      console.log('drugs');
       drugsArticles.data.response.results.forEach(function(article) {
         article.gameSession = gameSession;
         article.type = 'drugs';
         articles.push(article);
       });
-      return $http.get('http://content.guardianapis.com/search?q=crime%20AND%20unsolved&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0');
+      return $http.get('https://content.guardianapis.com/search?q=crime%20AND%20unsolved&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0');
     }).then(function(crimeArticles) {
+      console.log('crime');
       crimeArticles.data.response.results.forEach(function(article) {
         article.gameSession = gameSession;
         article.type = 'crime';
         articles.push(article);
       });
-      return $http.get('http://content.guardianapis.com/search?q=divorce%20AND%20marriage&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0');
+      return $http.get('https://content.guardianapis.com/search?q=divorce%20AND%20marriage&page-size=50&from-date=2015-07-01&section=world&api-key=5297a5ae-063b-42f1-a315-22e0168546e0');
     }).then(function(marriageArticles) {
-
+      console.log('marriage');
       for (var i = 0; i < marriageArticles.data.response.results.length; i++) {
         marriageArticles.data.response.results[i].gameSession = gameSession;
         marriageArticles.data.response.results[i].type = 'marriage';
